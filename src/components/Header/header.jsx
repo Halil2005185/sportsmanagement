@@ -83,7 +83,7 @@ function Header() {
                         </div>
                         <FaAngleDown className={`${showLanguage ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer `} />
                     </div>
-                    <div className={`${showLanguage ? "block" : "hidden"} absolute top-[55px] left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]`}>
+                    <div className={`${showLanguage ? "block" : "hidden"} z-50 absolute top-[55px] left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]`}>
                         {Languages.map((language) => (
                             <div key={language.id} onClick={() => Handeler(language.id)} className="cursor-pointer flex items-center gap-2 px-4 py-2 ">
                                 <img className="w-[21px]" src={language.image} alt="use" />
