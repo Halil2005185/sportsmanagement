@@ -71,7 +71,7 @@ function Header() {
                 {Navber.map((nav) => (<Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch']">{nav.label}</Link>))}
             </nav>
             <div className="flex items-center gap-3">
-                <div ref={langMenuRef} className="relative  flex items-center gap-2">
+                <div ref={langMenuRef} className="relative z-50 flex items-center gap-2">
                     <div onClick={() => setShowLanguage(prev => !prev)} className="flex items-center gap-2">
                         <div className=" cursor-pointer flex items-center gap-2">
                             {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
@@ -106,7 +106,7 @@ function Header() {
                     openMenu ? <IoClose onClick={() => setOpenMenu(false)} className="text-[#D2FF00] sm:text-5xl cursor-pointer text-[30px]" /> : <IoMenu onClick={() => setOpenMenu(true)} className="text-[#D2FF00] sm:text-5xl text-[30px] cursor-pointer" />
                 }
             </div>
-            <div className="absolute left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150" style={{
+            <div className="absolute z-50 left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150" style={{
                 clipPath: openMenu
                     ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
                     : "polygon(0 0, 100% 0, 100% 0, 0 0)"
