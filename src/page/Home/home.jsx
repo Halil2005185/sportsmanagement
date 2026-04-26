@@ -2,16 +2,19 @@ import FootballCart from "../../components/FootballCart/footballCart";
 import OurNumbers from "../../components/OurNumbers/ourNumbers";
 import SportCard from "../../components/SportCard/sportCard";
 import WhySports from "../../components/WhySports/whySports";
-import Stadyum from "/images/stadyum.jpg";
 import test from "/images/test.jpg";
 import Logo from "/images/mainLogo.svg";
 import Sbu from "/images/sbu.png";
 import vedioBg from "/src/assets/bg.mp4";
+import { useState } from "react";
+import Studyom from "../../components/Studyom/studyom";
+import LatestNews from "../../components/LatestNews/latestNews";
 
 function Home() {
+    const [open, setOpen] = useState(true)
     return (
         <section className=" relative w-screen bg-[#121212]">
-            <div className=" w-screen  ">
+            <div className=" relative w-screen  ">
                 <video
                     src={vedioBg}
                     autoPlay
@@ -21,59 +24,64 @@ function Home() {
                     controls={false}
                     disablePictureInPicture
                     controlsList="nodownload nofullscreen noremoteplayback"
-                    className="w-full  object-cover"
+                    className="w-full md:object-cover object-cover h-[400px] sm:h-fit "
                 ></video>
-                <div className="absolute flex-col gap-3 flex z-40 top-1/3 left-1/2 -translate-x-[50%] w-[80%]">
-                    <h1 className="text-center text-[#D2FF00] font-bold text-[64px] font-['Platypi'] italic ">
+                <div className="absolute flex-col gap-3 flex z-40 top-1/3 left-1/2 -translate-x-[50%] w-[98%]  md:w-[80%]">
+                    <h1 className="text-center text-[#D2FF00] font-bold text-[24px] sm:text-[35px] md:[50px] lg:text-[60px] xl:text-[60px] font-['Platypi'] italic ">
                         The power that shapes the game.
                     </h1>
-                    <h3 className="text-white font-bold font-['Platypi'] italic text-[40px] text-center ">
+                    <h3 className="text-white font-bold font-['Platypi'] italic text-[16px] sm:text-[25px] md:[32px] lg:text-[38px] xl:text-[40px] text-center ">
                         Every move matters. Every second counts.
                     </h3>
-                    <div className="flex items-center justify-center gap-4">
-                        <div className="rounded-[8px] bg-[#D2FF00] shadow-[0_8px_16px_0_#C3FF1A29] py-[18px] px-[24px]">
-                            <p className="font-['Geist'] font-bold text-[20px] leading-[100%] ">
+                    <div className="flex items-center justify-center gap-1  ">
+                        <div className="rounded-[8px] bg-[#D2FF00] shadow-[0_8px_16px_0_#C3FF1A29] md:py-[18px] md:px-[24px] p-4">
+                            <p className="font-['Geist'] font-bold md:text-[20px] leading-[100%] ">
                                 Pricing Plans
                             </p>
                         </div>
-                        <div className="rounded-[8px] border-[1px] border-[#D2FF00] py-[18px] px-[24px]">
-                            <p className="text-[#D2FF00] font-['Geist'] font-bold text-[20px] leading-[100%] ">
+                        <div className="rounded-[8px] border-[1px] border-[#D2FF00] md:py-[18px] md:px-[24px] p-4">
+                            <p className="text-[#D2FF00] font-['Geist'] font-bold md:text-[20px] leading-[100%] ">
                                 Contact us
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className=" w-screen h-[822px] z-50 flex flex-col gap-6 py-[48px] px-[96px]">
-                <h4 className="text-white font-['Platypi'] font-bold italic text-[32px] leading-[100%] w-[90%] pl-10 mx-auto  ">
+
+            <div className=" w-[100%]  lg:min-h-[822px] z-50 flex flex-col gap-6  lg:py-[48px] px-4 lg:px-[80px] xl:px-[96px] mt-4 ">
+                <h4 className="text-white font-['Platypi'] font-bold italic text-[32px] leading-[100%] w-full mx-auto  ">
                     Who<span className="text-[#D2FF00] px-2 leading-[100%]">We</span>Are
                 </h4>
-                <div className="flex items-center justify-evenly  ">
+                <div className=" flex lg:grid lg:grid-cols-3 overflow-x-auto lg:overflow-visible gap-6 w-full ">
                     <FootballCart text="OA Sports is a multidisciplinary sports consulting and management firm that brings together diverse expertise under one roof." />
                     <FootballCart text="Our mission is to accompany professionals at all levels of sport, players, coaches, referees, clubs, and federations in building sustainable success through effective, long-term strategies." />
                     <FootballCart text="Every service we offer is meticulously designed to add value to your career and help you reach the top." />
                 </div>
             </div>
-            <div className=" w-screen  z-50 flex flex-col gap-6 py-[48px] px-[96px]">
-                <h4 className="text-white font-['Platypi'] font-bold italic text-[32px] leading-[100%] w-[90%] pl-10 mx-auto  ">
+
+
+            <div className=" w-screen z-50 flex flex-col gap-6 lg:py-[48px] lg:px-[96px] px-4 py-8">
+                <h4 className="text-white font-['Platypi'] font-bold italic text-[26px] lg:text-[32px] leading-[100%] w-[100%] mx-auto  ">
                     Our<span className="text-[#D2FF00] px-2 leading-[100%]">Numbers</span>
                     Talks
                 </h4>
-                <div className="flex items-center justify-evenly  ">
+                <div className=" overflow-x-auto flex items-center justify-between gap-4 lg:gap-10 ">
                     <OurNumbers />
                     <OurNumbers />
                     <OurNumbers />
                 </div>
             </div>
 
-            <div className=" w-screen  z-50 flex flex-col gap-6 py-[48px] px-[96px]">
-                <h4 className="text-white font-['Platypi'] font-bold italic text-[32px] leading-[100%] w-[90%] pl-10 mx-auto  ">
+
+
+            <div className=" w-screen  z-50 flex flex-col gap-6 py-[48px] lg:px-[96px] px-4 ">
+                <h4 className="text-white font-['Platypi'] font-bold italic text-[24px] sm:text-[32px] leading-[100%] w-full mx-auto  ">
                     What
                     <span className="text-[#D2FF00] px-2 leading-[100%]">OA Sports</span>
                     do
                 </h4>
-                <div className="custom-scroll flex items-center gap-4 overflow-x-auto w-[85%] mx-auto">
-                    <SportCard />
+                <div className="custom-scroll flex flex-col md:flex-row md:items-center gap-4 overflow-x-auto w-[98%] md:w-full mx-auto">
+                    <SportCard open={open} setOpen={setOpen} />
                     <SportCard />
                     <SportCard />
                     <SportCard />
@@ -81,13 +89,15 @@ function Home() {
                 </div>
             </div>
 
-            <div className="z-50 flex flex-col gap-6 py-[48px] px-[96px]">
-                <h4 className="text-white font-['Platypi'] font-bold italic text-[32px] leading-[100%] w-[90%] pl-10 mx-auto  ">
+
+
+            <div className="z-50 flex flex-col gap-6 py-[48px] px-4 lg:px-[96px]">
+                <h4 className="text-white font-['Platypi'] font-bold italic text-[26px] lg:text-[32px] leading-[100%] w-full mx-auto  ">
                     What
                     <span className="text-[#D2FF00] px-2 leading-[100%]">OA Sports</span>
                     do
                 </h4>
-                <div className="flex flex-wrap gap-6 justify-evenly w-[90%] mx-auto">
+                <div className="flex flex-wrap items-center gap-6 justify-evenly md:justify-between 2xl:justify-evenly w-full mx-auto">
                     <WhySports
                         title="A 360° perspective"
                         text="OA Sports is a multifaceted sports consulting and management company that brings together multidisciplinary expertise under one roof."
@@ -115,37 +125,13 @@ function Home() {
                 </div>
             </div>
 
-            <div className="z-50 relative w-[80%] h-[395px] mx-auto rounded-[48px] overflow-hidden">
-                <img
-                    src={Stadyum}
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
 
-                <img
-                    src={Stadyum}
-                    className="
-      absolute w-full h-full object-cover blur-xl left-[-255px]
-      [mask-image:linear-gradient(to_right,black_0%,black_35%,transparent_75%)]
-      [-webkit-mask-image:linear-gradient(to_right,black_0%,black_35%,transparent_75%)]
-    "
-                />
-                <div className="absolute left-16 top-1/2 -translate-y-1/2 z-20">
-                    <h2 className="text-[#D2FF00] text-[64px] italic font-bold font-['Platypi']">
-                        Interested?
-                    </h2>
+            <Studyom />
 
-                    <h3 className="text-white text-[48px] italic font-bold mb-8 font-['Platypi']">
-                        That’s just the start.
-                    </h3>
 
-                    <div className="bg-[#D2FF00] px-[24px] py-[18px] rounded-[8px] w-[280px] shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] flex justify-center items-center ">
-                        <p className="font-['Chakra_Petch'] font-bold text-[20px] leading-[100%]  ">
-                            View prices
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="relative ">
+
+
+            <div className="relative hidden lg:block ">
                 <div className="absolute z-0 left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] w-[1071px] h-[50%] rounded-full bg-[#d0ff002a] blur-[400px]"></div>
                 <div className="relative z-20 flex flex-col gap-6 py-[48px] px-[96px]">
                     <div className="flex items-center justify-between w-[90%] mx-auto">
@@ -245,6 +231,9 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <LatestNews/>
+                {/*  
+
             <div className="w-[80%] min-h-[500px] pb-52 mx-auto">
                 <h2 className="font-bold font-['Platypi'] text-[46px] leading-[100%] italic text-white ">Our <span className=" text-[#D2FF00] " >Partnership</span></h2>
                 <div className="flex flex-col gap-8" >
@@ -270,7 +259,7 @@ function Home() {
                         <img className="h-full rounded-[24px]" src={test} alt="test" />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }

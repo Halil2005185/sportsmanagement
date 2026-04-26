@@ -41,7 +41,7 @@ function Footer() {
 
 
     return <section className="bg-[#1C1C1C] w-screen">
-        <footer className=" flex flex-col gap-4 px-[96px] py-[64px] " >
+        <footer className=" hidden lg:flex flex-col gap-4 px-[96px] py-[64px] " >
             <div className="flex justify-around items-center gap-2 " >
                 <div className="w-[20%] flex flex-col gap-3" >
                     <img className="w-[105px]" src={Logo} alt="logo" />
@@ -78,7 +78,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="w-[85%] border-[#D2FF00] border-t-[1px] py-4 px-1 mx-auto flex items-center justify-between">
+            <div className="w-[85%] border-[#D2FF00] border-t-[1px] py-4     px-1 mx-auto flex items-center justify-between">
                 <p className="text-white font-['Chakra_Petch'] text-[20px] leading-[100%] " >AO Sports OAll Rights Reserved 2025</p>
                 <div className="text-white flex items-center gap-2 font-['Chakra_Petch'] text-[20px] leading-[100%] ">
                     <p>Privacy Policy</p>
@@ -86,6 +86,50 @@ function Footer() {
                 </div>
             </div>
         </footer>
+        <footer className="lg:hidden flex flex-col gap-8 px-4 sm:px-[96px]  py-[64px] " >
+            <div className="flex flex-col gap-3" >
+                <img className="w-[105px]" src={Logo} alt="logo" />
+                <p className="font-['Chakra_Petch'] leading-[100%] text-[20px] text-white" >OA Sports is a multifaceted sports consulting and management company
+                    together multidisciplinary expertise under one roof.</p>
+            </div>
+            <div className="flex items-center justify-between ">
+                <div className="flex flex-col gap-3">
+                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Fast Links</p>
+                    <div className="flex flex-col gap-2" >
+                        {Navber.map((nav) => (
+                            <Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch']  leading-[100%] " >{nav.label}</Link>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 mb-3">
+                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                    <div className="flex flex-col gap-3" >
+                        {Contacts.map((contact) => (
+                            <div className="flex gap-2 items-centers">
+                                <p className="text-white ">{contact.icon}</p>
+                                <p className="text-white font-['Chakra_Petch'] leading-[100%]  ">{contact.number}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col gap-4 self-start mt-1 ">
+                <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                <div className="flex gap-2 flex-wrap ">
+                    {Icons.map((icon) => (
+                        <p className="text-white text-[21px] " >{icon.icon}</p>
+                    ))}
+                </div>
+            </div>
+            <div className="w-full border-[#D2FF00] border-t-[1px] py-4  px-1 mx-auto flex items-center justify-between">
+                <p className="text-white font-['Chakra_Petch'] text-[12px] sm:text-[20px] leading-[100%] " >OAll Rights Reserved 2025</p>
+                <div className="text-white flex items-center gap-2 font-['Chakra_Petch'] text-[12px] sm:text-[20px] leading-[100%] ">
+                    <p>Privacy Policy</p>
+                    <p>Terms</p>
+                </div>
+            </div>
+        </footer>
+
     </section>
 }
 export default Footer
