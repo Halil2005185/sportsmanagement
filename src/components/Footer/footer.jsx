@@ -40,7 +40,7 @@ function Footer() {
     ]
 
 
-    return <section className="bg-[#1C1C1C] w-screen">
+    return <section className="bg-[#1C1C1C] w-screen z-50">
         <footer className=" hidden lg:flex flex-col gap-4 px-[96px] py-[64px] " >
             <div className="flex justify-around items-center gap-2 " >
                 <div className="w-[20%] flex flex-col gap-3" >
