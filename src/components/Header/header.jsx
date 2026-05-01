@@ -14,6 +14,7 @@ import Logo from "/images/logoIcon.png"
 import { FaAngleDown } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { useLocation } from "react-router-dom"
 
 
 import { useEffect, useRef, useState } from "react"
@@ -22,7 +23,7 @@ function Header() {
     const [handleLanguage, setHandleLanguage] = useState(2)
     const [openMenu, setOpenMenu] = useState(false)
     const langMenuRef = useRef()
-
+    const { pathname } = useLocation()
     const Navber = [
         { id: 1, label: "Home", path: "/" },
         { id: 2, label: "Services", path: "/services" },
@@ -68,7 +69,7 @@ function Header() {
                 <p className="absolute size-4 bg-[#1C1C1C] top-[88%] rotate-[45deg] right-[-8px]"></p>
             </div>
             <nav className="flex items-center gap-5">
-                {Navber.map((nav) => (<Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch']">{nav.label}</Link>))}
+                {Navber.map((nav) => (<Link key={nav.id} to={nav.path} className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"} font-['Chakra_Petch']`}>{nav.label}</Link>))}
             </nav>
             <div className="flex items-center gap-3">
                 <div ref={langMenuRef} className="relative z-50 flex items-center gap-2">

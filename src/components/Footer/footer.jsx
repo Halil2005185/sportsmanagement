@@ -61,7 +61,7 @@ function Footer() {
                         <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
                         <div className="flex flex-col gap-3" >
                             {Contacts.map((contact) => (
-                                <div className="flex gap-2 items-centers">
+                                <div key={contact.id} className="flex gap-2 items-centers">
                                     <p className="text-white text-[20px] ">{contact.icon}</p>
                                     <p className="text-white text-[20px] font-['Chakra_Petch'] leading-[100%]  ">{contact.number}</p>
                                 </div>
@@ -71,8 +71,8 @@ function Footer() {
                     <div className="flex flex-col gap-4 self-start mt-1 ">
                         <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
                         <div className="flex gap-2 w-[120px] flex-wrap ">
-                            {Icons.map((icon) => (
-                                <p className="text-white text-[21px] " >{icon.icon}</p>
+                            {Icons.map((icon , index) => (
+                                <p key={index} className="text-white text-[21px] " >{icon.icon}</p>
                             ))}
                         </div>
                     </div>
@@ -105,7 +105,7 @@ function Footer() {
                     <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
                     <div className="flex flex-col gap-3" >
                         {Contacts.map((contact) => (
-                            <div className="flex gap-2 items-centers">
+                            <div key={contact.id} className="flex gap-2 items-centers">
                                 <p className="text-white ">{contact.icon}</p>
                                 <p className="text-white font-['Chakra_Petch'] leading-[100%]  ">{contact.number}</p>
                             </div>
@@ -116,8 +116,8 @@ function Footer() {
             <div className="flex flex-col gap-4 self-start mt-1 ">
                 <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
                 <div className="flex gap-2 flex-wrap ">
-                    {Icons.map((icon) => (
-                        <p className="text-white text-[21px] " >{icon.icon}</p>
+                    {Icons.map((icon , index) => (
+                        <p key={index} className="text-white text-[21px] " >{icon.icon}</p>
                     ))}
                 </div>
             </div>

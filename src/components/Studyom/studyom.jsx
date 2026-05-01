@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 
 function Studyom() {
     const { pathname } = useLocation()
-    const STD = pathname == "/services"
+    const STD = pathname == "/services" || "/about-us"
     console.log(STD);
 
-    return <div className={` ${STD ? "xl:w-full" : ""} z-50 relative w-[98%] md:w-[95%] lg:w-[90%] md:h-[395px] mx-auto md:rounded-[48px] overflow-hidden`}>
+    return <div className={` ${STD ? "xl:w-full" : ""} z-50 relative w-[98%] md:w-[95%] lg:w-[90%] md:h-[395px]  mx-auto md:rounded-[48px] overflow-hidden`}>
         <img
             src={Stadyum}
             className="md:absolute md:inset-0 md:w-full md:h-full object-contain md:object-cover rounded-[30px] md:rounded-[0]"
