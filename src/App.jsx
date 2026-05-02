@@ -9,6 +9,8 @@ import ViewAll from "./page/OurNews/viewAll"
 import Pricing from "./page/Pricing/pricing"
 import AboutUs from "./page/AboutUs/aboutUs"
 import ContactUs from "./page/ContactUs/ContactUs"
+import NewsContact from "./page/OurNews/newsContact"
+import Payment from "./page/Payment/payment"
 function App() {
 
   return (
@@ -19,8 +21,10 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/News-and-reviews" element={<OurNews />} />
+        <Route path="/News-and-reviews/:id" element={<NewsContact />} />
         <Route path="/News-and-reviews/viewAll" element={<ViewAll />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/pricing/payment" element={<Payment />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>

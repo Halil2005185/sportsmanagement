@@ -1,4 +1,5 @@
 import { CiCircleCheck } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function PlayersPlan() {
     return <section className="flex flex-col gap-8 w-full md:w-[531px] h-fit bg-[#121212] border-[1px] border-[#D5D7DA] p-2 md:p-[24px] rounded-[30px]">
@@ -10,7 +11,7 @@ function PlayersPlan() {
                 <p className="text-[#535862] md:text-[20px] leading-[100%] font-[Chakra_Petch] not-italic">/month</p>
             </div>
             <div className="cursor-pointer w-[95%] rounded-[8px] py-[18px] px-[24px] bg-[#D2FF00] flex items-center justify-center " >
-                <p className="font-bold leading-[100%] font-['Chakra_Petch'] md:text-[20px] ">Start Now</p>
+                <Link to="/pricing/payment"><p className="font-bold leading-[100%] font-['Chakra_Petch'] md:text-[20px] ">Start Now</p></Link>
             </div>
         </div>
         <div className="flex flex-col gap-10">

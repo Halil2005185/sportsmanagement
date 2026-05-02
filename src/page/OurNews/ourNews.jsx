@@ -3,7 +3,19 @@ import CustomerReviews from "../../components/CustomerReviews/customerReviews"
 import NewCard from "../../components/NewCard/newCard"
 import Studyom from "../../components/Studyom/studyom"
 import SearchSection from "../../components/SearchSection/searchSection"
+import newImage from "/images/newImage.jpg"
 
+const AllNewCard = [
+    { id: 1, image: newImage },
+    { id: 2, image: newImage },
+    { id: 3, image: newImage },
+    { id: 4, image: newImage },
+    { id: 5, image: newImage },
+    { id: 6, image: newImage },
+    { id: 7, image: newImage },
+    { id: 8, image: newImage },
+    { id: 9, image: newImage },
+]
 function OurNews() {
     return <section className="bg-[#121212]  py-4 ">
         <div className="w-[90%] mx-auto flex flex-col gap-4 ">
@@ -12,16 +24,12 @@ function OurNews() {
                 <Link to="/News-and-reviews/viewAll" className="lg:text-[28px] text-[#D2FF00]  font-['Chakra_Petch'] leading-[100%] pt-1">View all</Link>
             </div>
             <SearchSection />
-            <div className="flex gap-4 flex-wrap" >
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
-                <NewCard />
+            <div className="grid-cols-1 grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-[98%] mx-auto " >
+                {AllNewCard.map((NwCard) => (
+
+                    <NewCard id={NwCard.id} />
+                ))}
+
             </div>
             <div className="flex flex-col gap-8 py-10">
                 <h2 className="text-[26px] lg:text-[48px] text-white font-bold leading-[100%] italic font-['Platypi'] " >What our <span className="text-[#D2FF00] " >clients</span> say about us</h2>

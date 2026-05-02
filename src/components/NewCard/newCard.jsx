@@ -1,9 +1,10 @@
 import newImage from "/images/newImage.jpg"
 import avatar from "/images/avatar.jpg"
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-function NewCard() {
-    return <section className="w-[98%] sm:w-[45%] mx-auto lg:w-[31%] flex flex-col gap-8  bg-[#1C1C1C] border-[#535862] rounded-[24px] p-3 border-[1px] h-fit py-4  " >
+function NewCard({ id }) {
+    return <section className="w-[98%]  flex flex-col gap-8  bg-[#1C1C1C] border-[#535862] rounded-[24px] p-3 border-[1px] h-fit py-4  " >
         <img src={newImage} alt="newimg" className="w-[98%] mx-auto rounded-[12px]" />
         <div className="flex flex-col justify-between gap-4 h-full">
             <p className="font-[Chakra_Petch] text-[12px] leading-[100%] text-[#D5D7DA]">25 Oct 2025</p>
@@ -31,7 +32,9 @@ function NewCard() {
                     <p className="text-white">Ahmed Ali</p>
                 </div>
                 <div className="flex items-center gap-4 text-[#D2FF00] font-bold font-['Chakra_Petch'] leading-[100%] ">
-                    <p>Read more</p>
+                    <Link to={`/News-and-reviews/${id}`} >
+                        <p>Read more</p>
+                    </Link>
                     <FiArrowUpRight />
                 </div>
             </div>
