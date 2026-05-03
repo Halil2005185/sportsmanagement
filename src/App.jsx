@@ -11,6 +11,9 @@ import AboutUs from "./page/AboutUs/aboutUs"
 import ContactUs from "./page/ContactUs/ContactUs"
 import NewsContact from "./page/OurNews/newsContact"
 import Payment from "./page/Payment/payment"
+import SuccessfulPayment from "./page/PaymentState/successfulPayment"
+import FailedPayment from "./page/PaymentState/FailedPayment"
+import NotFound from "./page/NotFound/notFound"
 function App() {
 
   return (
@@ -25,8 +28,11 @@ function App() {
         <Route path="/News-and-reviews/viewAll" element={<ViewAll />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/pricing/payment" element={<Payment />} />
+        <Route path="/pricing/payment/successful-payment" element={<SuccessfulPayment />} />
+        <Route path="/pricing/payment/failed-payment" element={<FailedPayment />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

@@ -15,6 +15,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { useLocation } from "react-router-dom"
+import { motion } from "framer-motion"
 
 
 import { useEffect, useRef, useState } from "react"
@@ -62,43 +63,134 @@ function Header() {
         setShowLanguage(false)
     }
 
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.15
+            }
+        }
+    };
+    const item = {
+        hidden: { opacity: 0, y: 30 },
+        show: { opacity: 1, y: 0 }
+    };
+    const menuContainer = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.15,
+            },
+        },
+    };
+    const navContainer = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.08,
+            },
+        },
+    };
+    const Mobileitem = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 },
+    };
+    const LanguageItem = {
+        hidden: { opacity: 0, y: -10 },
+        show: { opacity: 1, y: 0 }
+    };
+    const buttonItem = {
+        hidden: { opacity: 0, y: 20 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.5
+            }
+        }
+    };
+    const LangItem = {
+        hidden: { opacity: 0, y: 20 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.6
+            }
+        }
+    };
+
+
     return <section className=" bg-[#1C1C1C] w-screen h-[83px] flex items-center ">
         {/* Min-width : 1024px */}
-        <header className="hidden lg:flex items-center justify-between w-full xl:w-[85%] h-full mx-auto px-4">
+        <motion.header className="hidden lg:flex items-center justify-between w-full xl:w-[85%] h-full mx-auto px-4">
             <div className="relative bg-[#D2FF00] w-[56px] h-[60px] rounded-[4px] ">
                 <p className="absolute size-4 bg-[#1C1C1C] top-[88%] rotate-[45deg] right-[-8px]"></p>
             </div>
-            <nav className="flex items-center gap-5">
-                {Navber.map((nav) => (<Link key={nav.id} to={nav.path} className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"} font-['Chakra_Petch']`}>{nav.label}</Link>))}
-            </nav>
+            <motion.nav className="flex items-center gap-5"
+                variants={container}
+                initial="hidden"
+                animate="show">
+                {Navber.map((nav) => (
+                    <motion.div key={nav.id} variants={item}>
+                        <Link
+                            to={nav.path}
+                            className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"
+                                } font-['Chakra_Petch']`}
+                        >
+                            {nav.label}
+                        </Link>
+                    </motion.div>
+                ))}            </motion.nav>
             <div className="flex items-center gap-3">
                 <div ref={langMenuRef} className="relative z-50 flex items-center gap-2">
-                    <div onClick={() => setShowLanguage(prev => !prev)} className="flex items-center gap-2">
-                        <div className=" cursor-pointer flex items-center gap-2">
+                    <motion.div
+                        onClick={() => setShowLanguage(prev => !prev)}
+                        className="flex items-center gap-2 cursor-pointer">
+
+                        <div className="flex items-center gap-2">
+
                             {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
                                 <div className="flex items-center gap-2" key={lang.id}>
-                                    <img className="w-[20px]" src={lang.image} alt="use" />
-                                    <p className="text-white font-bold font-['Chakra_Petch'] ">{lang.label}</p>
+                                    <img className="w-[20px]" src={lang.image} alt="" />
+                                    <p className="text-white font-bold font-['Chakra_Petch']">{lang.label}</p>
                                 </div>
                             ))}
+
                         </div>
-                        <FaAngleDown className={`${showLanguage ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer `} />
-                    </div>
-                    <div className={`${showLanguage ? "block" : "hidden"} z-50 absolute top-[55px] left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]`}>
-                        {Languages.map((language) => (
-                            <div key={language.id} onClick={() => Handeler(language.id)} className="cursor-pointer flex items-center gap-2 px-4 py-2 ">
-                                <img className="w-[21px]" src={language.image} alt="use" />
-                                <p className="text-white font-bold font-['Chakra_Petch'] ">{language.label}</p>
-                            </div>
-                        ))}
-                    </div>
+
+                        <FaAngleDown
+                            className={`${showLanguage ? "rotate-180" : ""} transition-all duration-150 text-[#D2FF00]`} />
+                    </motion.div>
+                    {showLanguage && (
+                        <motion.div
+                            variants={container}
+                            initial="hidden"
+                            animate="show"
+                            className="absolute top-[55px] left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]"
+                        >
+                            {Languages.map((language) => (
+                                <motion.div
+                                    key={language.id}
+                                    variants={LanguageItem}
+                                    onClick={() => Handeler(language.id)}
+                                    className="cursor-pointer flex items-center gap-2 px-4 py-2"
+                                >
+                                    <img className="w-[21px]" src={language.image} alt="" />
+                                    <p className="text-white font-bold font-['Chakra_Petch']">
+                                        {language.label}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
+
                 </div>
                 <div className="w-[133px] h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
                     <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">Contact Us</p>
                 </div>
             </div>
-
-        </header>
+        </motion.header>
 
         <header className="relative flex lg:hidden items-center justify-between w-full xl:w-[85%] h-full mx-auto px-4 border-b-[1px] border-[#D5D7DA]">
             <div className="flex items-center justify-between w-full ">
@@ -107,33 +199,58 @@ function Header() {
                     openMenu ? <IoClose onClick={() => setOpenMenu(false)} className="text-[#D2FF00] sm:text-5xl cursor-pointer text-[30px]" /> : <IoMenu onClick={() => setOpenMenu(true)} className="text-[#D2FF00] sm:text-5xl text-[30px] cursor-pointer" />
                 }
             </div>
-            <div className="absolute z-50 left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150" style={{
-                clipPath: openMenu
-                    ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-                    : "polygon(0 0, 100% 0, 100% 0, 0 0)"
-            }}>
-                <div className="flex flex-col gap-9 py-2 ">
-                    {Navber.map((nav) => (<Link to={nav.path} key={nav.id} onClick={() => setOpenMenu(false)} className="font-bold text-white font-['Chakra_Petch'] " >{nav.label}</Link>))}
-                </div>
-                <div onClick={() => setShowLanguage(prev => !prev)} className="flex items-center gap-2 mt-4 justify-between">
-                    <p className="font-bold text-white font-['Chakra_Petch']  ">Language</p>
-
+            <motion.div
+                variants={menuContainer}
+                initial="hidden"
+                animate={openMenu ? "show" : "hidden"}
+                className={`${openMenu ? "h-[525px]" : "h-0 "} absolute z-50 left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150`}>
+                {/* nav group */}
+                <motion.div
+                    variants={navContainer}
+                    className="flex flex-col gap-9 py-2"
+                >
+                    {Navber.map((nav) => (
+                        <motion.div key={nav.id} variants={Mobileitem}>
+                            <Link
+                                to={nav.path}
+                                onClick={() => setOpenMenu(false)}
+                                className="font-bold text-white font-['Chakra_Petch']"
+                            >
+                                {nav.label}
+                            </Link>
+                        </motion.div>
+                    ))}
+                </motion.div>
+                {/* language row */}
+                <motion.div
+                    variants={buttonItem}
+                    onClick={() => setShowLanguage(prev => !prev)}
+                    className=" flex items-center gap-2 mt-4 justify-between">
+                    <p className="font-bold text-white font-['Chakra_Petch']">Language</p>
                     <div className="flex items-center gap-2">
-                        <div className=" cursor-pointer flex items-center gap-2">
-                            {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
-                                <div className="flex items-center gap-2" key={lang.id}>
-                                    <img className="w-[20px]" src={lang.image} alt="use" />
-                                    <p className="text-white font-bold font-['Chakra_Petch'] ">{lang.label}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <FaAngleDown className={`${showLanguage ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer `} />
+                        {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
+                            <div className="flex items-center gap-2" key={lang.id}>
+                                <img className="w-[20px]" src={lang.image} alt="use" />
+                                <p className="text-white font-bold font-['Chakra_Petch']">
+                                    {lang.label}
+                                </p>
+                            </div>
+                        ))}
+                        <FaAngleDown
+                            className={`${showLanguage ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer`}
+                        />
                     </div>
-                </div>
-                <div className="w-full text-center mt-4 h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
-                    <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">Contact Us</p>
-                </div>
-            </div>
+                </motion.div>
+                {/* button */}
+                <motion.div
+                    variants={LangItem}
+                    className="w-full text-center mt-4 h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29]"
+                >
+                    <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">
+                        Contact Us
+                    </p>
+                </motion.div>
+            </motion.div>
 
         </header>
     </section >

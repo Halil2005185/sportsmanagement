@@ -2,7 +2,7 @@ import Football from "/images/football.jpg";
 
 function FootballCart({ text }) {
     return (
-        <section className="relative shrink-0 w-[300px] h-[400px]  lg:w-full lg:h-[650px]  lg:overflow-visible">
+        <section className="z-40 relative shrink-0 w-[300px] h-[400px]  lg:w-full lg:h-[650px]  lg:overflow-visible">
             <div className="pl-2 absolute inset-x-0 rounded-[26px] bg-[#D2FF00] lg:w-full lg:h-full">
                 <img
                     className="rounded-[26px] h-full lg:w-full lg:object-cover"
