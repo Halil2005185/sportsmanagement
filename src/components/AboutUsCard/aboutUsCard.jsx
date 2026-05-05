@@ -6,7 +6,7 @@ import { useState } from "react";
 import lights from "/images/lights.png"
 
 function AboutUsCard({ number }) {
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(number === "1");
     return <section className="flex w-full sm:w-fit">
         <div className="hidden lg:flex" >
             <div onClick={() => setShow(prev => !prev)} className={`${show ? "rounded-l-[20px] bg-[#D2FF00] " : "rounded-[20px] bg-[#1C1C1C]"} transition-all duration-150  flex flex-col items-center justify-between h-[530px]  w-[82px] py-[26px]  cursor-pointer `}>
@@ -38,7 +38,7 @@ function AboutUsCard({ number }) {
                 {show ?
                     <FiMinus className=" text-[35px]" /> : <GoPlus className="text-[35px] text-white font-bold" />}
             </div>
-            <div className={`${show ? " h-[750px] sm:h-[700px]  pt-4" : "h-[0]"} w-full px-6 overflow-hidden transition-all duration-150 bg-[#1C1C1C] h-[530px] flex flex-col gap-4 rounded-t-[20px]`} >
+            <div className={`${show ? " h-[750px] sm:h-[700px]  pt-4" : "h-0" } w-full px-6 overflow-hidden transition-all duration-150 bg-[#1C1C1C] flex flex-col gap-4 rounded-t-[20px]`} >
                 <p className="font-bold italic text-[26px] font-['Platypi'] text-[#D2FF00] ">Management & Strategy Team</p>
                 <div className=" relative flex flex-col gap-4 items-center">
                     <div>

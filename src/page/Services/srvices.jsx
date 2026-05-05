@@ -17,15 +17,6 @@ import map from "/images/map.png";
 import dashbord from "/images/dashbord.png";
 import { motion, AnimatePresence } from "framer-motion";
 
-const container = {
-    hidden: {},
-    show: {
-        transition: {
-            staggerChildren: 0.55,
-        },
-    },
-};
-
 const item = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0 },
@@ -58,19 +49,19 @@ function Services() {
                     ))}
                 </div>
                 <AnimatePresence mode="wait">
-
                     <motion.div
                         key={serviceNum}
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="flex flex-col lg:flex-row justify-between items-center gap-4">
-
+                        className="flex flex-col lg:flex-row justify-between items-center gap-4"
+                    >
                         <motion.div variants={item} className="lg:w-[50%]">
                             <motion.h2
                                 variants={item}
-                                className="text-[#D2FF00] [text-shadow:0_0_30px_rgba(195,255,26,.7)] w-fit font-['Platypi'] font-bold italic leading-[100%] text-[24px] md:text-[48px] ">
+                                className="text-[#D2FF00] [text-shadow:0_0_30px_rgba(195,255,26,.7)] w-fit font-['Platypi'] font-bold italic leading-[100%] text-[24px] md:text-[48px] "
+                            >
                                 {AllServices[serviceNum - 1].label}
                             </motion.h2>
                             <motion.div variants={item} className="flex flex-col gap-1 ">
@@ -78,39 +69,44 @@ function Services() {
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
                                     <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
                                         To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional support.
+                                        you need the right strategy and complete professional
+                                        support.
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 md:w-[750px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
                                     <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
                                         To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional support.
+                                        you need the right strategy and complete professional
+                                        support.
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 md:w-[750px] py-3 px-1 ">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
                                     <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
                                         To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional support.
+                                        you need the right strategy and complete professional
+                                        support.
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 md:w-[750px] py-3 px-1 ">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
                                     <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
                                         To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional support.
+                                        you need the right strategy and complete professional
+                                        support.
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 md:w-[750px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
                                     <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
                                         To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional support.
+                                        you need the right strategy and complete professional
+                                        support.
                                     </p>
                                 </div>
                             </motion.div>
-                            <div className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-[286px] flex items-center justify-center ">
+                            <div className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-full md:w-[286px] flex items-center justify-center ">
                                 <p className="font-['Chakra_Petch'] font-bold leading-[100%] text-[20px] ">
                                     Buy Now
                                 </p>
@@ -130,8 +126,8 @@ function Services() {
                     <FAQ title="03 Professional Partnership" />
                 </div>
 
-                <div className="flex flex-col justify-center gap-4 mt-20">
-                    <h2 className="text-white font-bold italic text-[48px] font-['Platypi']">
+                <div className="flex flex-col justify-center gap-4 md:mt-20">
+                    <h2 className="text-white font-bold italic text-[30px] md:text-[48px] font-['Platypi']">
                         What you <span className="text-[#D2FF00]">Gain </span> from this
                         service
                     </h2>
@@ -147,26 +143,59 @@ function Services() {
 
                 <Studyom />
 
-                <div className="flex flex-col gap-4 mt-20">
+                <div className="flex flex-col gap-4 md:mt-20">
                     <h2 className="text-white italic font-bold text-[48px] font-['Platypi'] leading-[100%]">
                         Why <span className="text-[#D2FF00]">OA Sports </span>
                     </h2>
                     <div className="flex items-center gap-4 flex-wrap justify-around ">
-                        <WhyOaSports image={blackman} />
-                        <WhyOaSports image={blueman} />
-                        <WhyOaSports image={grawman} />
-                        <WhyOaSports image={tabletman} />
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full md:w-[40%] lg:w-[49%]"
+                        >
+                            <WhyOaSports image={blackman} />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full md:w-[40%] lg:w-[49%]"
+                        >
+                            <WhyOaSports image={blueman} />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full md:w-[40%] lg:w-[49%]"
+                        >
+                            <WhyOaSports image={grawman} />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full md:w-[40%] lg:w-[49%]"
+                        >
+                            <WhyOaSports image={tabletman} />
+                        </motion.div>
                     </div>
                 </div>
 
-                <div className=" flex flex-col gap-8 mt-20 ">
+                <div className=" flex flex-col gap-4 md:gap-8 mt-8 md:mt-20 ">
                     <motion.h2
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.4 }}
                         transition={{ duration: 0.5 }}
                         values={item}
-                        className="italic font-bold text-[48px] font-['Platypi'] leading-[100%] text-white ">
+                    className="italic font-bold text-[30px] lg:text-[48px] font-['Platypi'] leading-[100%] text-white "
+                    >
                         {" "}
                         <span className="text-[#D2FF00]">Starting </span> the Journey
                     </motion.h2>
@@ -176,7 +205,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3">
+                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3"
+                        >
                             <StartingJourney number="01" image={hack} />
                         </motion.div>
                         <motion.div
@@ -184,7 +214,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3">
+                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3"
+                        >
                             <StartingJourney number="02" image={manandgoogle} />
                         </motion.div>
                         <motion.div
@@ -192,7 +223,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3">
+                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3"
+                        >
                             <StartingJourney number="03" image={flash} />
                         </motion.div>
                         <motion.div
@@ -200,7 +232,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3">
+                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3"
+                        >
                             <StartingJourney number="04" image={map} />
                         </motion.div>
                         <motion.div
@@ -208,7 +241,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3">
+                            className="w-full md:w-[44%] lg:w-[48%] h-[600px] py-3"
+                        >
                             <StartingJourney number="05" image={dashbord} />
                         </motion.div>
                         <motion.div
@@ -216,7 +250,8 @@ function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5 }}
-                            className=" relative w-full md:w-[44%] lg:w-[48%] h-[510px] lg:h-[600px]  rounded-[32px] flex flex-col justify-between gap-4 ">
+                            className=" relative w-full md:w-[44%] lg:w-[48%] h-[350px] sm:h-[375px]  md:h-[510px] lg:h-[600px]  rounded-[32px] flex flex-col justify-between gap-4 "
+                        >
                             <div className="flex flex-col justify-between h-[70%]">
                                 <h2 className="text-[26px] lg:text-[48px] font-bold leading-[100%] font-['Platypi'] text-[#D2FF00] italic ">
                                     OA Sports — A step forward starts with a strong team.
@@ -238,11 +273,8 @@ function Services() {
                         </motion.div>
                     </div>
                 </div>
-
-
-
             </div>
-        </section >
+        </section>
     );
 }
 export default Services;

@@ -1,9 +1,33 @@
 import { CiCircleCheck } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
+
+
+const container = {
+    hidden: {},
+    show: {
+        transition: {
+            delayChildren: 0.1,
+            staggerChildren: 0.25,
+        },
+    },
+};
+const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.9,
+            ease: "easeOut",
+        },
+    },
+};
+
 
 function PlayersPlan() {
-    return <section className="flex flex-col gap-8 w-full md:w-[531px] h-fit bg-[#121212] border-[1px] border-[#D5D7DA] p-2 md:p-[24px] rounded-[30px]">
-        <div className="bg-[#1C1C1C] w-[98%] mx-auto md:w-[483px] h-fit gap-8 md:h-[340px] rounded-[18px] p-[18px] flex flex-col justify-between">
+    return <motion.section variants={item} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.5 }} className="flex flex-col gap-8 w-full md:w-[531px] h-fit bg-[#121212] border-[1px] border-[#D5D7DA] p-2 md:p-[24px] rounded-[30px]">
+        <motion.div variants={item} className="bg-[#1C1C1C] w-[98%] mx-auto md:w-[483px] h-fit gap-8 md:h-[340px] rounded-[18px] p-[18px] flex flex-col justify-between">
             <h4 className="text-white font-bol italic text-[26px] md:text-[32px] leading-[100%] font-['Platypi']  ">Players Plan</h4>
             <p className="text-[#D5D7DA] font-['Chakra_Petch']  md:text-[24px] leading-[100%]">We offer a consulting service that thinks through every detail on your behalf.</p>
             <div className="flex items-end gap-1">
@@ -13,8 +37,8 @@ function PlayersPlan() {
             <div className="cursor-pointer w-[95%] rounded-[8px] py-[18px] px-[24px] bg-[#D2FF00] flex items-center justify-center " >
                 <Link to="/pricing/payment"><p className="font-bold leading-[100%] font-['Chakra_Petch'] md:text-[20px] ">Start Now</p></Link>
             </div>
-        </div>
-        <div className="flex flex-col gap-10">
+        </motion.div>
+        <motion.div variants={item} className="flex flex-col gap-10">
             <div className="flex items-center gap-2 " >
                 <CiCircleCheck className="text-[#D2FF00] [text-shadow:0px_1px_6px_#D2FF008A]" />
                 <p className="text-[#D5D7DA] leading-[100%] md:text-[24px] font-['Chakra_Petch']  ">We offer a consulting service that thinks </p>
@@ -35,7 +59,7 @@ function PlayersPlan() {
                 <CiCircleCheck className="text-[#D2FF00] [text-shadow:0px_1px_6px_#D2FF008A]" />
                 <p className="text-[#D5D7DA] leading-[100%] md:text-[24px] font-['Chakra_Petch']  ">We offer a consulting service that thinks </p>
             </div>
-        </div>
-    </section>
+        </motion.div>
+    </motion.section>
 }
 export default PlayersPlan

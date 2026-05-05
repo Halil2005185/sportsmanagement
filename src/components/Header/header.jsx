@@ -203,11 +203,11 @@ function Header() {
                 variants={menuContainer}
                 initial="hidden"
                 animate={openMenu ? "show" : "hidden"}
-                className={`${openMenu ? "h-[525px]" : "h-0 "} absolute z-50 left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150`}>
+                className={`${openMenu ? "h-[525px]" : "h-  0 hidden"} absolute z-50 left-0 top-full w-screen bg-[#1C1C1C] px-4 pb-4 transition-all duration-150`}>
                 {/* nav group */}
                 <motion.div
                     variants={navContainer}
-                    className="flex flex-col gap-9 py-2"
+                    className="flex flex-col gap-9 py-2 "
                 >
                     {Navber.map((nav) => (
                         <motion.div key={nav.id} variants={Mobileitem}>

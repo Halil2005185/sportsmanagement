@@ -20,7 +20,6 @@ const container = {
         },
     },
 };
-
 const item = {
     hidden: { opacity: 0, y: 50 },
     show: {
@@ -261,8 +260,10 @@ function Home() {
                     </motion.div>
                 </motion.div>
             </motion.div>
+            <div className="lg:w-[90%] mx-auto">
 
-            <Studyom />
+                <Studyom />
+            </div>
 
             {/* Latest News Desktop */}
             <div className="relative hidden lg:block ">
