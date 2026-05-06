@@ -29,8 +29,7 @@ function Services() {
         { id: 3, label: "Performance Optimizatio" },
         { id: 4, label: "360° Multidisciplinary Career Support" },
         { id: 5, label: "Professional Partnership" },
-        { id: 6, label: "What Do These Services Bring You?" },
-        { id: 7, label: "Become the Architect of Your Career" },
+        { id: 6, label: "Become the Architect of Your Career" },
     ];
     const [serviceNum, setServiceNum] = useState(1);
 
@@ -42,7 +41,7 @@ function Services() {
                         <p
                             key={service.id}
                             onClick={() => setServiceNum(service.id)}
-                            className={`${service.id == serviceNum ? "bg-[#D2FF00] text-black rounded-[100px]" : "text-white"}  md:text-[24px] italic font-bold font-['Platypi'] w-fit cursor-pointer  py-3 px-1`}
+                            className={`${service.id == serviceNum ? "bg-[#D2FF00] text-black rounded-[100px]" : "text-gray-300"}  md:text-[24px] italic font-bold font-['Platypi'] w-fit cursor-pointer  py-3 px-1`}
                         >
                             {service.label}
                         </p>
@@ -60,63 +59,68 @@ function Services() {
                         <motion.div variants={item} className="lg:w-[50%]">
                             <motion.h2
                                 variants={item}
-                                className="text-[#D2FF00] [text-shadow:0_0_30px_rgba(195,255,26,.7)] w-fit font-['Platypi'] font-bold italic leading-[100%] text-[24px] md:text-[48px] "
+                                className="text-[#D2FF00] [text-shadow:0_0_30px_rgba(195,255,26,.7)] w-fit font-['Platypi'] font-bold italic leading-[100%] text-[24px] md:text-[40px] "
                             >
                                 {AllServices[serviceNum - 1].label}
                             </motion.h2>
-                            <motion.div variants={item} className="flex flex-col gap-1 ">
-                                <div className="flex items-center gap-4 md:w-[750px] py-3 px-1">
+                            <motion.div variants={item} className="flex flex-col gap-4 py-6 ">
+                                <div className="flex items-center gap-4 border-[1px] border-[#d0ff008e] rounded-[16px]  md:w-[750px] lg:w-[1000px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
-                                    <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
-                                        To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional
-                                        support.
-                                    </p>
+                                    <div className="flex flex-col gap-2  ">
+                                        <p className="text-[#D2FF00] font-medium text-['Chakra_Petch'] md:text-[24px] leading-[100%] ">Strategic Advantage in Every Match</p>
+                                        <p className="text-['Chakra_Petch'] md:text-[24px] leading-tight  text-gray-300 ">
+                                            With detailed opponent analysis and tactical match plans, you read the game before it even starts—at player, coach, referee, club, and federation levels—stepping onto the field one step ahead.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-4 md:w-[750px] py-3 px-1">
+                                <div className="flex items-center gap-4 border-[1px] border-[#d0ff008e] rounded-[16px] md:w-[750px] lg:w-[1000px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
-                                    <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
-                                        To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional
-                                        support.
-                                    </p>
+                                    <div className="flex flex-col gap-2  ">
+                                        <p className="text-[#D2FF00] font-medium text-['Chakra_Petch'] md:text-[24px] leading-[100%] ">Strategic Advantage in Every Match</p>
+                                        <p className="text-['Chakra_Petch'] md:text-[24px] leading-tight text-gray-300 ">
+                                            With video and data-supported performance analysis, GPS statistics, and tactical and physical evaluations, you measure both individual and team performance, tracking your progress with concrete reports.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-4 md:w-[750px] py-3 px-1 ">
+                                <div className="flex items-center gap-4 border-[1px] border-[#d0ff008e] rounded-[16px] md:w-[750px] lg:w-[1000px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
-                                    <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
-                                        To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional
-                                        support.
-                                    </p>
+                                    <div className="flex flex-col gap-2  ">
+                                        <p className="text-[#D2FF00] font-medium text-['Chakra_Petch'] md:text-[24px] leading-[100%] ">Strategic Advantage in Every Match</p>
+                                        <p className="text-['Chakra_Petch'] md:text-[24px] leading-tight text-gray-300 ">
+                                            For clubs, squad planning, transfer strategy, and scouting services match the right player with the right system and budget; achieving sustainable sporting success and financial balance.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-4 md:w-[750px] py-3 px-1 ">
+                                <div className="flex items-center gap-4 border-[1px] border-[#d0ff008e] rounded-[16px] md:w-[750px] lg:w-[1000px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
-                                    <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
-                                        To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional
-                                        support.
-                                    </p>
+                                    <div className="flex flex-col gap-2  ">
+                                        <p className="text-[#D2FF00] font-medium text-['Chakra_Petch'] md:text-[24px] leading-[100%] ">Strategic Advantage in Every Match</p>
+                                        <p className="text-['Chakra_Petch'] md:text-[24px] leading-tight text-gray-300 ">
+                                            Custom-designed referee analysis, training programs, and match management consultancy for referees and federations elevate your league's level of fairness, decision consistency, and brand value.
+
+
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-4 md:w-[750px] py-3 px-1">
+                                <div className="flex items-center gap-4 border-[1px] border-[#d0ff008e] rounded-[16px] md:w-[750px] xl:w-[1000px] py-3 px-1">
                                     <BsStars className="text-[#D2FF00] drop-shadow-[0_6px_23px_#D2FF00] text-[100px]" />
-                                    <p className="text-['Chakra_Petch'] md:text-[24px] leading-[100%] text-white ">
-                                        To stay at the top of football, talent alone is not enough —
-                                        you need the right strategy and complete professional
-                                        support.
-                                    </p>
+                                    <div className="flex flex-col gap-2  ">
+                                        <p className="text-[#D2FF00] font-medium text-['Chakra_Petch'] md:text-[24px] leading-[100%] ">Strategic Advantage in Every Match</p>
+                                        <p className="text-['Chakra_Petch'] md:text-[24px] leading-tight text-gray-300 ">
+                                            With an expert team accessible throughout the season, you access all analyses and reports via a dedicated digital panel; experiencing continuous partnership supported by privacy and data security.
+
+
+                                        </p>
+                                    </div>
                                 </div>
                             </motion.div>
-                            <div className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-full md:w-[286px] flex items-center justify-center ">
+                            <div className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px]  shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-full md:w-[386px] flex items-center justify-center ">
                                 <p className="font-['Chakra_Petch'] font-bold leading-[100%] text-[20px] ">
                                     Buy Now
                                 </p>
                             </div>
                         </motion.div>
-                        <img
-                            src={footballPlayer}
-                            alt="footballPlayer"
-                            className="lg:w-[50%] lg:pl-52 xl:pl-0"
-                        />
+
                     </motion.div>
                 </AnimatePresence>
                 <div>
@@ -194,7 +198,7 @@ function Services() {
                         viewport={{ once: true, amount: 0.4 }}
                         transition={{ duration: 0.5 }}
                         values={item}
-                    className="italic font-bold text-[30px] lg:text-[48px] font-['Platypi'] leading-[100%] text-white "
+                        className="italic font-bold text-[30px] lg:text-[48px] font-['Platypi'] leading-[100%] text-white "
                     >
                         {" "}
                         <span className="text-[#D2FF00]">Starting </span> the Journey

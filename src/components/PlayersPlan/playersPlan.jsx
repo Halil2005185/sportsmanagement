@@ -3,15 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 
 
-const container = {
-    hidden: {},
-    show: {
-        transition: {
-            delayChildren: 0.1,
-            staggerChildren: 0.25,
-        },
-    },
-};
 const item = {
     hidden: { opacity: 0, y: 50 },
     show: {

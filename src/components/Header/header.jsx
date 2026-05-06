@@ -35,19 +35,18 @@ function Header() {
         { id: 7, label: "Contact us", path: "/contact-us" },
     ]
     const Languages = [
-        { id: 1, label: "Turkish", image: turkey },
-        { id: 2, label: "English", image: usa },
-        { id: 3, label: "Arabic", image: saudiArabia },
-        { id: 4, label: "Spanish", image: spanish },
-        { id: 5, label: "France", image: france },
-        { id: 6, label: "Portuguese", image: portuguese },
-        { id: 7, label: "Germany", image: germany },
-        { id: 8, label: "Italian", image: italian },
-        { id: 9, label: "Japanece", image: japan },
-        { id: 10, label: "Korean", image: korean },
-        { id: 11, label: "Chinese", image: chinese },
-    ]
-
+        { id: 1, label: "Turkish", image: turkey, code: "tr" },
+        { id: 2, label: "English", image: usa, code: "en" },
+        { id: 3, label: "Arabic", image: saudiArabia, code: "ar" },
+        { id: 4, label: "Spanish", image: spanish, code: "es" },
+        { id: 5, label: "French", image: france, code: "fr" },
+        { id: 6, label: "Portuguese", image: portuguese, code: "pt" },
+        { id: 7, label: "German", image: germany, code: "de" },
+        { id: 8, label: "Italian", image: italian, code: "it" },
+        { id: 9, label: "Japanese", image: japan, code: "ja" },
+        { id: 10, label: "Korean", image: korean, code: "ko" },
+        { id: 11, label: "Chinese", image: chinese, code: "zh" },
+    ];
     useEffect(() => {
         const handler = (e) => {
             if (langMenuRef.current && !langMenuRef.current.contains(e.target)) {
