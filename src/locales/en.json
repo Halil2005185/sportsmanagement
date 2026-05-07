@@ -336,5 +336,349 @@
       "title": "Track Your Progress",
       "text": "Monitor your growth with reports, analysis, and performance tracking tools."
     }
+  },
+  "partnersPage": {
+    "hero": {
+      "title": {
+        "before": "Our",
+        "highlight": "Partners"
+      },
+
+      "subtitle": "Let’s shape the future together",
+
+      "points": {
+        "point1": "We build trust, draw a shared vision, and move with steady steps toward success.",
+
+        "point2": "Strong partnerships create stronger opportunities for athletes, clubs, and professionals.",
+
+        "point3": "Together, we combine innovation, strategy, and expertise to achieve sustainable growth.",
+
+        "point4": "Our collaborations are built on long-term value, transparency, and professional excellence."
+      },
+
+      "button": "Contact us",
+      "sbuUniversity": {
+        "title": {
+          "before": "Partners with",
+          "highlight": "SBU University!"
+        },
+
+        "description": "OA Sports is a multifaceted sports consulting and management company that brings together multidisciplinary expertise under one roof.",
+
+        "button": "Contact us"
+      }
+    }
+  },
+  "newsPage": {
+    "hero": {
+      "title": {
+        "before": "Our",
+        "highlight": "News"
+      },
+
+      "viewAll": "View all"
+    },
+
+    "reviews": {
+      "title": {
+        "before": "What our",
+        "highlight": "clients",
+        "after": "say about us"
+      }
+    }
+  },
+  "searchSection": {
+    "placeholder": "Search by topic..."
+  },
+  "newsCard": {
+    "readMore": "Read more",
+
+    "cards": {
+      "card1": {
+        "date": "25 Oct 2025",
+        "title": "Night Games",
+        "description": "We manage the planning behind the scenes with expertise, while helping you excel on the field.",
+        "tags": ["Football", "Analysis", "Strategy"],
+        "author": "Ahmed Ali"
+      },
+
+      "card2": {
+        "date": "28 Oct 2025",
+        "title": "Match Strategy",
+        "description": "Professional tactical planning designed to improve team coordination and match performance.",
+        "tags": ["Tactics", "Coaching", "Planning"],
+        "author": "John Carter"
+      },
+
+      "card3": {
+        "date": "02 Nov 2025",
+        "title": "Player Development",
+        "description": "Helping athletes improve technical and mental performance through modern training systems.",
+        "tags": ["Training", "Players", "Development"],
+        "author": "Michael Lee"
+      },
+
+      "card4": {
+        "date": "06 Nov 2025",
+        "title": "Sports Analytics",
+        "description": "Data-driven analysis provides deeper insights into team and player performance.",
+        "tags": ["Data", "Performance", "Analytics"],
+        "author": "Sarah Wilson"
+      },
+
+      "card5": {
+        "date": "10 Nov 2025",
+        "title": "Elite Coaching",
+        "description": "Experienced coaching staff guiding players and teams toward long-term success.",
+        "tags": ["Coach", "Leadership", "Success"],
+        "author": "David Brown"
+      },
+
+      "card6": {
+        "date": "14 Nov 2025",
+        "title": "Referee Support",
+        "description": "Advanced referee consultancy and match management solutions for professional leagues.",
+        "tags": ["Referee", "League", "Support"],
+        "author": "Emma Taylor"
+      },
+
+      "card7": {
+        "date": "18 Nov 2025",
+        "title": "Scouting Network",
+        "description": "Connecting talented athletes with the right clubs and opportunities worldwide.",
+        "tags": ["Scouting", "Talent", "Network"],
+        "author": "Chris Martin"
+      },
+
+      "card8": {
+        "date": "21 Nov 2025",
+        "title": "Medical Performance",
+        "description": "Reducing injury risks and improving recovery through sports science and medical support.",
+        "tags": ["Health", "Recovery", "Science"],
+        "author": "Laura White"
+      },
+
+      "card9": {
+        "date": "25 Nov 2025",
+        "title": "Future of Football",
+        "description": "Exploring innovation and technology shaping the next generation of football.",
+        "tags": ["Innovation", "Technology", "Future"],
+        "author": "Daniel Green"
+      }
+    }
+  },
+  "reviews": {
+    "cards": {
+      "card1": {
+        "name": "Ahmed Ali",
+        "job": "Football Player",
+        "text": "OA Sports helped me improve my tactical understanding and performance on the field."
+      },
+
+      "card2": {
+        "name": "Michael Brown",
+        "job": "Coach",
+        "text": "Professional analysis and strategic support that truly made a difference for our team."
+      }
+    }
+  },
+  "pricingPage": {
+    "hero": {
+      "title": {
+        "highlight": "Pricing",
+        "after": "plans"
+      }
+    },
+
+    "perMonth": "/month",
+    "startNow": "Start Now",
+
+    "cards": {
+      "card1": {
+        "title": "Players Plan",
+
+        "description": "We offer a consulting service that thinks through every detail on your behalf.",
+
+        "price": "990",
+
+        "features": [
+          "Professional match analysis",
+          "Performance tracking support",
+          "Personal tactical reports",
+          "Career development guidance",
+          "Continuous digital support"
+        ]
+      },
+
+      "card2": {
+        "title": "Professional Plan",
+
+        "description": "Advanced sports consulting and management support designed for professionals and clubs.",
+
+        "price": "1490",
+
+        "features": [
+          "Advanced performance analytics",
+          "Full scouting support",
+          "Transfer strategy consulting",
+          "Dedicated sports experts",
+          "24/7 professional assistance"
+        ]
+      }
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": {
+        "highlight": "About",
+        "after": "us"
+      }
+    },
+
+    "ecosystemCards": {
+      "card1": "OA Sports is a multidisciplinary sports consulting and management company that unites diverse expertise under one roof and views sports as a complete ecosystem.",
+
+      "card2": "We combine strategy, analytics, performance, and innovation to support athletes, clubs, and professionals at every level.",
+
+      "card3": "Our mission is to create sustainable success through long-term planning, collaboration, and professional development."
+    },
+
+    "holistic": {
+      "title": {
+        "before": "A",
+        "highlight": "Holistic",
+        "after": "Approach"
+      }
+    },
+
+    "partnership": {
+      "title": {
+        "before": "More Than Consulting — A Strategic",
+        "highlight": "Partnership"
+      },
+
+      "cards": {
+        "card1": "We are not just a consulting company; we are your strategic partner in your sports journey.",
+
+        "card2": "We manage the planning behind the scenes with professionalism and strengthen your performance.",
+
+        "card3": "We help you build a stronger future with strategic support and sustainable growth."
+      }
+    }
+  },
+  "aboutUsCard": {
+    "card1": {
+      "title": "Management & Strategy Team",
+
+      "points": {
+        "point1": "OA Sports is a multidisciplinary sports consulting and management company that unites diverse expertise under one roof and views sports as a complete ecosystem.",
+
+        "point2": "We provide long-term strategic planning, career management, and professional guidance for athletes and organizations."
+      }
+    },
+
+    "card2": {
+      "title": "Technical & Tactical Team",
+
+      "points": {
+        "point1": "We analyze every detail of performance and tactical structure to maximize efficiency on the field.",
+
+        "point2": "Our technical experts support players and teams with advanced football intelligence and strategic preparation."
+      }
+    },
+
+    "card3": {
+      "title": "Scouting & Recruitment Team",
+
+      "points": {
+        "point1": "We identify talent through data-driven scouting systems and professional analysis methods.",
+
+        "point2": "Our recruitment network connects athletes with the right clubs and opportunities worldwide."
+      }
+    },
+
+    "card4": {
+      "title": "Medical & Sports Science Team",
+
+      "points": {
+        "point1": "We support athletes with injury prevention, recovery systems, and sports science expertise.",
+
+        "point2": "Our holistic performance approach improves physical preparation and long-term consistency."
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": {
+        "highlight": "Contact",
+        "after": "us"
+      }
+    },
+
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "emailPlaceholder": "Ahmed@email.com",
+      "country": "Country",
+      "selectLanguage": "Select Language",
+      "language": "Language",
+      "role": "Role",
+      "player": "Player",
+      "phoneNumber": "Phone number",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message...",
+      "sendMessage": "Send Message"
+    },
+
+    "officialChannels": {
+      "title": {
+        "before": "Contact us through our",
+        "highlight": "official channels"
+      },
+
+      "cards": {
+        "card1": {
+          "title": "Call us",
+          "value": "+1 (555) 000-0000"
+        },
+
+        "card2": {
+          "title": "WhatsApp",
+          "value": "+1 (555) 000-0000"
+        },
+
+        "card3": {
+          "title": "Telegram",
+          "value": "@OASports"
+        },
+
+        "card4": {
+          "title": "Email us",
+          "value": "contact@oasports.com"
+        }
+      }
+    }
+  },
+  "footer": {
+    "description": "OA Sports is a multifaceted sports consulting and management company bringing together multidisciplinary expertise under one roof.",
+
+    "fastLinks": "Fast Links",
+
+    "contactUs": "Contact Us",
+
+    "rights": "OA Sports © All Rights Reserved ",
+
+    "privacyPolicy": "Privacy Policy",
+
+    "terms": "Terms",
+
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "news": "News and reviews",
+      "article": "Article",
+      "contact": "Contact us"
+    }
   }
 }

@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { object } from "framer-motion/m";
+import { useTranslation } from "react-i18next";
 
 function ContactUs() {
     const [countries, setCountries] = useState([]);
@@ -23,7 +23,6 @@ function ContactUs() {
             .then((res) => res.json())
             .then((data) => setLanguages(data));
     }, []);
-    console.log(languages);
 
     const uniqueLanguages = [
         ...new Set(
@@ -41,7 +40,6 @@ function ContactUs() {
         setShowLanguage(false);
         setSelectdLanguage(e);
     }
-    console.log(languages);
 
     const container = {
         hidden: {},
@@ -63,7 +61,7 @@ function ContactUs() {
             },
         },
     };
-
+    const { t } = useTranslation()
     return (
         <section className="bg-[#121212]">
             <div className="w-[98%] lg:w-[90%] mx-auto py-8">
@@ -84,7 +82,7 @@ function ContactUs() {
                                         htmlFor="firstName"
                                         className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
                                     >
-                                        First Name
+                                        {t("contactPage.form.firstName")}
                                     </label>
                                     <input
                                         type="text"
@@ -97,7 +95,7 @@ function ContactUs() {
                                         htmlFor="lastName"
                                         className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
                                     >
-                                        Last Name
+                                        {t("contactPage.form.lastName")}
                                     </label>
                                     <input
                                         type="text"
@@ -112,19 +110,19 @@ function ContactUs() {
                                     htmlFor="Email"
                                     className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
                                 >
-                                    Email
+                                    {t("contactPage.form.email")}
                                 </label>
                                 <input
                                     type="email"
                                     id="Email"
-                                    placeholder="Ahmed@email.com"
+                                    placeholder={t("contactPage.form.emailPlaceholder")}
                                     className="placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
                                 />
                             </motion.div>
 
                             <motion.div variants={item} className="relative flex flex-col gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic ">
-                                    Country
+                                    {t("contactPage.form.country")}
                                 </label>
                                 {/* @TODO:Adding search part for Countries */}
                                 <div
@@ -163,7 +161,7 @@ function ContactUs() {
 
                             <motion.div variants={item} className="relative flex flex-col gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic">
-                                    Language
+                                    {t("contactPage.form.selectLanguage")}
                                 </label>
 
                                 <div
@@ -197,11 +195,13 @@ function ContactUs() {
 
                             <motion.div variants={item} className="flex flex-col gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic">
-                                    Role
+                                    {t("contactPage.form.role")}
+
                                 </label>
                                 <div className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 ">
                                     <p className="text-[24px] font-['Chakra_Petch'] leading-[100%] ">
-                                        Player
+                                        {t("contactPage.form.player")}
+
                                     </p>
                                     <FaAngleDown className="text-[#D5D7DA] text-[25px] " />
                                 </div>
@@ -209,7 +209,7 @@ function ContactUs() {
 
                             <motion.div variants={item} className="flex flex-col gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic">
-                                    Phone number
+                                    {t("contactPage.form.phoneNumber")}
                                 </label>
                                 <div className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[1px] px-4 ">
                                     <div className="flex items-center gap-2">
@@ -232,19 +232,21 @@ function ContactUs() {
                                     htmlFor="Email"
                                     className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
                                 >
-                                    Message
+                                    {t("contactPage.form.message")}
+
                                 </label>
                                 <textarea
                                     name=""
                                     id=""
-                                    placeholder="Enter your message"
+                                    placeholder={t("contactPage.form.messagePlaceholder")}
+
                                     className="text-[20px] resize-none placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
                                 ></textarea>
                             </motion.div>
 
                             <motion.div variants={item} className="rounded-[8px] cursor-pointer bg-[#D2FF00] py-[18px] px-6 flex items-center justify-center shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040]">
                                 <p className="font-['Geist'] font-bold text-[26px] leading-[100%] ">
-                                    Send Message
+                                    {t("contactPage.form.sendMessage")}
                                 </p>
                             </motion.div>
                         </motion.div>
@@ -262,18 +264,19 @@ function ContactUs() {
                     ></video>
                 </div>
                 <motion.h4 variants={item} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.9 }} className="italic font-bold leading-[100%] py-8 font-['Platypi'] text-white text-[32px] pl-4">
-                    Contact us throw our{" "}
-                    <span className="text-[#D2FF00]"> official channels </span>{" "}
+                    {t("contactPage.officialChannels.title.before")}
+                    {" "}
+                    <span className="text-[#D2FF00]"> {t("contactPage.officialChannels.title.highlight")} </span>{" "}
                 </motion.h4>
                 <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.6 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <motion.div variants={item} className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8">
                         <MdOutlinePhoneInTalk className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
-                                Call us
+                                {t("contactPage.officialChannels.cards.card1.title")}
                             </h5>
                             <p className="font-['Chakra_Petch'] text-[#D2FF00] text-[24px] leading-[100%] ">
-                                +1 (555) 000-0000
+                                {t("contactPage.officialChannels.cards.card1.value")}
                             </p>
                         </div>
                     </motion.div>
@@ -281,10 +284,10 @@ function ContactUs() {
                         <FaWhatsapp className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
-                                Call us
+                                {t("contactPage.officialChannels.cards.card2.title")}
                             </h5>
                             <p className="font-['Chakra_Petch'] text-[#D2FF00] text-[24px] leading-[100%] ">
-                                +1 (555) 000-0000
+                                {t("contactPage.officialChannels.cards.card2.value")}
                             </p>
                         </div>
                     </motion.div>
@@ -293,10 +296,10 @@ function ContactUs() {
                         <FaTelegramPlane className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
-                                Call us
+                                {t("contactPage.officialChannels.cards.card3.title")}
                             </h5>
                             <p className="font-['Chakra_Petch'] text-[#D2FF00] text-[24px] leading-[100%] ">
-                                +1 (555) 000-0000
+                                {t("contactPage.officialChannels.cards.card3.value")}
                             </p>
                         </div>
                     </motion.div>
@@ -305,10 +308,11 @@ function ContactUs() {
                         <HiOutlineMailOpen className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
-                                Call us
+                                {t("contactPage.officialChannels.cards.card4.title")}
                             </h5>
                             <p className="font-['Chakra_Petch'] text-[#D2FF00] text-[24px] leading-[100%] ">
-                                +1 (555) 000-0000
+                                {t("contactPage.officialChannels.cards.card4.value")}
+
                             </p>
                         </div>
                     </motion.div>

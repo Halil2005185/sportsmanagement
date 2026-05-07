@@ -268,71 +268,420 @@
     }
   },
   "faqContent": {
-  "box1": "Rakibin oyun planını, zayıf yönlerini ve kilit oyuncularını analiz ediyor; pozisyonunuza özel görsel ve pratik veriler sunuyoruz.",
+    "box1": "Rakibin oyun planını, zayıf yönlerini ve kilit oyuncularını analiz ediyor; pozisyonunuza özel görsel ve pratik veriler sunuyoruz.",
 
-  "box2": "Özelleştirilmiş detaylı analiz raporlarıyla maçınıza rakibinizden bir adım önde hazırlanın.",
+    "box2": "Özelleştirilmiş detaylı analiz raporlarıyla maçınıza rakibinizden bir adım önde hazırlanın.",
 
-  "card1": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+    "card1": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
 
-  "card2": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+    "card2": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
 
-  "card3": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+    "card3": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
 
-  "card4": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi."
-},
-"gainFromCards": {
-  "card1": "Objektif performans ölçümü ve net gelişim takibi.",
-  "card2": "Veri odaklı taktiksel ve teknik gelişim.",
-  "card3": "Uzun vadeli profesyonel kariyer planlaması.",
-  "card4": "Maç sırasında daha güçlü karar verme yeteneği.",
-  "card5": "Uzman analistlerden profesyonel destek.",
-  "card6": "Modern futbol stratejileriyle sürekli gelişim."
-},
-"whyOaSportsCards": {
-  "card1": {
-    "title": "Deneyim",
-    "text": "Gerçek saha tecrübesine sahip lisanslı profesyonellerle çalışırsınız."
+    "card4": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi."
   },
-
-  "card2": {
-    "title": "Strateji",
-    "text": "Her adım modern futbol analizi ve planlamasıyla desteklenir."
+  "gainFromCards": {
+    "card1": "Objektif performans ölçümü ve net gelişim takibi.",
+    "card2": "Veri odaklı taktiksel ve teknik gelişim.",
+    "card3": "Uzun vadeli profesyonel kariyer planlaması.",
+    "card4": "Maç sırasında daha güçlü karar verme yeteneği.",
+    "card5": "Uzman analistlerden profesyonel destek.",
+    "card6": "Modern futbol stratejileriyle sürekli gelişim."
   },
+  "whyOaSportsCards": {
+    "card1": {
+      "title": "Deneyim",
+      "text": "Gerçek saha tecrübesine sahip lisanslı profesyonellerle çalışırsınız."
+    },
 
-  "card3": {
-    "title": "Profesyonel Destek",
-    "text": "Profesyonel yolculuğunuz boyunca sürekli rehberlik sağlıyoruz."
+    "card2": {
+      "title": "Strateji",
+      "text": "Her adım modern futbol analizi ve planlamasıyla desteklenir."
+    },
+
+    "card3": {
+      "title": "Profesyonel Destek",
+      "text": "Profesyonel yolculuğunuz boyunca sürekli rehberlik sağlıyoruz."
+    },
+
+    "card4": {
+      "title": "Gelişim",
+      "text": "Uzman desteğiyle teknik, taktiksel ve zihinsel performansınızı geliştirin."
+    }
   },
+  "startingJourneyCards": {
+    "card1": {
+      "title": "Hizmetinizi Seçin",
+      "text": "Hedeflerinize ve profesyonel ihtiyaçlarınıza uygun hizmeti seçin."
+    },
 
-  "card4": {
-    "title": "Gelişim",
-    "text": "Uzman desteğiyle teknik, taktiksel ve zihinsel performansınızı geliştirin."
+    "card2": {
+      "title": "Analiz ve Değerlendirme",
+      "text": "Mevcut performans seviyenizi analiz eder, güçlü yönlerinizi ve gelişim alanlarınızı belirleriz."
+    },
+
+    "card3": {
+      "title": "Stratejik Planlama",
+      "text": "Uzun vadeli başarınızı desteklemek için kişiselleştirilmiş bir gelişim yol haritası oluşturulur."
+    },
+
+    "card4": {
+      "title": "Profesyonel Destek",
+      "text": "Deneyimli analistler ve spor profesyonellerinden sürekli destek alın."
+    },
+
+    "card5": {
+      "title": "Gelişiminizi Takip Edin",
+      "text": "Raporlar, analizler ve performans takip araçlarıyla gelişiminizi izleyin."
+    }
+  },
+  "partnersPage": {
+    "hero": {
+      "title": {
+        "before": "Ortaklarımız",
+        "highlight": ""
+      },
+
+      "subtitle": "Geleceği birlikte şekillendirelim",
+
+      "points": {
+        "point1": "Güven inşa ediyor, ortak bir vizyon çiziyor ve başarıya emin adımlarla ilerliyoruz.",
+
+        "point2": "Güçlü ortaklıklar; sporcular, kulüpler ve profesyoneller için daha güçlü fırsatlar oluşturur.",
+
+        "point3": "Birlikte inovasyonu, stratejiyi ve uzmanlığı bir araya getirerek sürdürülebilir büyüme sağlıyoruz.",
+
+        "point4": "İş birliklerimiz; uzun vadeli değer, şeffaflık ve profesyonel mükemmeliyet üzerine kuruludur."
+      },
+
+      "button": "Bize Ulaşın",
+      "sbuUniversity": {
+        "title": {
+          "before": "SBU Üniversitesi ile",
+          "highlight": "Ortaklık!"
+        },
+
+        "description": "OA Sports, farklı disiplinlerden uzmanlıkları tek çatı altında bir araya getiren çok yönlü bir spor danışmanlığı ve yönetim şirketidir.",
+
+        "button": "Bize Ulaşın"
+      }
+    }
+  },
+  "newsPage": {
+    "hero": {
+      "title": {
+        "before": "Haberlerimiz",
+        "highlight": ""
+      },
+
+      "viewAll": "Tümünü Gör"
+    },
+
+    "reviews": {
+      "title": {
+        "before": "Müşterilerimizin",
+        "highlight": "bizim",
+        "after": "hakkımızda söyledikleri"
+      }
+    }
+  },
+  "searchSection": {
+    "placeholder": "Konuya göre ara..."
+  },
+  "newsCard": {
+    "readMore": "Devamını Oku",
+
+    "cards": {
+      "card1": {
+        "date": "25 Eki 2025",
+        "title": "Gece Maçları",
+        "description": "Saha dışında planlamayı uzmanlıkla yönetirken, sahada en iyi performansı göstermenize yardımcı oluyoruz.",
+        "tags": ["Futbol", "Analiz", "Strateji"],
+        "author": "Ahmed Ali"
+      },
+
+      "card2": {
+        "date": "28 Eki 2025",
+        "title": "Maç Stratejisi",
+        "description": "Takım koordinasyonunu ve maç performansını geliştirmek için profesyonel taktik planlama.",
+        "tags": ["Taktik", "Koçluk", "Planlama"],
+        "author": "John Carter"
+      },
+
+      "card3": {
+        "date": "02 Kas 2025",
+        "title": "Oyuncu Gelişimi",
+        "description": "Modern antrenman sistemleriyle sporcuların teknik ve zihinsel performansını geliştirmeye yardımcı oluyoruz.",
+        "tags": ["Antrenman", "Oyuncular", "Gelişim"],
+        "author": "Michael Lee"
+      },
+
+      "card4": {
+        "date": "06 Kas 2025",
+        "title": "Spor Analitiği",
+        "description": "Veri odaklı analizler, takım ve oyuncu performansı hakkında daha derin bilgiler sunar.",
+        "tags": ["Veri", "Performans", "Analitik"],
+        "author": "Sarah Wilson"
+      },
+
+      "card5": {
+        "date": "10 Kas 2025",
+        "title": "Elit Koçluk",
+        "description": "Deneyimli antrenör ekibi, oyuncuları ve takımları uzun vadeli başarıya yönlendiriyor.",
+        "tags": ["Koç", "Liderlik", "Başarı"],
+        "author": "David Brown"
+      },
+
+      "card6": {
+        "date": "14 Kas 2025",
+        "title": "Hakem Desteği",
+        "description": "Profesyonel ligler için gelişmiş hakem danışmanlığı ve maç yönetimi çözümleri.",
+        "tags": ["Hakem", "Lig", "Destek"],
+        "author": "Emma Taylor"
+      },
+
+      "card7": {
+        "date": "18 Kas 2025",
+        "title": "Scouting Ağı",
+        "description": "Yetenekli sporcuları dünya çapında doğru kulüpler ve fırsatlarla buluşturuyoruz.",
+        "tags": ["Scouting", "Yetenek", "Ağ"],
+        "author": "Chris Martin"
+      },
+
+      "card8": {
+        "date": "21 Kas 2025",
+        "title": "Medikal Performans",
+        "description": "Spor bilimi ve medikal destek ile sakatlık riskini azaltıyor ve iyileşmeyi hızlandırıyoruz.",
+        "tags": ["Sağlık", "İyileşme", "Bilim"],
+        "author": "Laura White"
+      },
+
+      "card9": {
+        "date": "25 Kas 2025",
+        "title": "Futbolun Geleceği",
+        "description": "Yeni nesil futbolu şekillendiren inovasyon ve teknolojiyi keşfediyoruz.",
+        "tags": ["İnovasyon", "Teknoloji", "Gelecek"],
+        "author": "Daniel Green"
+      }
+    }
+  },
+  "reviews": {
+    "cards": {
+      "card1": {
+        "name": "Ahmed Ali",
+        "job": "Futbolcu",
+        "text": "OA Sports, taktik anlayışımı ve sahadaki performansımı geliştirmeme yardımcı oldu."
+      },
+
+      "card2": {
+        "name": "Michael Brown",
+        "job": "Antrenör",
+        "text": "Takımımız için gerçekten fark yaratan profesyonel analiz ve stratejik destek sundular."
+      },
+
+      "card3": {
+        "name": "Sarah Wilson",
+        "job": "Spor Analisti",
+        "text": "Sezon boyunca mükemmel iş birliği ve detaylı veri odaklı analizler sağladılar."
+      }
+    }
+  },
+  "pricingPage": {
+    "hero": {
+      "title": {
+        "highlight": "Fiyat",
+        "after": "planları"
+      }
+    },
+
+    "perMonth": "/ay",
+    "startNow": "Hemen Başla",
+
+    "cards": {
+      "card1": {
+        "title": "Oyuncu Planı",
+
+        "description": "Sizin yerinize her detayı düşünen profesyonel danışmanlık hizmeti sunuyoruz.",
+
+        "price": "990",
+
+        "features": [
+          "Profesyonel maç analizi",
+          "Performans takip desteği",
+          "Kişisel taktik raporları",
+          "Kariyer gelişim rehberliği",
+          "Sürekli dijital destek"
+        ]
+      },
+
+      "card2": {
+        "title": "Profesyonel Plan",
+
+        "description": "Profesyoneller ve kulüpler için geliştirilmiş ileri düzey spor danışmanlığı ve yönetim desteği.",
+
+        "price": "1490",
+
+        "features": [
+          "Gelişmiş performans analitiği",
+          "Tam scouting desteği",
+          "Transfer stratejisi danışmanlığı",
+          "Özel spor uzmanları",
+          "7/24 profesyonel destek"
+        ]
+      }
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": {
+        "highlight": "Hakkımızda",
+        "after": ""
+      }
+    },
+
+    "ecosystemCards": {
+      "card1": "OA Sports, farklı uzmanlık alanlarını tek çatı altında birleştiren ve sporu bütünsel bir ekosistem olarak gören çok disiplinli bir spor danışmanlığı ve yönetim şirketidir.",
+
+      "card2": "Strateji, analiz, performans ve inovasyonu bir araya getirerek sporcuları, kulüpleri ve profesyonelleri her seviyede destekliyoruz.",
+
+      "card3": "Misyonumuz; uzun vadeli planlama, iş birliği ve profesyonel gelişim ile sürdürülebilir başarı oluşturmaktır."
+    },
+
+    "holistic": {
+      "title": {
+        "before": "Bütünsel",
+        "highlight": "Bir",
+        "after": "Yaklaşım"
+      }
+    },
+
+    "partnership": {
+      "title": {
+        "before": "Danışmanlıktan Daha Fazlası — Stratejik",
+        "highlight": "Ortaklık"
+      },
+
+      "cards": {
+        "card1": "Biz sadece bir danışmanlık şirketi değiliz; spor yolculuğunuzdaki stratejik ortağınızız.",
+
+        "card2": "Saha arkasındaki planlamayı profesyonellikle yönetiyor ve performansınızı güçlendiriyoruz.",
+
+        "card3": "Stratejik destek ve sürdürülebilir gelişim ile daha güçlü bir gelecek kurmanıza yardımcı oluyoruz."
+      }
+    }
+  },
+  "aboutUsCard": {
+    "card1": {
+      "title": "Yönetim & Strateji Ekibi",
+
+      "points": {
+        "point1": "OA Sports, farklı uzmanlık alanlarını tek çatı altında birleştiren ve sporu bütünsel bir ekosistem olarak gören çok disiplinli bir spor danışmanlığı ve yönetim şirketidir.",
+
+        "point2": "Sporcular ve kurumlar için uzun vadeli stratejik planlama, kariyer yönetimi ve profesyonel rehberlik sunuyoruz."
+      }
+    },
+
+    "card2": {
+      "title": "Teknik & Taktik Ekibi",
+
+      "points": {
+        "point1": "Sahadaki verimliliği en üst seviyeye çıkarmak için performans ve taktik yapının her detayını analiz ediyoruz.",
+
+        "point2": "Teknik uzmanlarımız; oyunculara ve takımlara gelişmiş futbol zekâsı ve stratejik hazırlık desteği sağlar."
+      }
+    },
+
+    "card3": {
+      "title": "Scouting & Transfer Ekibi",
+
+      "points": {
+        "point1": "Veri odaklı scouting sistemleri ve profesyonel analiz yöntemleri ile yetenekleri keşfediyoruz.",
+
+        "point2": "Transfer ağımız, sporcuları dünya çapında doğru kulüpler ve fırsatlarla buluşturur."
+      }
+    },
+
+    "card4": {
+      "title": "Medikal & Spor Bilimi Ekibi",
+
+      "points": {
+        "point1": "Sporcuları sakatlık önleme, iyileşme sistemleri ve spor bilimi uzmanlığı ile destekliyoruz.",
+
+        "point2": "Bütünsel performans yaklaşımımız fiziksel hazırlığı ve uzun vadeli istikrarı geliştirir."
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": {
+        "highlight": "İletişim",
+        "after": "kurun"
+      }
+    },
+
+    "form": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "email": "E-posta",
+      "emailPlaceholder": "Ahmed@email.com",
+      "country": "Ülke",
+      "selectLanguage": "Dil Seçin",
+      "language": "Dil",
+      "role": "Rol",
+      "player": "Oyuncu",
+      "phoneNumber": "Telefon numarası",
+      "message": "Mesaj",
+      "messagePlaceholder": "Mesajınızı girin",
+      "sendMessage": "Mesaj Gönder"
+    },
+
+    "officialChannels": {
+      "title": {
+        "before": "Bizimle",
+        "highlight": "resmi kanallarımız"
+      },
+      "cards": {
+        "card1": {
+          "title": "Bizi Arayın",
+          "value": "+1 (555) 000-0000"
+        },
+
+        "card2": {
+          "title": "WhatsApp",
+          "value": "+1 (555) 000-0000"
+        },
+
+        "card3": {
+          "title": "Telegram",
+          "value": "@OASports"
+        },
+
+        "card4": {
+          "title": "E-posta",
+          "value": "contact@oasports.com"
+        }
+      }
+    }
+  },
+  "footer": {
+    "description": "OA Sports, farklı disiplinlerden uzmanlıkları tek çatı altında bir araya getiren çok yönlü bir spor danışmanlığı ve yönetim şirketidir.",
+
+    "fastLinks": "Hızlı Linkler",
+
+    "contactUs": "Bize Ulaşın",
+
+    "rights": "OA Sports © Tüm Hakları Saklıdır",
+
+    "privacyPolicy": "Gizlilik Politikası",
+
+    "terms": "Şartlar",
+
+    "navbar": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "news": "Haberler ve İncelemeler",
+      "article": "Makale",
+      "contact": "Bize Ulaşın"
+    }
   }
-},
-"startingJourneyCards": {
-  "card1": {
-    "title": "Hizmetinizi Seçin",
-    "text": "Hedeflerinize ve profesyonel ihtiyaçlarınıza uygun hizmeti seçin."
-  },
-
-  "card2": {
-    "title": "Analiz ve Değerlendirme",
-    "text": "Mevcut performans seviyenizi analiz eder, güçlü yönlerinizi ve gelişim alanlarınızı belirleriz."
-  },
-
-  "card3": {
-    "title": "Stratejik Planlama",
-    "text": "Uzun vadeli başarınızı desteklemek için kişiselleştirilmiş bir gelişim yol haritası oluşturulur."
-  },
-
-  "card4": {
-    "title": "Profesyonel Destek",
-    "text": "Deneyimli analistler ve spor profesyonellerinden sürekli destek alın."
-  },
-
-  "card5": {
-    "title": "Gelişiminizi Takip Edin",
-    "text": "Raporlar, analizler ve performans takip araçlarıyla gelişiminizi izleyin."
-  }
-}
 }

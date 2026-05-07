@@ -188,9 +188,9 @@ function Header() {
                     )}
 
                 </div>
-                <div className="w-[133px] h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
-                    <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">Contact Us</p>
-                </div>
+                <Link to="/contact-us" className="w-[133px] cursor-pointer h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
+                    <p className=" font-bold leading-[100%] font-['Chakra_Petch']">Contact Us</p>
+                </Link>
             </div>
         </motion.header>
 

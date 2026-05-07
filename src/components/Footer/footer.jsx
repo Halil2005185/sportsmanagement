@@ -11,15 +11,16 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 
 function Footer() {
     const Navber = [
-        { id: 1, label: "Home", path: "/" },
-        { id: 2, label: "Services", path: "/services" },
-        { id: 4, label: "News and reviews", path: "/News-and-reviews" },
-        { id: 6, label: "Article", path: "/article" },
-        { id: 7, label: "Contact us", path: "/contact-us" },
+        { id: 1, label: "footer.navbar.home", path: "/" },
+        { id: 2, label: "footer.navbar.services", path: "/services" },
+        { id: 4, label: "footer.navbar.news", path: "/News-and-reviews" },
+        { id: 6, label: "footer.navbar.article", path: "/article" },
+        { id: 7, label: "footer.navbar.contact", path: "/contact-us" },
     ]
     const Contacts = [
         { id: 1, icon: <FaWhatsapp />, number: "055 991 3254" },
@@ -38,40 +39,40 @@ function Footer() {
         { id: 4, icon: <FaSnapchatGhost /> },
         { id: 4, icon: <FaXTwitter /> },
     ]
-
+    const data = new Date()
+    const { t } = useTranslation();
 
     return <section className="bg-[#1C1C1C] w-screen z-50">
         <footer className=" hidden lg:flex flex-col gap-4 px-[96px] py-[64px] " >
             <div className="flex justify-around items-center gap-2 " >
                 <div className="w-[20%] flex flex-col gap-3" >
                     <img className="w-[105px]" src={Logo} alt="logo" />
-                    <p className="font-['Chakra_Petch'] leading-[100%] text-[20px] text-white" >OA Sports is a multifaceted sports consulting and management company
-                        together multidisciplinary expertise under one roof.</p>
+                    <p className="font-['Chakra_Petch'] leading-[100%] text-[20px] text-white" >{t("footer.description")}</p>
                 </div>
                 <div className="flex justify-between w-[50%] items-center">
                     <div className="flex flex-col gap-3">
-                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Fast Links</p>
+                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.fastLinks")}</p>
                         <div className="flex flex-col gap-2" >
                             {Navber.map((nav) => (
-                                <Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch'] text-[20px] leading-[100%] " >{nav.label}</Link>
+                                <Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch'] text-[20px] leading-[100%] " >{t(nav.label)}</Link>
                             ))}
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 mb-3">
-                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.contactUs")}</p>
                         <div className="flex flex-col gap-3" >
                             {Contacts.map((contact) => (
                                 <div key={contact.id} className="flex gap-2 items-centers">
                                     <p className="text-white text-[20px] ">{contact.icon}</p>
-                                    <p className="text-white text-[20px] font-['Chakra_Petch'] leading-[100%]  ">{contact.number}</p>
+                                    <p className="text-white text-[20px] font-['Chakra_Petch'] leading-[100%] ">{contact.number}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 self-start mt-1 ">
-                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                        <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.contactUs")}</p>
                         <div className="flex gap-2 w-[120px] flex-wrap ">
-                            {Icons.map((icon , index) => (
+                            {Icons.map((icon, index) => (
                                 <p key={index} className="text-white text-[21px] " >{icon.icon}</p>
                             ))}
                         </div>
@@ -79,30 +80,29 @@ function Footer() {
                 </div>
             </div>
             <div className="w-[85%] border-[#D2FF00] border-t-[1px] py-4     px-1 mx-auto flex items-center justify-between">
-                <p className="text-white font-['Chakra_Petch'] text-[20px] leading-[100%] " >AO Sports OAll Rights Reserved 2025</p>
+                <p className="text-white font-['Chakra_Petch'] text-[20px] leading-[100%] " >{t("footer.rights") + data.getFullYear()}</p>
                 <div className="text-white flex items-center gap-2 font-['Chakra_Petch'] text-[20px] leading-[100%] ">
-                    <p>Privacy Policy</p>
-                    <p>Terms</p>
+                    <p>{t("footer.privacyPolicy")}</p>
+                    <p>{t("footer.terms")}</p>
                 </div>
             </div>
         </footer>
         <footer className="lg:hidden flex flex-col gap-8 px-4 sm:px-[96px]  py-[64px] " >
             <div className="flex flex-col gap-3" >
                 <img className="w-[105px]" src={Logo} alt="logo" />
-                <p className="font-['Chakra_Petch'] leading-[100%] text-[20px] text-white" >OA Sports is a multifaceted sports consulting and management company
-                    together multidisciplinary expertise under one roof.</p>
+                <p className="font-['Chakra_Petch'] leading-[100%] text-[20px] text-white" >{t("footer.description")}</p>
             </div>
             <div className="flex items-center justify-between ">
                 <div className="flex flex-col gap-3">
-                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Fast Links</p>
+                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.fastLinks")}</p>
                     <div className="flex flex-col gap-2" >
                         {Navber.map((nav) => (
-                            <Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch']  leading-[100%] " >{nav.label}</Link>
+                            <Link key={nav.id} to={nav.path} className="text-white font-['Chakra_Petch']  leading-[100%] " >{t(nav.label)}</Link>
                         ))}
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 mb-3">
-                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                    <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.contactUs")}</p>
                     <div className="flex flex-col gap-3" >
                         {Contacts.map((contact) => (
                             <div key={contact.id} className="flex gap-2 items-centers">
@@ -114,18 +114,18 @@ function Footer() {
                 </div>
             </div>
             <div className="flex flex-col gap-4 self-start mt-1 ">
-                <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">Contact Us</p>
+                <p className=" text-[#D2FF00] text-[20px] leading-[100%] font-bold  ">{t("footer.contactUs")}</p>
                 <div className="flex gap-2 flex-wrap ">
-                    {Icons.map((icon , index) => (
+                    {Icons.map((icon, index) => (
                         <p key={index} className="text-white text-[21px] " >{icon.icon}</p>
                     ))}
                 </div>
             </div>
             <div className="w-full border-[#D2FF00] border-t-[1px] py-4  px-1 mx-auto flex items-center justify-between">
-                <p className="text-white font-['Chakra_Petch'] text-[12px] sm:text-[20px] leading-[100%] " >OAll Rights Reserved 2025</p>
+                <p className="text-white font-['Chakra_Petch'] text-[12px] sm:text-[20px] leading-[100%] " >{t("footer.rights") + " " + data.getFullYear()}</p>
                 <div className="text-white flex items-center gap-2 font-['Chakra_Petch'] text-[12px] sm:text-[20px] leading-[100%] ">
-                    <p>Privacy Policy</p>
-                    <p>Terms</p>
+                    <p>{t("footer.privacyPolicy")}</p>
+                    <p>{t("footer.terms")}</p>
                 </div>
             </div>
         </footer>

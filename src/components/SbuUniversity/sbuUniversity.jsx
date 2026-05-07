@@ -9,11 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-function SbuUniversity() {
-
+function SbuUniversity({ title, description, button }) {
     const images = [mans, mans, mans, mans, mans];
-
-    const isMobile = window.innerWidth < 768;
 
     return (
         <section className="bg-[#1C1C1C] w-full h-fit rounded-[20px] lg:rounded-[40px] mt-10 py-6 lg:py-12 px-4 sm:px-6 lg:px-8 flex flex-col gap-6 lg:gap-8 overflow-hidden">
@@ -22,14 +19,14 @@ function SbuUniversity() {
             <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between w-full xl:w-[90%] mx-auto gap-6 xl:gap-0">
                 <div className="flex flex-col gap-4 lg:gap-6 w-full xl:w-[60%]">
                     <h4 className="italic font-bold leading-tight text-white text-[22px] sm:text-[26px] lg:text-[32px] font-['Platypi']">
-                        Partners with <span className="text-[#D2FF00]">SBU university !</span>
+                        {title.before} <span className="text-[#D2FF00]">{title.highlight}</span>
                     </h4>
                     <p className="text-[#FFFFFF] leading-relaxed text-[14px] sm:text-[16px] lg:text-[20px] xl:text-[24px] font-['Chakra_Petch']">
-                        OA Sports is a multifaceted sports consulting and management company that brings together multidisciplinary expertise under one roof.
+                        {description}
                     </p>
                     <div className="bg-[#D2FF00] w-full sm:w-[220px] lg:w-[284px] flex justify-center items-center py-3 lg:py-[18px] px-5 lg:px-[24px] rounded-[8px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] cursor-pointer hover:brightness-110 transition-all duration-200">
                         <p className="font-bold font-['Chakra_Petch'] text-[16px] lg:text-[20px] leading-[100%]">
-                            Contact us
+                            {button}
                         </p>
                     </div>
                 </div>

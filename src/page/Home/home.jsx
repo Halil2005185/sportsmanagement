@@ -132,7 +132,7 @@ function Home() {
                 </motion.h4>
 
                 <motion.div
-                    variants={container}
+                    variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.9 }}
                     className="flex lg:grid lg:grid-cols-3 overflow-x-auto lg:overflow-visible gap-6 w-full"
                 >
                     <motion.div variants={item}>
