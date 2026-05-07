@@ -1,0 +1,194 @@
+{
+  "header": {
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "partners": "Partners",
+      "news": "News and reviews",
+      "pricing": "Pricing",
+      "about": "About us",
+      "contact": "Contact us"
+    }
+  },
+
+  "homePage": {
+    "hero": {
+      "title": "The power that shapes the game.",
+      "subtitle": "Every move matters. Every second counts.",
+      "buttons": {
+        "services": "Services",
+        "contact": "Contact us"
+      }
+    },
+
+    "whoWeAre": {
+      "title": {
+        "before": "Who",
+        "highlight": "We",
+        "after": "Are"
+      },
+      "cards": {
+        "card1": "OA Sports is a multidisciplinary sports consulting and management firm that brings together diverse expertise under one roof.",
+
+        "card2": "Our mission is to accompany professionals at all levels of sport, players, coaches, referees, clubs, and federations in building sustainable success through effective, long-term strategies.",
+
+        "card3": "Every service we offer is meticulously designed to add value to your career and help you reach the top."
+      }
+    },
+    "ourNumbers": {
+      "title": {
+        "before": "Our",
+        "highlight": "Numbers",
+        "after": "Talks"
+      },
+
+      "cards": {
+        "card1": {
+          "number": "15+",
+          "title": "Years of Industry Experience",
+          "text": "In-depth experience gained in the global dynamics of football, focusing on strategy, 360° performance analysis, and career management."
+        },
+
+        "card2": {
+          "number": "6+",
+          "title": "Partner",
+          "text": "Core team specializing in performance analysis, sports science, scouting, data analytics, and mental support, providing 360° service."
+        },
+
+        "card3": {
+          "number": "42+",
+          "title": "Global Connection Point",
+          "text": "More than 42 strong and active international relationships established across different continents for elite-level career management, squad planning, and strategic collaborations."
+        }
+      }
+    },
+    "whatOASportsDo": {
+      "title": {
+        "before": "What",
+        "highlight": "OA Sports",
+        "after": "Do"
+      },
+
+      "cards": {
+        "card1": {
+          "title": "For Players",
+          "text": "We provide comprehensive career consulting, performance development, and representation support to help transform your potential into performance—and your performance into a lasting career."
+        },
+
+        "card2": {
+          "title": "For Coaches",
+          "text": "We partner in your career planning and professional growth, delivering technical development and guidance."
+        },
+
+        "card3": {
+          "title": "For Referees",
+          "text": "We offer all the professional support needed for an elite-level career through development-focused advisory services."
+        },
+
+        "card4": {
+          "title": "For Teams and Professionals",
+          "text": "We add vision to ambition-driven clubs with squad planning, scouting, and recruitment services."
+        },
+
+        "card5": {
+          "title": "For Federations",
+          "text": "We support fair and high-quality competition with referee consultancy and training solutions."
+        }
+      }
+    },
+    "whySports": {
+      "title": {
+        "before": "Why",
+        "highlight": "OA Sports",
+        "after": ""
+      },
+
+      "cards": {
+        "card1": {
+          "title": "Interdisciplinary Expert Team",
+          "text": "The strength of OA Sports comes from its interdisciplinary team that approaches sports from every angle. With our expert staff built on four main pillars, we secure your future."
+        },
+
+        "card2": {
+          "title": "Management & Strategy Team",
+          "text": "We shape your long-term career roadmap and define your vision. With strategic guidance in representation, negotiation processes, and contract management, we open the path ahead of you."
+        },
+
+        "card3": {
+          "title": "Technical & Tactical Team",
+          "text": "We provide specialized analyses, on-field development plans, and technical guidance to enhance your performance."
+        },
+
+        "card4": {
+          "title": "Scouting, Analysis & Recruitment Team",
+          "text": "We match talent with the right opportunities using data-driven systems."
+        },
+
+        "card5": {
+          "title": "Medical, Health & Sports Science Team",
+          "text": "We reduce injury risk, improve performance, and provide personalized preparation support."
+        },
+
+        "card6": {
+          "title": "A 360° Perspective",
+          "text": "This holistic approach helps you find a strategic partner dedicated to your career and delivers the most accurate and reliable solutions to your needs."
+        }
+      }
+    },
+    "latestNews": {
+      "title": {
+        "before": "What",
+        "highlight": "OA Sports",
+        "after": "Do"
+      },
+
+      "showAll": "Show All",
+
+      "cards": {
+        "card1": {
+          "title": "Match Analysis",
+          "text": "Detailed reports to help players and teams understand performance, improve decisions, and build better strategies."
+        },
+
+        "card2": {
+          "title": "Career Strategy",
+          "text": "We guide athletes step by step with professional planning, long-term goals, and clear development paths."
+        },
+
+        "card3": {
+          "title": "Performance Support",
+          "text": "Improve your physical, technical, and mental performance with expert support designed for modern football."
+        },
+
+        "card4": {
+          "title": "Club Consulting",
+          "text": "Smart consulting solutions for clubs, academies, and federations to grow stronger and work more professionally."
+        }
+      }
+    },
+    "partnership": {
+  "title": {
+    "before": "Our",
+    "highlight": "Partnership"
+  },
+
+  "section": {
+    "title": {
+      "before": "Official Partnership with",
+      "highlight": "SBU University!"
+    },
+
+    "description1": "OA Sports proudly collaborates with SBU University to create new opportunities for athletes, students, and sports professionals through innovation, education, and strategic development.",
+
+    "description2": "This partnership combines academic excellence with real-world sports expertise to support the next generation of talent and build a stronger future for modern sports.",
+
+    "button": "Explore Partnership"
+  }
+}
+  },
+  "studyom": {
+  "title": "Interested?",
+  "subtitle": "That’s just the start.",
+  "button": "View prices"
+}
+}

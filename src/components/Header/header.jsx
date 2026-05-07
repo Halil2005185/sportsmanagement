@@ -17,23 +17,25 @@ import { IoClose } from "react-icons/io5";
 import { useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 
-
 import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
+import i18n from "../../i18n.js"
 function Header() {
+    const { t } = useTranslation()
     const [showLanguage, setShowLanguage] = useState(false)
     const [handleLanguage, setHandleLanguage] = useState(2)
     const [openMenu, setOpenMenu] = useState(false)
     const langMenuRef = useRef()
     const { pathname } = useLocation()
     const Navber = [
-        { id: 1, label: "Home", path: "/" },
-        { id: 2, label: "Services", path: "/services" },
-        { id: 3, label: "Partners", path: "/partners" },
-        { id: 4, label: "News and reviews", path: "/News-and-reviews" },
-        { id: 5, label: "Pricing", path: "/pricing" },
-        { id: 6, label: "About us", path: "/about-us" },
-        { id: 7, label: "Contact us", path: "/contact-us" },
-    ]
+        { id: 1, label: "header.navbar.home", path: "/" },
+        { id: 2, label: "header.navbar.services", path: "/services" },
+        { id: 3, label: "header.navbar.partners", path: "/partners" },
+        { id: 4, label: "header.navbar.news", path: "/News-and-reviews" },
+        { id: 5, label: "header.navbar.pricing", path: "/pricing" },
+        { id: 6, label: "header.navbar.about", path: "/about-us" },
+        { id: 7, label: "header.navbar.contact", path: "/contact-us" },
+    ];
     const Languages = [
         { id: 1, label: "Turkish", image: turkey, code: "tr" },
         { id: 2, label: "English", image: usa, code: "en" },
@@ -57,9 +59,10 @@ function Header() {
         document.addEventListener("mousedown", handler)
         return () => document.removeEventListener("mousedown", handler)
     }, [])
-    function Handeler(id) {
+    function Handeler(id, code) {
         setHandleLanguage(id)
         setShowLanguage(false)
+        i18n.changeLanguage(code)
     }
 
     const container = {
@@ -137,7 +140,7 @@ function Header() {
                             className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"
                                 } font-['Chakra_Petch']`}
                         >
-                            {nav.label}
+                            {t(nav.label)}
                         </Link>
                     </motion.div>
                 ))}            </motion.nav>
@@ -172,7 +175,7 @@ function Header() {
                                 <motion.div
                                     key={language.id}
                                     variants={LanguageItem}
-                                    onClick={() => Handeler(language.id)}
+                                    onClick={() => Handeler(language.id, language.code)}
                                     className="cursor-pointer flex items-center gap-2 px-4 py-2"
                                 >
                                     <img className="w-[21px]" src={language.image} alt="" />

@@ -1,0 +1,192 @@
+{
+  "header": {
+    "navbar": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "partners": "Ortaklar",
+      "news": "Haberler ve İncelemeler",
+      "pricing": "Fiyatlandırma",
+      "about": "Hakkımızda",
+      "contact": "Bize Ulaşın"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "title": "Oyunu şekillendiren güç.",
+      "subtitle": "Her hareket önemlidir. Her saniye fark yaratır.",
+      "buttons": {
+        "services": "Hizmetler",
+        "contact": "Bize Ulaşın"
+      }
+    },
+    "whoWeAre": {
+      "title": {
+        "before": "Biz",
+        "highlight": "Kimiz",
+        "after": ""
+      },
+      "cards": {
+        "card1": "OA Sports, farklı uzmanlık alanlarını tek çatı altında bir araya getiren çok disiplinli bir spor danışmanlığı ve yönetim firmasıdır.",
+
+        "card2": "Misyonumuz; oyuncular, antrenörler, hakemler, kulüpler ve federasyonlar dahil olmak üzere sporun her seviyesindeki profesyonellere etkili ve uzun vadeli stratejilerle sürdürülebilir başarı yolunda eşlik etmektir.",
+
+        "card3": "Sunduğumuz her hizmet, kariyerinize değer katmak ve zirveye ulaşmanıza yardımcı olmak için özenle tasarlanmıştır."
+      }
+    },
+    "ourNumbers": {
+      "title": {
+        "before": "Rakamlarımız",
+        "highlight": "",
+        "after": "Konuşuyor"
+      },
+
+      "cards": {
+        "card1": {
+          "number": "15+",
+          "title": "Yıllık Sektör Deneyimi",
+          "text": "Futbolun küresel dinamiklerinde kazanılmış derin deneyim; strateji, 360° performans analizi ve kariyer yönetimine odaklanmaktadır."
+        },
+
+        "card2": {
+          "number": "6+",
+          "title": "Partner",
+          "text": "Performans analizi, spor bilimi, scouting, veri analitiği ve mental destek alanlarında uzmanlaşmış çekirdek ekip, 360° hizmet sunmaktadır."
+        },
+
+        "card3": {
+          "number": "42+",
+          "title": "Küresel Bağlantı Noktası",
+          "text": "Elit düzey kariyer yönetimi, kadro planlaması ve stratejik iş birlikleri için farklı kıtalarda kurulmuş 42’den fazla güçlü ve aktif uluslararası ilişki."
+        }
+      }
+    },
+    "whatOASportsDo": {
+      "title": {
+        "before": "OA Sports",
+        "highlight": "Ne",
+        "after": "Yapar"
+      },
+
+      "cards": {
+        "card1": {
+          "title": "Oyuncular İçin",
+          "text": "Potansiyelinizi performansa ve performansınızı uzun vadeli bir kariyere dönüştürmenize yardımcı olmak için kapsamlı kariyer danışmanlığı, performans geliştirme ve temsil desteği sunuyoruz."
+        },
+
+        "card2": {
+          "title": "Antrenörler İçin",
+          "text": "Kariyer planlamanız ve profesyonel gelişiminizde yanınızda olarak teknik gelişim ve rehberlik sağlıyoruz."
+        },
+
+        "card3": {
+          "title": "Hakemler İçin",
+          "text": "Gelişim odaklı danışmanlık hizmetleriyle elit seviyede bir kariyer için gereken tüm profesyonel desteği sunuyoruz."
+        },
+
+        "card4": {
+          "title": "Kulüpler ve Profesyoneller İçin",
+          "text": "Kadro planlaması, scouting ve oyuncu transfer hizmetleriyle hedef odaklı kulüplere vizyon katıyoruz."
+        },
+
+        "card5": {
+          "title": "Federasyonlar İçin",
+          "text": "Hakem danışmanlığı ve eğitim çözümleriyle adil ve yüksek kaliteli rekabeti destekliyoruz."
+        }
+      }
+    },
+    "whySports": {
+      "title": {
+        "before": "Neden",
+        "highlight": "OA Sports",
+        "after": ""
+      },
+
+      "cards": {
+        "card1": {
+          "title": "Disiplinlerarası Uzman Ekip",
+          "text": "OA Sports’un gücü, spora her açıdan yaklaşan disiplinlerarası ekibinden gelir. Dört ana temel üzerine kurulu uzman kadromuzla geleceğinizi güvence altına alıyoruz."
+        },
+
+        "card2": {
+          "title": "Yönetim ve Strateji Ekibi",
+          "text": "Uzun vadeli kariyer yol haritanızı şekillendiriyor ve vizyonunuzu belirliyoruz. Temsil, müzakere süreçleri ve sözleşme yönetimindeki stratejik rehberliğimizle önünüzdeki yolu açıyoruz."
+        },
+
+        "card3": {
+          "title": "Teknik ve Taktik Ekibi",
+          "text": "Performansınızı geliştirmek için özel analizler, saha içi gelişim planları ve teknik rehberlik sunuyoruz."
+        },
+
+        "card4": {
+          "title": "Scouting, Analiz ve Transfer Ekibi",
+          "text": "Veri odaklı sistemler kullanarak yetenekleri doğru fırsatlarla buluşturuyoruz."
+        },
+
+        "card5": {
+          "title": "Medikal, Sağlık ve Spor Bilimleri Ekibi",
+          "text": "Sakatlık riskini azaltıyor, performansı artırıyor ve kişiselleştirilmiş hazırlık desteği sağlıyoruz."
+        },
+
+        "card6": {
+          "title": "360° Bakış Açısı",
+          "text": "Bu bütünsel yaklaşım, kariyerinize adanmış stratejik bir partner bulmanıza yardımcı olur ve ihtiyaçlarınıza en doğru ve güvenilir çözümleri sunar."
+        }
+      }
+    },
+    "latestNews": {
+      "title": {
+        "before": "OA Sports",
+        "highlight": "Ne",
+        "after": "Yapar"
+      },
+
+      "showAll": "Tümünü Göster",
+
+      "cards": {
+        "card1": {
+          "title": "Maç Analizi",
+          "text": "Oyuncuların ve takımların performansı anlamasına, kararlarını geliştirmesine ve daha iyi stratejiler oluşturmasına yardımcı olan detaylı raporlar."
+        },
+
+        "card2": {
+          "title": "Kariyer Stratejisi",
+          "text": "Sporculara profesyonel planlama, uzun vadeli hedefler ve net gelişim yolları ile adım adım rehberlik ediyoruz."
+        },
+
+        "card3": {
+          "title": "Performans Desteği",
+          "text": "Modern futbol için tasarlanmış uzman desteğiyle fiziksel, teknik ve zihinsel performansınızı geliştirin."
+        },
+
+        "card4": {
+          "title": "Kulüp Danışmanlığı",
+          "text": "Kulüplerin, akademilerin ve federasyonların daha güçlü ve profesyonel şekilde gelişmesi için akıllı danışmanlık çözümleri sunuyoruz."
+        }
+      }
+    },
+    "partnership": {
+      "title": {
+        "before": "Ortaklığımız",
+        "highlight": ""
+      },
+
+      "section": {
+        "title": {
+          "before": "SBU Üniversitesi ile",
+          "highlight": "Resmi Ortaklık!"
+        },
+
+        "description1": "OA Sports, inovasyon, eğitim ve stratejik gelişim aracılığıyla sporcular, öğrenciler ve spor profesyonelleri için yeni fırsatlar yaratmak amacıyla SBU Üniversitesi ile gururla iş birliği yapmaktadır.",
+
+        "description2": "Bu ortaklık, yeni nesil yetenekleri desteklemek ve modern sporlar için daha güçlü bir gelecek inşa etmek amacıyla akademik mükemmeliyeti gerçek dünya spor uzmanlığıyla birleştirmektedir.",
+
+        "button": "Ortaklığı Keşfet"
+      }
+    }
+  },
+  "studyom": {
+  "title": "İlgilendiniz mi?",
+  "subtitle": "Bu sadece başlangıç.",
+  "button": "Fiyatları Gör"
+}
+}
