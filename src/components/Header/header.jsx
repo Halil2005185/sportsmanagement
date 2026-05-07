@@ -137,8 +137,8 @@ function Header() {
                     <motion.div key={nav.id} variants={item}>
                         <Link
                             to={nav.path}
-                            className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"
-                                } font-['Chakra_Petch']`}
+                            className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white" 
+                                } font-['Chakra_Petch'] text-[14px] xl:text-[15px] 2xl:text-[16px] `}
                         >
                             {t(nav.label)}
                         </Link>
@@ -189,7 +189,7 @@ function Header() {
 
                 </div>
                 <Link to="/contact-us" className="w-[133px] cursor-pointer h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
-                    <p className=" font-bold leading-[100%] font-['Chakra_Petch']">Contact Us</p>
+                    <p className=" font-bold leading-[100%] font-['Chakra_Petch']">{t("header.navbar.contact")}</p>
                 </Link>
             </div>
         </motion.header>
@@ -218,7 +218,7 @@ function Header() {
                                 onClick={() => setOpenMenu(false)}
                                 className="font-bold text-white font-['Chakra_Petch']"
                             >
-                                {nav.label}
+                                {t(nav.label)}
                             </Link>
                         </motion.div>
                     ))}
@@ -228,7 +228,7 @@ function Header() {
                     variants={buttonItem}
                     onClick={() => setShowLanguage(prev => !prev)}
                     className=" flex items-center gap-2 mt-4 justify-between">
-                    <p className="font-bold text-white font-['Chakra_Petch']">Language</p>
+                    <p className="font-bold text-white font-['Chakra_Petch']">{t("header.navbar.language")}</p>
                     <div className="flex items-center gap-2">
                         {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
                             <div className="flex items-center gap-2" key={lang.id}>
@@ -249,7 +249,7 @@ function Header() {
                     className="w-full text-center mt-4 h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29]"
                 >
                     <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">
-                        Contact Us
+                        {t("header.navbar.contact")}
                     </p>
                 </motion.div>
             </motion.div>

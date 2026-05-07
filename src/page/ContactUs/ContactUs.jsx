@@ -13,8 +13,13 @@ function ContactUs() {
     const [languages, setLanguages] = useState([]);
     const [selectdCountry, setSelectdCountry] = useState(0);
     const [selectdLanguage, setSelectdLanguage] = useState(0);
+    const [selectdRole, setSelectdRole] = useState(0);
     const [showLanguage, setShowLanguage] = useState(false);
+    const [showRole, setShowRole] = useState(false);
     const [showCountry, setShowCountry] = useState(false);
+    const [countrySearch, setCountrySearch] = useState("");
+    const [languageSearch, setLanguageSearch] = useState("");
+
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all?fields=name,capital,currencies")
             .then((res) => res.json())
@@ -26,21 +31,35 @@ function ContactUs() {
 
     const uniqueLanguages = [
         ...new Set(
-            languages.flatMap((country) =>
-                Object.values(country.languages || {})
-            )
-        )
+            languages.flatMap((country) => Object.values(country.languages || {})),
+        ),
     ];
 
     function handleCounty(e) {
         setShowCountry(false);
         setSelectdCountry(e);
+        setCountrySearch("")
+
     }
     function handleLanguage(e) {
         setShowLanguage(false);
         setSelectdLanguage(e);
+        setLanguageSearch("")
     }
-
+    function handleRole(e) {
+        setShowRole(false);
+        setSelectdRole(e)
+    }
+    const AllRole = [
+        { id: 1, label: "Player/Athlete" },
+        { id: 2, label: "Coach" },
+        { id: 3, label: "Analyst" },
+        { id: 4, label: "Manager" },
+        { id: 5, label: "Scout" },
+        { id: 6, label: "Referee" },
+        { id: 7, label: "Agent" },
+        { id: 8, label: "Other" }
+    ]
     const container = {
         hidden: {},
         show: {
@@ -61,7 +80,8 @@ function ContactUs() {
             },
         },
     };
-    const { t } = useTranslation()
+
+    const { t } = useTranslation();
     return (
         <section className="bg-[#121212]">
             <div className="w-[98%] lg:w-[90%] mx-auto py-8">
@@ -71,12 +91,23 @@ function ContactUs() {
                     animate="show"
                     className="italic font-bold leading-[100%] py-8 font-['Platypi'] text-white text-[48px] pl-4"
                 >
-                    <span className="text-[#D2FF00]"> Contact </span>us
+                    <span className="text-[#D2FF00]">
+                        {" "}
+                        {t("contactPage.hero.title.highlight")}{" "}
+                    </span>
+                    {t("contactPage.hero.title.after")}
                 </motion.h2>
                 <div className="w-full flex flex-col items-center lg:flex-row  gap-8 justify-between  bg-[#1C1C1C] rounded-[40px] lg:h-fit py-2 px-4 lg:p-12 ">
                     <form className="w-full">
-                        <motion.div variants={container} initial="hidden" animate="show" className=" flex flex-col gap-6">
-                            <motion.div variants={item} className="flex flex-col lg:flex-row gap-4">
+                        <motion.div
+                            variants={container}
+                            initial="hidden"
+                            animate="show"
+                            className=" flex flex-col gap-6">
+                            <motion.div
+                                variants={item}
+                                className="flex flex-col lg:flex-row gap-4"
+                            >
                                 <div className="flex flex-col gap-2 w-full lg:w-[50%]">
                                     <label
                                         htmlFor="firstName"
@@ -120,20 +151,22 @@ function ContactUs() {
                                 />
                             </motion.div>
 
-                            <motion.div variants={item} className="relative flex flex-col gap-2">
+                            <motion.div
+                                variants={item}
+                                className="relative flex flex-col gap-2"
+                            >
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic ">
                                     {t("contactPage.form.country")}
                                 </label>
-                                {/* @TODO:Adding search part for Countries */}
+
                                 <div
                                     onClick={() => setShowCountry((prev) => !prev)}
-                                    className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
-                                >
+                                    className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 ">
                                     {countries
                                         .filter((country, index) => index === selectdCountry)
-                                        .map((country) => (
+                                        .map((country, index) => (
                                             <p
-                                                key={country.cca3}
+                                                key={index}
                                                 className="text-[24px] font-['Chakra_Petch'] leading-[100%]"
                                             >
                                                 {country.name.common}
@@ -143,67 +176,126 @@ function ContactUs() {
                                         className={`${showCountry ? "rotate-180" : "rotate-0"} transition-all duration-150 text-[#D5D7DA] text-[25px]`}
                                     />
                                 </div>
-                                <div
-                                    className={`${showCountry ? "h-[250px] overflow-y-auto py-[18px] border-[1px]" : "h-0"} z-50 overflow-hidden transition-all duration-150 absolute top-[110%] w-full flex flex-col gap-4 placeholder:text-[#535862] bg-[#2B2B2B] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] px-4 `}
-                                >
-                                    {countries.map((country, inedex) => (
-                                        <p
-                                            key={inedex}
-                                            onClick={() => handleCounty(inedex)}
-                                            className="text-[24px] font-['Chakra_Petch'] leading-[100%] cursor-pointer "
-                                        >
-                                            {country.name.common}
-                                        </p>
-                                    ))}
+                                <div className={`${showCountry ? "h-[250px] overflow-y-auto  border-[1px]" : "h-0"} z-50  overflow-hidden transition-all duration-150 absolute top-[110%] w-full flex flex-col placeholder:text-[#535862] bg-[#2B2B2B] border-gray-600 focus:border-[#D2FF00] text-white  outline-none rounded-[12px] `}>
+                                    <div className="mx-auto w-[98%] py-3">
+                                        <input
+                                            type="text"
+                                            value={countrySearch}
+                                            onChange={(e) => setCountrySearch(e.target.value)}
+                                            placeholder="Search Country..."
+                                            className="rounded-[12px] py-2 px-2 w-full border-[1px] bg-[#1b1b1b] border-gray-300"
+                                        />
+                                    </div>
+                                    {countries
+                                        .filter((country) =>
+                                            country.name.common
+                                                .toLowerCase()
+                                                .includes(countrySearch.toLowerCase())
+                                        )
+                                        .map((country) => {
+
+                                            const realIndex = countries.indexOf(country);
+
+                                            const langCode =
+                                                Object.keys(country.name.nativeName || {})[0];
+
+                                            return (
+                                                <p
+                                                    key={realIndex}
+                                                    onClick={() => handleCounty(realIndex)}
+                                                    className="text-[24px] text-gray-300 border-t-[1px] hover:bg-white/10 border-gray-600 font-['Chakra_Petch'] leading-[100%] cursor-pointer p-2"
+                                                >
+                                                    <span className="px-4 text-[#D2FF00] w-[75px] text-center inline-block font-extralight font-['Platypi']">
+                                                        {langCode}
+                                                    </span>
+
+                                                    {country.name.common}
+                                                </p>
+                                            );
+                                        })}
                                 </div>
                             </motion.div>
-                            {/* @TODO:Adding search part for Language and Adding API */}
 
-                            <motion.div variants={item} className="relative flex flex-col gap-2">
+                            <motion.div
+                                variants={item}
+                                className="relative flex flex-col gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic">
                                     {t("contactPage.form.selectLanguage")}
                                 </label>
 
                                 <div
                                     onClick={() => setShowLanguage((prev) => !prev)}
-                                    className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white outline-none rounded-[12px] py-[18px] px-4"
-                                >
-                                    <p className="text-[24px] font-['Chakra_Petch'] leading-[100%]">
-                                        {uniqueLanguages?.[selectdLanguage] ||
-                                            "Select Language"}
-                                    </p>
+                                    className="flex items-center  justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white outline-none rounded-[12px] py-[18px] px-4">
+                                    {uniqueLanguages.filter((lang, index) => index === selectdLanguage).map((lang, index) => (
+
+                                        <p key={index} className="text-[24px] font-['Chakra_Petch'] leading-[100%]">
+                                            {lang || "Select Language"}
+                                        </p>
+                                    ))}
 
                                     <FaAngleDown
                                         className={`${showLanguage ? "rotate-180" : "rotate-0"} transition-all duration-150 text-[#D5D7DA] text-[25px]`}
                                     />
                                 </div>
 
-                                <div
-                                    className={`${showLanguage ? "h-[250px] overflow-y-auto py-[18px] border-[1px]" : "h-0"} overflow-hidden transition-all duration-150 absolute top-[110%] w-full flex flex-col gap-4 placeholder:text-[#535862] bg-[#2B2B2B] border-[#2B2B2B] focus:border-[#D2FF00] text-white outline-none rounded-[12px] px-4 z-50`}
-                                >
-                                    {uniqueLanguages?.map((lang, index) => (
-                                        <p
-                                            key={index}
-                                            onClick={() => handleLanguage(index)}
-                                            className="text-[24px] font-['Chakra_Petch'] leading-[100%] cursor-pointer"
-                                        >
-                                            {lang}
-                                        </p>
-                                    ))}
+                                <div className={`${showLanguage ? "h-[250px] overflow-y-auto  border-[1px]" : "h-0"} z-50  overflow-hidden transition-all duration-150 absolute top-[110%] w-full flex flex-col placeholder:text-[#535862] bg-[#2B2B2B] border-gray-600 focus:border-[#D2FF00] text-white  outline-none rounded-[12px]  `}>
+                                    <div className="mx-auto w-[98%] py-3">
+                                        <input
+                                            type="text"
+                                            value={languageSearch}
+                                            onChange={(e) => setLanguageSearch(e.target.value)}
+                                            placeholder="Search Language..."
+                                            className="rounded-[12px] py-2 px-2 w-full border-[1px] bg-[#1b1b1b] border-gray-300"
+                                        />
+                                    </div>
+                                    {uniqueLanguages?.filter((lang) => lang.toLowerCase().includes(languageSearch.toLowerCase())).map((lang, index) => {
+                                        const relIndex = uniqueLanguages.indexOf(lang);
+
+                                        return (
+                                            <p
+                                                key={index}
+                                                onClick={() => handleLanguage(relIndex)}
+                                                className="text-[24px] text-gray-300 border-t-[1px] hover:bg-white/10 border-gray-600 font-['Chakra_Petch'] leading-[100%] cursor-pointer p-2"
+                                            >
+                                                {lang}
+                                            </p>
+                                        )
+                                    }
+                                    )}
                                 </div>
                             </motion.div>
 
-                            <motion.div variants={item} className="flex flex-col gap-2">
+                            <motion.div variants={item} className="flex flex-col relative gap-2">
                                 <label className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic">
                                     {t("contactPage.form.role")}
-
                                 </label>
-                                <div className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 ">
-                                    <p className="text-[24px] font-['Chakra_Petch'] leading-[100%] ">
-                                        {t("contactPage.form.player")}
 
-                                    </p>
+                                <div
+                                    onClick={() => setShowRole((prev) => !prev)}
+                                    className="flex items-center justify-between placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 ">
+                                    {AllRole.filter((role, index) => index === selectdRole).map((role) => (
+
+                                        <p key={role.id} className="text-[24px] font-['Chakra_Petch'] leading-[100%] ">
+                                            {role.label}
+                                        </p>
+                                    ))}
                                     <FaAngleDown className="text-[#D5D7DA] text-[25px] " />
+                                </div>
+
+                                <div className={`${showRole ? "h-[250px] overflow-y-auto  border-[1px]" : "h-0"} z-50  overflow-hidden transition-all duration-150 absolute top-[110%] w-full flex flex-col placeholder:text-[#535862] bg-[#2B2B2B] border-gray-600 focus:border-[#D2FF00] text-white  outline-none rounded-[12px]  `}>
+
+                                    {AllRole?.map((role, index) => {
+
+                                        return (
+                                            <p onClick={() => handleRole(index)}
+                                                key={index}
+                                                className="text-[24px] text-gray-300 border-t-[1px] hover:bg-white/10 border-gray-600 font-['Chakra_Petch'] leading-[100%] cursor-pointer p-2"
+                                            >
+                                                {role.label}
+                                            </p>
+                                        )
+                                    }
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -233,18 +325,19 @@ function ContactUs() {
                                     className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
                                 >
                                     {t("contactPage.form.message")}
-
                                 </label>
                                 <textarea
                                     name=""
                                     id=""
                                     placeholder={t("contactPage.form.messagePlaceholder")}
-
                                     className="text-[20px] resize-none placeholder:text-[#535862] bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
                                 ></textarea>
                             </motion.div>
 
-                            <motion.div variants={item} className="rounded-[8px] cursor-pointer bg-[#D2FF00] py-[18px] px-6 flex items-center justify-center shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040]">
+                            <motion.div
+                                variants={item}
+                                className="rounded-[8px] cursor-pointer bg-[#D2FF00] py-[18px] px-6 flex items-center justify-center shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040]"
+                            >
                                 <p className="font-['Geist'] font-bold text-[26px] leading-[100%] ">
                                     {t("contactPage.form.sendMessage")}
                                 </p>
@@ -263,13 +356,30 @@ function ContactUs() {
                         className="w-full sm:w-[90%] sm:h-[750px] lg:w-[35%] lg:h-fit rounded-[20px] lg:rounded-[20px]   "
                     ></video>
                 </div>
-                <motion.h4 variants={item} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.9 }} className="italic font-bold leading-[100%] py-8 font-['Platypi'] text-white text-[32px] pl-4">
-                    {t("contactPage.officialChannels.title.before")}
-                    {" "}
-                    <span className="text-[#D2FF00]"> {t("contactPage.officialChannels.title.highlight")} </span>{" "}
+                <motion.h4
+                    variants={item}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.9 }}
+                    className="italic font-bold leading-[100%] py-8 font-['Platypi'] text-white text-[32px] pl-4"
+                >
+                    {t("contactPage.officialChannels.title.before")}{" "}
+                    <span className="text-[#D2FF00]">
+                        {" "}
+                        {t("contactPage.officialChannels.title.highlight")}{" "}
+                    </span>{" "}
                 </motion.h4>
-                <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.6 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <motion.div variants={item} className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8">
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.6 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                >
+                    <motion.div
+                        variants={item}
+                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                    >
                         <MdOutlinePhoneInTalk className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
@@ -280,7 +390,10 @@ function ContactUs() {
                             </p>
                         </div>
                     </motion.div>
-                    <motion.div variants={item} className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8">
+                    <motion.div
+                        variants={item}
+                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                    >
                         <FaWhatsapp className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
@@ -292,7 +405,10 @@ function ContactUs() {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={item} className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8">
+                    <motion.div
+                        variants={item}
+                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                    >
                         <FaTelegramPlane className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
@@ -304,7 +420,10 @@ function ContactUs() {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={item} className="bg-[#1C1C1C] w-[95%] md:w-full h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8">
+                    <motion.div
+                        variants={item}
+                        className="bg-[#1C1C1C] w-[95%] md:w-full h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                    >
                         <HiOutlineMailOpen className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
                             <h5 className="italic font-['Platypi'] text-[26px] leading-[100%] text-white ">
@@ -312,7 +431,6 @@ function ContactUs() {
                             </h5>
                             <p className="font-['Chakra_Petch'] text-[#D2FF00] text-[24px] leading-[100%] ">
                                 {t("contactPage.officialChannels.cards.card4.value")}
-
                             </p>
                         </div>
                     </motion.div>
