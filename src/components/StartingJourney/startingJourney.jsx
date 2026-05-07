@@ -1,8 +1,11 @@
-function StartingJourney({ number, image }) {
+function StartingJourney({ number, image, title, text }) {
     return (
         <section className="relative bg-[#1C1C1C] w-full h-full md:py-10 rounded-[32px] flex flex-col gap-4">
+
             <div className="absolute top-0 left-0 bg-[#D2FF00] rounded-tr-[14px] rounded-br-[32px] rounded-tl-[32px] px-1">
-                <p className="text-[48px] italic font-bold font-['Platypi']">{number}</p>
+                <p className="text-[48px] italic font-bold font-['Platypi']">
+                    {number}
+                </p>
             </div>
 
             <img
@@ -12,14 +15,18 @@ function StartingJourney({ number, image }) {
             />
 
             <div className="bg-[#2B2B2B] w-[95%] mx-auto rounded-[16px] p-4 flex flex-col gap-8">
+
                 <h2 className="font-bold italic font-['Platypi'] text-[26px] lg:text-[48px] leading-[100%] text-[#D2FF00]">
-                    Choose your service
+                    {title}
                 </h2>
+
                 <p className="lg:text-[28px] font-['Chakra_Petch'] leading-[100%] text-[#FFFFFF]">
-                    Choose the service that suits you.
+                    {text}
                 </p>
+
             </div>
         </section>
     );
 }
-export default StartingJourney
+
+export default StartingJourney;

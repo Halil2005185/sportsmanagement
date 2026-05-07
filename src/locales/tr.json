@@ -185,8 +185,154 @@
     }
   },
   "studyom": {
-  "title": "İlgilendiniz mi?",
-  "subtitle": "Bu sadece başlangıç.",
-  "button": "Fiyatları Gör"
+    "title": "İlgilendiniz mi?",
+    "subtitle": "Bu sadece başlangıç.",
+    "button": "Fiyatları Gör"
+  },
+
+  "servicesPage": {
+    "tabs": {
+      "tab1": "Bu Hizmetler Size Ne Kazandırır?",
+      "tab2": "Stratejik Avantaj",
+      "tab3": "Performans Optimizasyonu",
+      "tab4": "360° Çok Disiplinli Kariyer Desteği",
+      "tab5": "Profesyonel Ortaklık",
+      "tab6": "Kariyerinizin Mimarı Olun"
+    },
+
+    "advantages": {
+      "card1": {
+        "title": "Her Maçta Stratejik Avantaj",
+        "text": "Detaylı rakip analizi ve taktik maç planları sayesinde oyunu başlamadan önce okur; oyuncu, antrenör, hakem, kulüp ve federasyon seviyelerinde sahaya bir adım önde çıkarsınız."
+      },
+
+      "card2": {
+        "title": "Performans Analizi",
+        "text": "Video ve veri destekli performans analizleri, GPS istatistikleri ile taktiksel ve fiziksel değerlendirmeler sayesinde hem bireysel hem takım performansınızı ölçer, gelişiminizi somut raporlarla takip edersiniz."
+      },
+
+      "card3": {
+        "title": "Kadro Planlaması",
+        "text": "Kulüpler için kadro planlaması, transfer stratejisi ve scouting hizmetleri; doğru oyuncuyu doğru sistem ve bütçeyle buluşturarak sürdürülebilir sportif başarı ve finansal denge sağlar."
+      },
+
+      "card4": {
+        "title": "Hakem Danışmanlığı",
+        "text": "Hakemler ve federasyonlar için özel hazırlanmış analizler, eğitim programları ve maç yönetimi danışmanlığı; liginizin adalet, karar tutarlılığı ve marka değerini yükseltir."
+      },
+
+      "card5": {
+        "title": "Sürekli Dijital Destek",
+        "text": "Sezon boyunca erişilebilir uzman ekibimiz sayesinde tüm analiz ve raporlara özel dijital panel üzerinden ulaşır; gizlilik ve veri güvenliği destekli sürekli bir iş ortaklığı deneyimi yaşarsınız."
+      }
+    },
+
+    "buttons": {
+      "buyNow": "Şimdi Satın Al"
+    },
+
+    "faq": {
+      "title1": "01 Stratejik Avantaj",
+      "title2": "02 Performans Optimizasyonu",
+      "title3": "03 Profesyonel Ortaklık",
+      "title4": "04 360° Çok Disiplinli Profesyonel Destek"
+    },
+
+    "gainFrom": {
+      "title": {
+        "before": "Bu Hizmetten",
+        "highlight": "Ne Kazanırsınız",
+        "after": ""
+      }
+    },
+
+    "whyOaSports": {
+      "title": {
+        "before": "Neden",
+        "highlight": "OA Sports"
+      }
+    },
+
+    "startingJourney": {
+      "title": {
+        "highlight": "Yolculuğa",
+        "after": "Başlamak"
+      }
+    },
+
+    "cta": {
+      "title": "OA Sports — Güçlü bir adım, güçlü bir ekiple başlar.",
+      "description1": "Kariyerinizde ustalaşmaya ve tam potansiyelinize ulaşmaya giden bir sonraki adımınız; strateji ve güçlü destek ile başlar.",
+      "description2": "Haydi bugün bu adımı birlikte atalım.",
+      "button": "Hemen Başlayalım"
+    }
+  },
+  "faqContent": {
+  "box1": "Rakibin oyun planını, zayıf yönlerini ve kilit oyuncularını analiz ediyor; pozisyonunuza özel görsel ve pratik veriler sunuyoruz.",
+
+  "box2": "Özelleştirilmiş detaylı analiz raporlarıyla maçınıza rakibinizden bir adım önde hazırlanın.",
+
+  "card1": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+
+  "card2": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+
+  "card3": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi.",
+
+  "card4": "Rakibin takım yapısı, dizilişi ve stratejik davranışlarının analizi."
+},
+"gainFromCards": {
+  "card1": "Objektif performans ölçümü ve net gelişim takibi.",
+  "card2": "Veri odaklı taktiksel ve teknik gelişim.",
+  "card3": "Uzun vadeli profesyonel kariyer planlaması.",
+  "card4": "Maç sırasında daha güçlü karar verme yeteneği.",
+  "card5": "Uzman analistlerden profesyonel destek.",
+  "card6": "Modern futbol stratejileriyle sürekli gelişim."
+},
+"whyOaSportsCards": {
+  "card1": {
+    "title": "Deneyim",
+    "text": "Gerçek saha tecrübesine sahip lisanslı profesyonellerle çalışırsınız."
+  },
+
+  "card2": {
+    "title": "Strateji",
+    "text": "Her adım modern futbol analizi ve planlamasıyla desteklenir."
+  },
+
+  "card3": {
+    "title": "Profesyonel Destek",
+    "text": "Profesyonel yolculuğunuz boyunca sürekli rehberlik sağlıyoruz."
+  },
+
+  "card4": {
+    "title": "Gelişim",
+    "text": "Uzman desteğiyle teknik, taktiksel ve zihinsel performansınızı geliştirin."
+  }
+},
+"startingJourneyCards": {
+  "card1": {
+    "title": "Hizmetinizi Seçin",
+    "text": "Hedeflerinize ve profesyonel ihtiyaçlarınıza uygun hizmeti seçin."
+  },
+
+  "card2": {
+    "title": "Analiz ve Değerlendirme",
+    "text": "Mevcut performans seviyenizi analiz eder, güçlü yönlerinizi ve gelişim alanlarınızı belirleriz."
+  },
+
+  "card3": {
+    "title": "Stratejik Planlama",
+    "text": "Uzun vadeli başarınızı desteklemek için kişiselleştirilmiş bir gelişim yol haritası oluşturulur."
+  },
+
+  "card4": {
+    "title": "Profesyonel Destek",
+    "text": "Deneyimli analistler ve spor profesyonellerinden sürekli destek alın."
+  },
+
+  "card5": {
+    "title": "Gelişiminizi Takip Edin",
+    "text": "Raporlar, analizler ve performans takip araçlarıyla gelişiminizi izleyin."
+  }
 }
 }

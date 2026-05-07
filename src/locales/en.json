@@ -167,28 +167,174 @@
       }
     },
     "partnership": {
-  "title": {
-    "before": "Our",
-    "highlight": "Partnership"
-  },
+      "title": {
+        "before": "Our",
+        "highlight": "Partnership"
+      },
 
-  "section": {
-    "title": {
-      "before": "Official Partnership with",
-      "highlight": "SBU University!"
-    },
+      "section": {
+        "title": {
+          "before": "Official Partnership with",
+          "highlight": "SBU University!"
+        },
 
-    "description1": "OA Sports proudly collaborates with SBU University to create new opportunities for athletes, students, and sports professionals through innovation, education, and strategic development.",
+        "description1": "OA Sports proudly collaborates with SBU University to create new opportunities for athletes, students, and sports professionals through innovation, education, and strategic development.",
 
-    "description2": "This partnership combines academic excellence with real-world sports expertise to support the next generation of talent and build a stronger future for modern sports.",
+        "description2": "This partnership combines academic excellence with real-world sports expertise to support the next generation of talent and build a stronger future for modern sports.",
 
-    "button": "Explore Partnership"
-  }
-}
+        "button": "Explore Partnership"
+      }
+    }
   },
   "studyom": {
-  "title": "Interested?",
-  "subtitle": "That’s just the start.",
-  "button": "View prices"
-}
+    "title": "Interested?",
+    "subtitle": "That’s just the start.",
+    "button": "View prices"
+  },
+
+  "servicesPage": {
+    "tabs": {
+      "tab1": "What Do These Services Bring You?",
+      "tab2": "Strategic Advantage",
+      "tab3": "Performance Optimization",
+      "tab4": "360° Multidisciplinary Career Support",
+      "tab5": "Professional Partnership",
+      "tab6": "Become the Architect of Your Career"
+    },
+
+    "advantages": {
+      "card1": {
+        "title": "Strategic Advantage in Every Match",
+        "text": "With detailed opponent analysis and tactical match plans, you read the game before it even starts—at player, coach, referee, club, and federation levels—stepping onto the field one step ahead."
+      },
+
+      "card2": {
+        "title": "Performance Analysis",
+        "text": "With video and data-supported performance analysis, GPS statistics, and tactical and physical evaluations, you measure both individual and team performance, tracking your progress with concrete reports."
+      },
+
+      "card3": {
+        "title": "Squad Planning",
+        "text": "For clubs, squad planning, transfer strategy, and scouting services match the right player with the right system and budget; achieving sustainable sporting success and financial balance."
+      },
+
+      "card4": {
+        "title": "Referee Consultancy",
+        "text": "Custom-designed referee analysis, training programs, and match management consultancy for referees and federations elevate your league's level of fairness, decision consistency, and brand value."
+      },
+
+      "card5": {
+        "title": "Continuous Digital Support",
+        "text": "With an expert team accessible throughout the season, you access all analyses and reports via a dedicated digital panel; experiencing continuous partnership supported by privacy and data security."
+      }
+    },
+
+    "buttons": {
+      "buyNow": "Buy Now"
+    },
+
+    "faq": {
+      "title1": "01 Strategic Advantage",
+      "title2": "02 Performance Optimization",
+      "title3": "03 Professional Partnership",
+      "title4": "04 360° Multidisciplinary Professional Support"
+    },
+
+    "gainFrom": {
+      "title": {
+        "before": "What you",
+        "highlight": "Gain",
+        "after": "from this service"
+      }
+    },
+
+    "whyOaSports": {
+      "title": {
+        "before": "Why",
+        "highlight": "OA Sports"
+      }
+    },
+
+    "startingJourney": {
+      "title": {
+        "highlight": "Starting",
+        "after": "the Journey"
+      }
+    },
+
+    "cta": {
+      "title": "OA Sports — A step forward starts with a strong team.",
+      "description1": "Your next step toward mastering your career and reaching your full potential begins with strategy and strong support behind you.",
+      "description2": "Let’s take that step together today.",
+      "button": "Let’s Start Now"
+    }
+  },
+  "faqContent": {
+    "box1": "We decode the opponent’s game plan, weaknesses, and key players, and provide you with visual and practical data tailored to your position.",
+
+    "box2": "Prepare for your match one step ahead of your opponent with customized detailed analytical reports.",
+
+    "card1": "Analysis of the opponent’s team structure, formation, and strategic behaviors.",
+
+    "card2": "Analysis of the opponent’s team structure, formation, and strategic behaviors.",
+
+    "card3": "Analysis of the opponent’s team structure, formation, and strategic behaviors.",
+
+    "card4": "Analysis of the opponent’s team structure, formation, and strategic behaviors."
+  },
+  "gainFromCards": {
+    "card1": "Objective performance measurement and clear progress tracking.",
+    "card2": "Data-driven tactical and technical development.",
+    "card3": "Long-term professional career planning.",
+    "card4": "Stronger decision-making during matches.",
+    "card5": "Professional support from expert analysts.",
+    "card6": "Continuous development with modern football strategies."
+  },
+  "whyOaSportsCards": {
+    "card1": {
+      "title": "Experience",
+      "text": "You work with licensed professionals with real on-field expertise."
+    },
+
+    "card2": {
+      "title": "Strategy",
+      "text": "Every step is supported with modern football analysis and planning."
+    },
+
+    "card3": {
+      "title": "Professional Support",
+      "text": "We provide continuous guidance throughout your professional journey."
+    },
+
+    "card4": {
+      "title": "Development",
+      "text": "Improve your technical, tactical, and mental performance with expert support."
+    }
+  },
+  "startingJourneyCards": {
+    "card1": {
+      "title": "Choose Your Service",
+      "text": "Choose the service that suits your goals and professional needs."
+    },
+
+    "card2": {
+      "title": "Analysis & Evaluation",
+      "text": "We analyze your current performance level and identify strengths and areas for improvement."
+    },
+
+    "card3": {
+      "title": "Strategic Planning",
+      "text": "A personalized development roadmap is created to support your long-term success."
+    },
+
+    "card4": {
+      "title": "Professional Support",
+      "text": "Receive continuous support from experienced analysts and sports professionals."
+    },
+
+    "card5": {
+      "title": "Track Your Progress",
+      "text": "Monitor your growth with reports, analysis, and performance tracking tools."
+    }
+  }
 }
