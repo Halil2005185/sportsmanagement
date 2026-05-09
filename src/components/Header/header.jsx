@@ -25,6 +25,7 @@ function Header() {
     const navigate = useNavigate();
     const { t } = useTranslation()
     const [showLanguage, setShowLanguage] = useState(false)
+    const [showLanguageMobile, setShowLanguageMobile] = useState(false)
     const [handleLanguage, setHandleLanguage] = useState(2)
     const [openMenu, setOpenMenu] = useState(false)
     const langMenuRef = useRef()
@@ -64,7 +65,7 @@ function Header() {
     function Handeler(id, code) {
         setHandleLanguage(id);
         setShowLanguage(false);
-
+        setShowLanguageMobile(false)
         i18n.changeLanguage(code);
 
         localStorage.setItem("lang", code);
@@ -150,8 +151,7 @@ function Header() {
                         <Link
                             to={nav.path}
                             className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"
-                                } font-['Chakra_Petch'] text-[14px] xl:text-[15px] 2xl:text-[16px] `}
-                        >
+                                } font-['Chakra_Petch'] text-[14px] xl:text-[15px] 2xl:text-[16px] `}>
                             {t(nav.label)}
                         </Link>
                     </motion.div>
@@ -181,8 +181,7 @@ function Header() {
                             variants={container}
                             initial="hidden"
                             animate="show"
-                            className="absolute top-[55px] left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]"
-                        >
+                            className="absolute top-[55px] z-50 left-[-5px] bg-[#1C1C1C] w-[160px] flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]">
                             {Languages.map((language) => (
                                 <motion.div
                                     key={language.id}
@@ -221,15 +220,13 @@ function Header() {
                 {/* nav group */}
                 <motion.div
                     variants={navContainer}
-                    className="flex flex-col gap-9 py-2 "
-                >
+                    className="flex flex-col gap-9 py-2 ">
                     {Navber.map((nav) => (
                         <motion.div key={nav.id} variants={Mobileitem}>
                             <Link
                                 to={nav.path}
                                 onClick={() => setOpenMenu(false)}
-                                className="font-bold text-white font-['Chakra_Petch']"
-                            >
+                                className="font-bold text-white font-['Chakra_Petch']">
                                 {t(nav.label)}
                             </Link>
                         </motion.div>
@@ -238,10 +235,10 @@ function Header() {
                 {/* language row */}
                 <motion.div
                     variants={buttonItem}
-                    onClick={() => setShowLanguage(prev => !prev)}
-                    className=" flex items-center gap-2 mt-4 justify-between">
-                    <p className="font-bold text-white font-['Chakra_Petch']">{t("header.navbar.language")}</p>
-                    <div className="flex items-center gap-2">
+
+                    className=" flex items-center relative gap-2 mt-4 justify-between">
+                    <p className="font-bold  text-white font-['Chakra_Petch']">{t("header.navbar.language")}</p>
+                    <div onClick={() => setShowLanguageMobile(prev => !prev)} className="cursor-pointer flex items-center gap-2">
                         {Languages.filter((lang) => lang.id == handleLanguage).map((lang) => (
                             <div className="flex items-center gap-2" key={lang.id}>
                                 <img className="w-[20px]" src={lang.image} alt="use" />
@@ -251,9 +248,30 @@ function Header() {
                             </div>
                         ))}
                         <FaAngleDown
-                            className={`${showLanguage ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer`}
+                            className={`${showLanguageMobile ? "rotate-[180deg]" : ""} transition-all duration-150 text-[#D2FF00] cursor-pointer`}
                         />
                     </div>
+                    {showLanguageMobile && (
+                        <motion.div
+                            variants={container}
+                            initial="hidden"
+                            animate="show"
+                            className="absolute z-50 top-[40px] left-[-5px] bg-[#1C1C1C] w-full items-end flex flex-col gap-2 rounded-[8px] shadow-[2px_3px_25px_0px_#D2FF000D]">
+                            {Languages.map((language) => (
+                                <motion.div
+                                    key={language.id}
+                                    variants={LanguageItem}
+                                    onClick={() => Handeler(language.id, language.code)}
+                                    className="cursor-pointer flex items-center gap-2 px-4 py-2"
+                                >
+                                    <img className="w-[21px]" src={language.image} alt="" />
+                                    <p className="text-white font-bold font-['Chakra_Petch']">
+                                        {language.label}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
                 </motion.div>
                 {/* button */}
                 <motion.div
