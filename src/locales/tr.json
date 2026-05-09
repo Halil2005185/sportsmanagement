@@ -386,6 +386,30 @@
       }
     }
   },
+  "newsContactPage": {
+    "date": "25 Ekim 2025",
+    "heroTitle": "Akademi güncel haberleri ve güncellemeleri",
+    "intro1": "İlk bakıştan son oyuncu dönüşümüne kadar tasarım, bir oyunun yolculuğunun her adımını etkiler. Video oyun endüstrisinde grafik tasarım sadece estetikle ilgili değildir. Stüdyoların yayıncılarla, oyuncularla ve daha geniş oyun topluluğuyla nasıl iletişim kurduğudur. İster yeni bir proje sunmak, ister bir kitlesel fonlama kampanyası hazırlamak veya bir mağaza sayfası oluşturmak olsun; tasarım, mesajınızı net, çekici ve akılda kalıcı kılan şeydir.",
+    "intro2": "Grafik tasarımın herhangi bir oyun geliştiricisi veya stüdyosu için kritik bir araç olmasının beş temel nedeni şunlardır.",
+    "sections": {
+      "section1": {
+        "title": "İlk İzlenimler Algıyı Belirler",
+        "description": "Birinin oyununuzla kurduğu ilk görsel temas, oyunun kalitesini ve alakasını nasıl algıladığını büyük ölçüde etkileyecektir. Bu ilk izlenim bir Steam görselinden, bir sunum dosyası kapağından, bir Kickstarter banner'ından veya bir sosyal medya tanıtımından gelebilir. Eğer bu görseller oyununuzun ne hakkında olduğunu hızlıca iletemezse veya özensiz görünürse, etkileşim fırsatı kaybolur. Oynanış videolarından veya metin açıklamalarından bile önce, bu görüntüler oyunculara veya yayıncılara oyunun premium mu, amatör mü, benzersiz mi yoksa unutulabilir mi hissettirdiğini söyler. ➡ Örnek: Açılış sayfasında parlak, karikatürize görseller kullanan bir hayatta kalma-korku oyunu kafa karıştırıcı bir sinyal gönderir. Tasarım, sunduğunuz deneyimin tonuyla eşleşmelidir."
+      },
+      "section2": {
+        "title": "Tasarım Karmaşık Fikirleri Basitleştirir",
+        "description": "Oyunlar karmaşık ürünlerdir; benzersiz oynanış mekaniklerini, para kazanma modellerini veya anlatı sistemlerini sadece metinle açıklamak genellikle yetersizdir. İnfografikler, diyagramlar, tel çerçeveler (wireframes) ve kullanıcı arayüzü taslakları gibi görsel yardımcılar, karmaşık fikirlerin bir bakışta kavranmasını sağlamak için gereklidir. ➡ Örnek: Prosedürel harita tasarımına sahip bir roguelike oyun, uzun bir metin paragrafı yerine seviyelerin nasıl evrildiğini gösteren basit bir diyagramla çok daha iyi açıklanabilir. İster yayıncılar için bir sunum, ister oyuncular için bir öğretici hazırlıyor olun, net görseller anlama ve akılda tutma becerisini artırır."
+      },
+      "section3": {
+        "title": "İyi Tasarım Sizi Doymuş Bir Pazarda Farklılaştırır",
+        "description": "Oyun dünyası son derece rekabetçidir. Oyuncular veya paydaşlar sonsuz seçenekler arasında hızla gezinirken, yüksek kaliteli tasarım öne çıkmanın birkaç güvenilir yolundan biridir. Özenli bir tasarım, küçük bağımsız projeleri bile üretime hazır ve profesyonel göstererek yükseltebilir. ➡ Örnek: Tutarlı markalamaya, ödül aşamaları için özel görsellere ve yüksek kaliteli konsept çizimlere sahip bir Kickstarter kampanyasının, genel şablonlara dayanan bir kampanyaya göre ilgi çekme olasılığı çok daha yüksektir."
+      }
+    },
+    "relatedTopics": {
+      "before": "İlgili",
+      "after": "Konular"
+    }
+  },
   "searchSection": {
     "placeholder": "Konuya göre ara..."
   },
@@ -662,7 +686,20 @@
           "value": "contact@oasports.com"
         }
       }
-    }
+    },
+    "Roles": {
+      "player": "Oyuncu/Sporcu",
+      "coach": "Antrenör",
+      "analyst": "Analist",
+      "manager": "Menajer",
+      "scout": "Scout",
+      "referee": "Hakem",
+      "agent": "Menajer Temsilcisi",
+      "other": "Diğer"
+    },
+    "searchNumber": "Numara Ara",
+    "searchLanguage": "Dil Ara...",
+    "searchCountry": "Ülke Ara..."
   },
   "footer": {
     "description": "OA Sports, farklı disiplinlerden uzmanlıkları tek çatı altında bir araya getiren çok yönlü bir spor danışmanlığı ve yönetim şirketidir.",

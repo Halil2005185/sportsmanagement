@@ -16,7 +16,9 @@ import Studyom from "../../components/Studyom/studyom";
 import LatestNews from "../../components/LatestNews/latestNews";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
+import i18n from "../../i18n";
+const MotionLink = motion.create(Link);
 const container = {
     hidden: {},
     show: {
@@ -44,6 +46,7 @@ const latestNewsCards = [
     "card4",
 ];
 const viewport = { once: true, amount: 0.1, margin: "0px 0px -150px 0px" };
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
 function Home() {
     const { t } = useTranslation();
@@ -91,23 +94,20 @@ function Home() {
                         variants={item}
                         className="flex items-center justify-center gap-1"
                     >
-                        <motion.div
-                            variants={item}
-                            className="rounded-[8px] bg-[#D2FF00] shadow-[0_8px_16px_0_#C3FF1A29] md:py-[18px] md:px-[24px] p-4"
-                        >
-                            <p className="font-['Geist'] font-bold md:text-[20px] leading-[100%]">
-                                {t("homePage.hero.buttons.services")}
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            variants={item}
-                            className="rounded-[8px] border-[1px] border-[#D2FF00] md:py-[18px] md:px-[24px] p-4"
-                        >
-                            <p className="text-[#D2FF00] font-['Geist'] font-bold md:text-[20px] leading-[100%]">
-                                {t("homePage.hero.buttons.contact")}
-                            </p>
-                        </motion.div>
+                        <MotionLink to={`/${currentLang}/contact-us`} variants={item} className="rounded-[8px] bg-[#D2FF00] shadow-[0_8px_16px_0_#C3FF1A29] md:py-[18px] md:px-[24px] p-4" >
+                            <div>
+                                <p className="font-['Geist'] font-bold md:text-[20px] leading-[100%]">
+                                    {t("homePage.hero.buttons.services")}
+                                </p>
+                            </div>
+                        </MotionLink>
+                        <MotionLink to={`/${currentLang}/services`} variants={item} className="rounded-[8px] border-[1px] border-[#D2FF00] md:py-[18px] md:px-[24px] p-4">
+                            <div>
+                                <p className="text-[#D2FF00] font-['Geist'] font-bold md:text-[20px] leading-[100%]">
+                                    {t("homePage.hero.buttons.contact")}
+                                </p>
+                            </div>
+                        </MotionLink>
                     </motion.div>
                 </motion.div>
             </motion.div>
@@ -485,7 +485,7 @@ function Home() {
                     variants={item}
                     className="font-bold font-['Platypi'] text-[30px] md:text-[46px] leading-[100%] italic text-white"
                 >
-                    {t("homePage.partnership.title.before")}
+                    {t("homePage.partnership.title.before")} {" "}
                     <span className=" text-[#D2FF00] ">{t("homePage.partnership.title.highlight")}</span>
                 </motion.h2>
                 <div className="flex flex-col gap-10 md:gap-8">
@@ -513,11 +513,13 @@ function Home() {
                                     {t("homePage.partnership.section.description2")}
                                 </p>
                             </div>
-                            <div className="cursor-pointer py-[18px] px-6 rounded-[8px] bg-[#D2FF00] flex items-center w-[280px] justify-center shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] ">
-                                <p className="font-bold text-[20px] font-['Chakra_Petch'] leading-[100%]">
-                                    {t("homePage.partnership.section.button")}{" "}
-                                </p>
-                            </div>
+                            <Link to={`/${currentLang}/partners`}>
+                                <div className="cursor-pointer py-[18px] px-6 rounded-[8px] bg-[#D2FF00] flex items-center w-[280px] justify-center shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] ">
+                                    <p className="font-bold text-[20px] font-['Chakra_Petch'] leading-[100%]">
+                                        {t("homePage.partnership.section.button")}{" "}
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                         <img
                             className="h-[80%] md:h-[450px] lg:w-full xl:h-full rounded-[24px] object-cover"

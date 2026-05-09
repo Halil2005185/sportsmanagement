@@ -82,24 +82,20 @@ function AboutUsCard({ number, cardNum }) {
                     className={`${show ? " h-[750px] sm:h-[700px]  pt-4" : "h-0"} w-full px-6 overflow-hidden transition-all duration-150 bg-[#1C1C1C] flex flex-col gap-4 rounded-t-[20px]`}
                 >
                     <p className="font-bold italic text-[26px] font-['Platypi'] text-[#D2FF00] ">
-                        Management & Strategy Team
+                        {t(`aboutUsCard.${cardNum}.title`)}
                     </p>
                     <div className=" relative flex flex-col gap-4 items-center">
                         <div>
                             <div className=" h-fit lg:h-[172px] flex gap-4 p-6 rounded-[26px] ">
                                 <PiStarFourFill className=" text-[#D2FF00] drop-shadow-[0px_6px_23px_#D2FF0080] text-[100px] pb-[50px] " />
                                 <p className=" md:text-[20px] lg:text-[24px] leading-[100%] font-['Chakra_Petch'] text-white ">
-                                    OA Sports is a multidisciplinary sports consulting and
-                                    management company that unites diverse expertise under one
-                                    roof and views sports as a complete ecosystem.
+                                    {t(`aboutUsCard.${cardNum}.points.point1`)}
                                 </p>
                             </div>
                             <div className=" h-fit lg:h-[172px] flex gap-4 p-6 rounded-[26px] ">
                                 <PiStarFourFill className=" text-[#D2FF00] drop-shadow-[0px_6px_23px_#D2FF0080] text-[100px] pb-[50px] " />
                                 <p className="md:text-[20px] lg:text-[24px] leading-[100%] font-['Chakra_Petch'] text-white ">
-                                    OA Sports is a multidisciplinary sports consulting and
-                                    management company that unites diverse expertise under one
-                                    roof and views sports as a complete ecosystem.
+                                    {t(`aboutUsCard.${cardNum}.points.point2`)}
                                 </p>
                             </div>
                         </div>

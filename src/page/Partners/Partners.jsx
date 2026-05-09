@@ -4,7 +4,11 @@ import lights from "/images/lights.png";
 import SbuUniversity from "../../components/SbuUniversity/sbuUniversity";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import i18n from "../../i18n";
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
+const MotionLink = motion.create(Link)
 const container = {
     hidden: {},
     show: {
@@ -78,14 +82,15 @@ function Partners() {
                                     </p>
                                 </motion.div>
                             </motion.div>
-                            <motion.div
-                                variants={item}
-                                className="bg-[#D2FF00] w-[284px] flex justify-center items-center py-[18px] px-[24px] rounded-[8px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] "
-                            >
-                                <p className="font-bold font-['Chakra_Petch'] text-[20px] leading-[100%]  ">
-                                    {t("partnersPage.hero.button")}
-                                </p>
-                            </motion.div>
+                            <MotionLink to={`/${currentLang}/contact-us`} variants={item}>
+                                <div
+                                    className="bg-[#D2FF00] w-[284px] flex justify-center items-center py-[18px] px-[24px] rounded-[8px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] "
+                                >
+                                    <p className="font-bold font-['Chakra_Petch'] text-[20px] leading-[100%]  ">
+                                        {t("partnersPage.hero.button")}
+                                    </p>
+                                </div>
+                            </MotionLink>
                         </div>
                         <img src={twoMan} alt="twoman" className="w-[500px] z-50" />
                         <img

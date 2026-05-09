@@ -6,6 +6,7 @@ import SearchSection from "../../components/SearchSection/searchSection";
 import newImage from "/images/newImage.jpg";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 const AllNewCard = [
     {
@@ -77,6 +78,7 @@ const item = {
 
 function OurNews() {
     const { t } = useTranslation();
+    const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
     return (
         <section className="bg-[#121212]  py-4 ">
@@ -89,7 +91,7 @@ function OurNews() {
                         </span>
                     </h2>
                     <Link
-                        to="/News-and-reviews/viewAll"
+                        to={`/${currentLang}/News-and-reviews/viewAll`}
                         className="lg:text-[28px] text-[#D2FF00]  font-['Chakra_Petch'] leading-[100%] pt-1"
                     >
                         {t("newsPage.hero.viewAll")}

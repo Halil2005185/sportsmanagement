@@ -12,15 +12,16 @@ import { FaTiktok } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
-
+import i18n from "../../i18n";
 
 function Footer() {
+    const currentLang = i18n.language || localStorage.getItem("lang") || "en"
     const Navber = [
-        { id: 1, label: "footer.navbar.home", path: "/" },
-        { id: 2, label: "footer.navbar.services", path: "/services" },
-        { id: 4, label: "footer.navbar.news", path: "/News-and-reviews" },
-        { id: 6, label: "footer.navbar.article", path: "/article" },
-        { id: 7, label: "footer.navbar.contact", path: "/contact-us" },
+        { id: 1, label: "footer.navbar.home", path: `/${currentLang}` },
+        { id: 2, label: "footer.navbar.services", path: `/${currentLang}/services` },
+        { id: 4, label: "footer.navbar.news", path: `/${currentLang}/News-and-reviews` },
+        { id: 6, label: "footer.navbar.article", path: `/${currentLang}/pricing` },
+        { id: 7, label: "footer.navbar.contact", path: `/${currentLang}/contact-us` },
     ]
     const Contacts = [
         { id: 1, icon: <FaWhatsapp />, number: "055 991 3254" },

@@ -2,7 +2,11 @@ import Stadyum from "/images/stadyum.jpg";
 import { useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import i18n from "../../i18n";
 
+const MotionLink = motion.create(Link)
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 const container = {
     hidden: {},
     show: {
@@ -23,8 +27,6 @@ const item = {
         },
     },
 };
-
-
 
 function Studyom() {
     const { t } = useTranslation()
@@ -52,11 +54,13 @@ function Studyom() {
                     {t("studyom.subtitle")}
                 </motion.h3>
             </motion.div>
-            <motion.div variants={item} className="bg-[#D2FF00] px-[24px] py-[18px] rounded-[8px] md:w-[280px] shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] flex justify-center items-center ">
-                <p className="font-['Chakra_Petch'] font-bold text-[12px] sm:text-[16px] md:text-[20px] leading-[100%]  ">
-                    {t("studyom.button")}
-                </p>
-            </motion.div>
+            <MotionLink to={`/${currentLang}/pricing`} variants={item} className="bg-[#D2FF00] px-[24px] py-[18px] rounded-[8px] md:w-[280px] shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] flex justify-center items-center " >
+                <div>
+                    <p className="font-['Chakra_Petch'] font-bold text-[12px] sm:text-[16px] md:text-[20px] leading-[100%]  ">
+                        {t("studyom.button")}
+                    </p>
+                </div>
+            </MotionLink>
         </motion.div>
     </div>
 

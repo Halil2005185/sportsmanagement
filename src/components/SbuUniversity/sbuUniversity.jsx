@@ -4,10 +4,13 @@ import mans from "/images/mans.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
+import i18n from "../../i18n";
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 import "swiper/css/pagination";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import { Link } from "react-router-dom";
 
 function SbuUniversity({ title, description, button }) {
     const images = [mans, mans, mans, mans, mans];
@@ -24,11 +27,11 @@ function SbuUniversity({ title, description, button }) {
                     <p className="text-[#FFFFFF] leading-relaxed text-[14px] sm:text-[16px] lg:text-[20px] xl:text-[24px] font-['Chakra_Petch']">
                         {description}
                     </p>
-                    <div className="bg-[#D2FF00] w-full sm:w-[220px] lg:w-[284px] flex justify-center items-center py-3 lg:py-[18px] px-5 lg:px-[24px] rounded-[8px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] cursor-pointer hover:brightness-110 transition-all duration-200">
+                    <Link to={`/${currentLang}/contact-us`} className="bg-[#D2FF00] w-full sm:w-[220px] lg:w-[284px] flex justify-center items-center py-3 lg:py-[18px] px-5 lg:px-[24px] rounded-[8px] shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] cursor-pointer hover:brightness-110 transition-all duration-200">
                         <p className="font-bold font-['Chakra_Petch'] text-[16px] lg:text-[20px] leading-[100%]">
                             {button}
                         </p>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className="flex xl:hidden items-center gap-3 mt-1">

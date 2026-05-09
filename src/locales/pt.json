@@ -1,0 +1,611 @@
+{
+  "header": {
+    "navbar": {
+      "home": "Início",
+      "services": "Serviços",
+      "partners": "Parceiros",
+      "news": "Notícias e avaliações",
+      "pricing": "Preços",
+      "about": "Sobre nós",
+      "contact": "Contacte-nos",
+      "language": "Idioma"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "title": "O poder que molda o jogo.",
+      "subtitle": "Cada jogada importa. Cada segundo conta.",
+      "buttons": {
+        "services": "Serviços",
+        "contact": "Contacte-nos"
+      }
+    },
+    "whoWeAre": {
+      "title": {
+        "before": "Quem",
+        "highlight": "Somos",
+        "after": "Nós"
+      },
+      "cards": {
+        "card1": "A OA Sports é uma empresa multidisciplinar de consultoria e gestão desportiva que reúne diversas competências sob o mesmo teto.",
+        "card2": "A nossa missão é acompanhar os profissionais em todos os níveis do desporto — jogadores, treinadores, árbitros, clubes e federações — na construção de um sucesso sustentável através de estratégias eficazes e a longo prazo.",
+        "card3": "Cada serviço que oferecemos é meticulosamente concebido para acrescentar valor à sua carreira e ajudá-lo a chegar ao topo."
+      }
+    },
+    "ourNumbers": {
+      "title": {
+        "before": "Os Nossos",
+        "highlight": "Números",
+        "after": "Falam"
+      },
+      "cards": {
+        "card1": {
+          "number": "15+",
+          "title": "Anos de Experiência no Setor",
+          "text": "Experiência aprofundada adquirida na dinâmica global do futebol, com foco em estratégia, análise de desempenho a 360° e gestão de carreira."
+        },
+        "card2": {
+          "number": "6+",
+          "title": "Parceiros",
+          "text": "Equipa central especializada em análise de desempenho, ciências do desporto, scouting, análise de dados e apoio mental, oferecendo um serviço a 360°."
+        },
+        "card3": {
+          "number": "42+",
+          "title": "Pontos de Ligação Global",
+          "text": "Mais de 42 relações internacionais sólidas e ativas estabelecidas em diferentes continentes para gestão de carreira de elite, planeamento de plantel e colaborações estratégicas."
+        }
+      }
+    },
+    "whatOASportsDo": {
+      "title": {
+        "before": "O Que Faz a",
+        "highlight": "OA Sports",
+        "after": ""
+      },
+      "cards": {
+        "card1": {
+          "title": "Para Jogadores",
+          "text": "Oferecemos consultoria de carreira abrangente, desenvolvimento de desempenho e apoio de representação para ajudar a transformar o seu potencial em performance — e a sua performance numa carreira duradoura."
+        },
+        "card2": {
+          "title": "Para Treinadores",
+          "text": "Somos parceiros no planeamento da sua carreira e crescimento profissional, proporcionando desenvolvimento técnico e orientação especializada."
+        },
+        "card3": {
+          "title": "Para Árbitros",
+          "text": "Oferecemos todo o apoio profissional necessário para uma carreira de nível de elite através de serviços de consultoria focados no desenvolvimento."
+        },
+        "card4": {
+          "title": "Para Equipas e Profissionais",
+          "text": "Acrescentamos visão à ambição dos clubes com serviços de planeamento de plantel, scouting e recrutamento."
+        },
+        "card5": {
+          "title": "Para Federações",
+          "text": "Apoiamos a competição justa e de alta qualidade com consultoria de arbitragem e soluções de formação."
+        }
+      }
+    },
+    "whySports": {
+      "title": {
+        "before": "Porquê",
+        "highlight": "OA Sports",
+        "after": ""
+      },
+      "cards": {
+        "card1": {
+          "title": "Equipa de Especialistas Interdisciplinar",
+          "text": "A força da OA Sports vem da sua equipa interdisciplinar que aborda o desporto sob todos os ângulos. Com os nossos especialistas assentes em quatro pilares principais, garantimos o seu futuro."
+        },
+        "card2": {
+          "title": "Equipa de Gestão e Estratégia",
+          "text": "Definimos o seu roteiro de carreira a longo prazo e traçamos a sua visão. Com orientação estratégica em representação, processos de negociação e gestão de contratos, abrimos o caminho à sua frente."
+        },
+        "card3": {
+          "title": "Equipa Técnica e Tática",
+          "text": "Fornecemos análises especializadas, planos de desenvolvimento em campo e orientação técnica para melhorar o seu desempenho."
+        },
+        "card4": {
+          "title": "Equipa de Scouting, Análise e Recrutamento",
+          "text": "Combinamos talento com as oportunidades certas utilizando sistemas baseados em dados."
+        },
+        "card5": {
+          "title": "Equipa Médica, de Saúde e Ciências do Desporto",
+          "text": "Reduzimos o risco de lesões, melhoramos o desempenho e oferecemos apoio de preparação personalizado."
+        },
+        "card6": {
+          "title": "Uma Perspetiva a 360°",
+          "text": "Esta abordagem holística ajuda-o a encontrar um parceiro estratégico dedicado à sua carreira e oferece as soluções mais precisas e fiáveis para as suas necessidades."
+        }
+      }
+    },
+    "latestNews": {
+      "title": {
+        "before": "O Que Faz a",
+        "highlight": "OA Sports",
+        "after": ""
+      },
+      "showAll": "Ver Tudo",
+      "cards": {
+        "card1": {
+          "title": "Análise de Jogo",
+          "text": "Relatórios detalhados para ajudar jogadores e equipas a compreender o desempenho, melhorar decisões e construir melhores estratégias."
+        },
+        "card2": {
+          "title": "Estratégia de Carreira",
+          "text": "Orientamos os atletas passo a passo com planeamento profissional, objetivos a longo prazo e caminhos de desenvolvimento claros."
+        },
+        "card3": {
+          "title": "Apoio ao Desempenho",
+          "text": "Melhore o seu desempenho físico, técnico e mental com apoio especializado concebido para o futebol moderno."
+        },
+        "card4": {
+          "title": "Consultoria para Clubes",
+          "text": "Soluções de consultoria inteligentes para clubes, academias e federações crescerem de forma mais forte e trabalharem de forma mais profissional."
+        }
+      }
+    },
+    "partnership": {
+      "title": {
+        "before": "A Nossa",
+        "highlight": "Parceria"
+      },
+      "section": {
+        "title": {
+          "before": "Parceria Oficial com a",
+          "highlight": "Universidade SBU!"
+        },
+        "description1": "A OA Sports colabora orgulhosamente com a Universidade SBU para criar novas oportunidades para atletas, estudantes e profissionais do desporto através da inovação, educação e desenvolvimento estratégico.",
+        "description2": "Esta parceria combina a excelência académica com a experiência desportiva real para apoiar a próxima geração de talentos e construir um futuro mais forte para o desporto moderno.",
+        "button": "Explorar Parceria"
+      }
+    }
+  },
+  "studyom": {
+    "title": "Interessado?",
+    "subtitle": "Isso é apenas o começo.",
+    "button": "Ver preços"
+  },
+  "servicesPage": {
+    "tabs": {
+      "tab1": "O Que Estes Serviços Lhe Trazem?",
+      "tab2": "Vantagem Estratégica",
+      "tab3": "Otimização do Desempenho",
+      "tab4": "Apoio de Carreira Multidisciplinar a 360°",
+      "tab5": "Parceria Profissional",
+      "tab6": "Torne-se o Arquiteto da Sua Carreira"
+    },
+    "advantages": {
+      "card1": {
+        "title": "Vantagem Estratégica em Cada Jogo",
+        "text": "Com análise detalhada do adversário e planos táticos de jogo, lê o jogo antes mesmo de começar — ao nível do jogador, treinador, árbitro, clube e federação — entrando em campo um passo à frente."
+      },
+      "card2": {
+        "title": "Análise de Desempenho",
+        "text": "Com análise de desempenho apoiada em vídeo e dados, estatísticas GPS e avaliações táticas e físicas, mede o desempenho individual e coletivo, acompanhando o seu progresso com relatórios concretos."
+      },
+      "card3": {
+        "title": "Planeamento de Plantel",
+        "text": "Para os clubes, os serviços de planeamento de plantel, estratégia de transferências e scouting combinam o jogador certo com o sistema e orçamento certos, alcançando sucesso desportivo sustentável e equilíbrio financeiro."
+      },
+      "card4": {
+        "title": "Consultoria de Arbitragem",
+        "text": "A análise de arbitragem personalizada, programas de treino e consultoria de gestão de jogo para árbitros e federações elevam o nível de equidade, consistência de decisões e valor de marca da sua liga."
+      },
+      "card5": {
+        "title": "Apoio Digital Contínuo",
+        "text": "Com uma equipa de especialistas acessível durante toda a época, acede a todas as análises e relatórios através de um painel digital dedicado, experienciando uma parceria contínua apoiada por privacidade e segurança de dados."
+      }
+    },
+    "buttons": {
+      "buyNow": "Comprar Agora"
+    },
+    "faq": {
+      "title1": "01 Vantagem Estratégica",
+      "title2": "02 Otimização do Desempenho",
+      "title3": "03 Parceria Profissional",
+      "title4": "04 Apoio Profissional Multidisciplinar a 360°"
+    },
+    "gainFrom": {
+      "title": {
+        "before": "O Que",
+        "highlight": "Ganha",
+        "after": "com este serviço"
+      }
+    },
+    "whyOaSports": {
+      "title": {
+        "before": "Porquê",
+        "highlight": "OA Sports"
+      }
+    },
+    "startingJourney": {
+      "title": {
+        "highlight": "Iniciar",
+        "after": "a Jornada"
+      }
+    },
+    "cta": {
+      "title": "OA Sports — Um passo em frente começa com uma equipa forte.",
+      "description1": "O seu próximo passo para dominar a sua carreira e atingir todo o seu potencial começa com estratégia e um forte apoio por detrás de si.",
+      "description2": "Vamos dar esse passo juntos hoje.",
+      "button": "Vamos Começar Agora"
+    }
+  },
+  "faqContent": {
+    "box1": "Descodificamos o plano de jogo, os pontos fracos e os jogadores-chave do adversário, e fornecemos-lhe dados visuais e práticos adaptados à sua posição.",
+    "box2": "Prepare-se para o seu jogo um passo à frente do adversário com relatórios analíticos detalhados e personalizados.",
+    "card1": "Análise da estrutura, formação e comportamentos estratégicos da equipa adversária.",
+    "card2": "Análise da estrutura, formação e comportamentos estratégicos da equipa adversária.",
+    "card3": "Análise da estrutura, formação e comportamentos estratégicos da equipa adversária.",
+    "card4": "Análise da estrutura, formação e comportamentos estratégicos da equipa adversária."
+  },
+  "gainFromCards": {
+    "card1": "Medição objetiva do desempenho e acompanhamento claro do progresso.",
+    "card2": "Desenvolvimento tático e técnico baseado em dados.",
+    "card3": "Planeamento de carreira profissional a longo prazo.",
+    "card4": "Tomada de decisão mais sólida durante os jogos.",
+    "card5": "Apoio profissional de analistas especializados.",
+    "card6": "Desenvolvimento contínuo com estratégias de futebol modernas."
+  },
+  "whyOaSportsCards": {
+    "card1": {
+      "title": "Experiência",
+      "text": "Trabalha com profissionais licenciados com verdadeira experiência em campo."
+    },
+    "card2": {
+      "title": "Estratégia",
+      "text": "Cada passo é apoiado por análise e planeamento de futebol moderno."
+    },
+    "card3": {
+      "title": "Apoio Profissional",
+      "text": "Proporcionamos orientação contínua ao longo da sua jornada profissional."
+    },
+    "card4": {
+      "title": "Desenvolvimento",
+      "text": "Melhore o seu desempenho técnico, tático e mental com apoio especializado."
+    }
+  },
+  "startingJourneyCards": {
+    "card1": {
+      "title": "Escolha o Seu Serviço",
+      "text": "Escolha o serviço que se adequa aos seus objetivos e necessidades profissionais."
+    },
+    "card2": {
+      "title": "Análise e Avaliação",
+      "text": "Analisamos o seu nível de desempenho atual e identificamos pontos fortes e áreas de melhoria."
+    },
+    "card3": {
+      "title": "Planeamento Estratégico",
+      "text": "É criado um roteiro de desenvolvimento personalizado para apoiar o seu sucesso a longo prazo."
+    },
+    "card4": {
+      "title": "Apoio Profissional",
+      "text": "Receba apoio contínuo de analistas experientes e profissionais do desporto."
+    },
+    "card5": {
+      "title": "Acompanhe o Seu Progresso",
+      "text": "Monitorize o seu crescimento com relatórios, análises e ferramentas de acompanhamento de desempenho."
+    }
+  },
+  "partnersPage": {
+    "hero": {
+      "title": {
+        "before": "Os Nossos",
+        "highlight": "Parceiros"
+      },
+      "subtitle": "Vamos moldar o futuro juntos",
+      "points": {
+        "point1": "Construímos confiança, traçamos uma visão partilhada e avançamos com passos firmes em direção ao sucesso.",
+        "point2": "Parcerias fortes criam oportunidades mais fortes para atletas, clubes e profissionais.",
+        "point3": "Juntos, combinamos inovação, estratégia e especialização para alcançar um crescimento sustentável.",
+        "point4": "As nossas colaborações são construídas sobre valor a longo prazo, transparência e excelência profissional."
+      },
+      "button": "Contacte-nos",
+      "sbuUniversity": {
+        "title": {
+          "before": "Parceiros com a",
+          "highlight": "Universidade SBU!"
+        },
+        "description": "A OA Sports é uma empresa multifacetada de consultoria e gestão desportiva que reúne competências multidisciplinares sob o mesmo teto.",
+        "button": "Contacte-nos"
+      }
+    }
+  },
+  "newsPage": {
+    "hero": {
+      "title": {
+        "before": "As Nossas",
+        "highlight": "Notícias"
+      },
+      "viewAll": "Ver tudo"
+    },
+    "reviews": {
+      "title": {
+        "before": "O que os nossos",
+        "highlight": "clientes",
+        "after": "dizem sobre nós"
+      }
+    }
+  },
+  "newsContactPage": {
+    "date": "25 de Outubro de 2025",
+    "heroTitle": "Últimas notícias e atualizações da Academia",
+    "intro1": "Do primeiro olhar à conversão final do jogador, o design impacta cada etapa da jornada de um jogo. Na indústria de videogames, o design gráfico não é apenas estética. É como os estúdios se comunicam com editores, jogadores e a comunidade gamer em geral. Seja apresentando um novo projeto, preparando uma campanha de crowdfunding ou criando uma página na loja, o design é o que torna sua mensagem clara, atraente e memorável.",
+    "intro2": "Aqui estão cinco razões essenciais pelas quais o design gráfico é uma ferramenta crítica para qualquer desenvolvedor ou estúdio de jogos.",
+    "sections": {
+      "section1": {
+        "title": "Primeiras impressões definem a percepção",
+        "description": "O primeiro contato visual que alguém tem com o seu jogo influenciará profundamente como eles percebem sua qualidade e relevância. Essa primeira impressão pode vir de uma cápsula do Steam, da capa de um pitch deck, de um banner do Kickstarter ou de um teaser nas redes sociais. Se esses visuais não comunicarem rapidamente sobre o que é o seu jogo, ou parecerem amadores, a oportunidade de engajamento é perdida. Mesmo antes de vídeos de gameplay ou descrições em texto, essas imagens dizem aos jogadores ou editores se o jogo parece premium, amador, único ou esquecível. ➡ Exemplo: Um jogo de survival-horror usando visuais brilhantes e cartunescos em sua landing page envia um sinal confuso. O design deve condizer com o tom da experiência que você está oferecendo."
+      },
+      "section2": {
+        "title": "O design simplifica ideias complexas",
+        "description": "Jogos são produtos intrincados, e explicar mecânicas de jogo únicas, modelos de monetização ou sistemas narrativos apenas em texto costuma ser ineficaz. Auxílios visuais — como infográficos, diagramas, wireframes e protótipos de UI — são essenciais para tornar ideias complexas fáceis de entender num relance. ➡ Exemplo: Um roguelike com design de mapa procedural pode ser muito melhor explicado com um diagrama simples mostrando como os níveis evoluem do que com um longo parágrafo de texto. Seja preparando uma apresentação de pitch para editores ou um tutorial de onboarding para jogadores, visuais claros aumentam a compreensão e a retenção."
+      },
+      "section3": {
+        "title": "Bom design diferencia você em um mercado saturado",
+        "description": "O cenário dos jogos é extremamente competitivo. O design de alta qualidade é uma das poucas formas confiáveis de se destacar quando jogadores ou partes interessadas estão navegando rapidamente por infinitas opções. Um design polido pode elevar até pequenos projetos indie, fazendo-os parecer profissionais e prontos para produção. ➡ Exemplo: Uma campanha no Kickstarter com branding consistente, visuais personalizados para níveis de recompensa e arte conceitual de alta qualidade tem mais chances de atrair atenção do que uma campanha que depende de modelos genéricos."
+      }
+    },
+    "relatedTopics": {
+      "before": "Tópicos",
+      "after": "Relacionados"
+    }
+  },
+  "searchSection": {
+    "placeholder": "Pesquisar por tema..."
+  },
+  "newsCard": {
+    "readMore": "Ler mais",
+    "cards": {
+      "card1": {
+        "date": "25 Out 2025",
+        "title": "Jogos Noturnos",
+        "description": "Gerimos o planeamento nos bastidores com expertise, enquanto o ajudamos a brilhar em campo.",
+        "tags": ["Futebol", "Análise", "Estratégia"],
+        "author": "Ahmed Ali"
+      },
+      "card2": {
+        "date": "28 Out 2025",
+        "title": "Estratégia de Jogo",
+        "description": "Planeamento tático profissional concebido para melhorar a coordenação da equipa e o desempenho em jogo.",
+        "tags": ["Táticas", "Treino", "Planeamento"],
+        "author": "John Carter"
+      },
+      "card3": {
+        "date": "02 Nov 2025",
+        "title": "Desenvolvimento de Jogadores",
+        "description": "Ajudamos os atletas a melhorar o desempenho técnico e mental através de sistemas de treino modernos.",
+        "tags": ["Treino", "Jogadores", "Desenvolvimento"],
+        "author": "Michael Lee"
+      },
+      "card4": {
+        "date": "06 Nov 2025",
+        "title": "Análise Desportiva",
+        "description": "A análise baseada em dados fornece informações mais aprofundadas sobre o desempenho da equipa e dos jogadores.",
+        "tags": ["Dados", "Desempenho", "Análise"],
+        "author": "Sarah Wilson"
+      },
+      "card5": {
+        "date": "10 Nov 2025",
+        "title": "Treino de Elite",
+        "description": "Equipa técnica experiente que orienta jogadores e equipas em direção ao sucesso a longo prazo.",
+        "tags": ["Treinador", "Liderança", "Sucesso"],
+        "author": "David Brown"
+      },
+      "card6": {
+        "date": "14 Nov 2025",
+        "title": "Apoio à Arbitragem",
+        "description": "Consultoria avançada de arbitragem e soluções de gestão de jogos para ligas profissionais.",
+        "tags": ["Árbitro", "Liga", "Apoio"],
+        "author": "Emma Taylor"
+      },
+      "card7": {
+        "date": "18 Nov 2025",
+        "title": "Rede de Scouting",
+        "description": "Conectamos atletas talentosos com os clubes e oportunidades certas em todo o mundo.",
+        "tags": ["Scouting", "Talento", "Rede"],
+        "author": "Chris Martin"
+      },
+      "card8": {
+        "date": "21 Nov 2025",
+        "title": "Desempenho Médico",
+        "description": "Redução de riscos de lesões e melhoria da recuperação através das ciências do desporto e apoio médico.",
+        "tags": ["Saúde", "Recuperação", "Ciência"],
+        "author": "Laura White"
+      },
+      "card9": {
+        "date": "25 Nov 2025",
+        "title": "O Futuro do Futebol",
+        "description": "Exploração da inovação e tecnologia que molda a próxima geração do futebol.",
+        "tags": ["Inovação", "Tecnologia", "Futuro"],
+        "author": "Daniel Green"
+      }
+    }
+  },
+  "reviews": {
+    "cards": {
+      "card1": {
+        "name": "Ahmed Ali",
+        "job": "Jogador de Futebol",
+        "text": "A OA Sports ajudou-me a melhorar a minha compreensão tática e o meu desempenho em campo."
+      },
+      "card2": {
+        "name": "Michael Brown",
+        "job": "Treinador",
+        "text": "Análise profissional e apoio estratégico que realmente fizeram a diferença para a nossa equipa."
+      }
+    }
+  },
+  "pricingPage": {
+    "hero": {
+      "title": {
+        "highlight": "Planos",
+        "after": "de preços"
+      }
+    },
+    "perMonth": "/mês",
+    "startNow": "Começar Agora",
+    "cards": {
+      "card1": {
+        "title": "Plano Jogadores",
+        "description": "Oferecemos um serviço de consultoria que pensa em cada detalhe em seu nome.",
+        "price": "990",
+        "features": [
+          "Análise profissional de jogos",
+          "Apoio ao acompanhamento de desempenho",
+          "Relatórios táticos personalizados",
+          "Orientação para o desenvolvimento de carreira",
+          "Apoio digital contínuo"
+        ]
+      },
+      "card2": {
+        "title": "Plano Profissional",
+        "description": "Consultoria desportiva avançada e apoio de gestão concebidos para profissionais e clubes.",
+        "price": "1490",
+        "features": [
+          "Análise avançada de desempenho",
+          "Apoio completo de scouting",
+          "Consultoria em estratégia de transferências",
+          "Especialistas desportivos dedicados",
+          "Assistência profissional 24/7"
+        ]
+      }
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": {
+        "highlight": "Sobre",
+        "after": "nós"
+      }
+    },
+    "ecosystemCards": {
+      "card1": "A OA Sports é uma empresa multidisciplinar de consultoria e gestão desportiva que une diversas competências sob o mesmo teto e vê o desporto como um ecossistema completo.",
+      "card2": "Combinamos estratégia, análise, desempenho e inovação para apoiar atletas, clubes e profissionais a todos os níveis.",
+      "card3": "A nossa missão é criar sucesso sustentável através de planeamento a longo prazo, colaboração e desenvolvimento profissional."
+    },
+    "holistic": {
+      "title": {
+        "before": "Uma",
+        "highlight": "Abordagem",
+        "after": "Holística"
+      }
+    },
+    "partnership": {
+      "title": {
+        "before": "Mais do que Consultoria — Uma",
+        "highlight": "Parceria Estratégica"
+      },
+      "cards": {
+        "card1": "Não somos apenas uma empresa de consultoria; somos o seu parceiro estratégico na sua jornada desportiva.",
+        "card2": "Gerimos o planeamento nos bastidores com profissionalismo e reforçamos o seu desempenho.",
+        "card3": "Ajudamo-lo a construir um futuro mais forte com apoio estratégico e crescimento sustentável."
+      }
+    }
+  },
+  "aboutUsCard": {
+    "card1": {
+      "title": "Equipa de Gestão e Estratégia",
+      "points": {
+        "point1": "A OA Sports é uma empresa multidisciplinar de consultoria e gestão desportiva que une diversas competências sob o mesmo teto e vê o desporto como um ecossistema completo.",
+        "point2": "Fornecemos planeamento estratégico a longo prazo, gestão de carreira e orientação profissional para atletas e organizações."
+      }
+    },
+    "card2": {
+      "title": "Equipa Técnica e Tática",
+      "points": {
+        "point1": "Analisamos cada detalhe do desempenho e da estrutura tática para maximizar a eficiência em campo.",
+        "point2": "Os nossos especialistas técnicos apoiam jogadores e equipas com inteligência futebolística avançada e preparação estratégica."
+      }
+    },
+    "card3": {
+      "title": "Equipa de Scouting e Recrutamento",
+      "points": {
+        "point1": "Identificamos talento através de sistemas de scouting baseados em dados e métodos de análise profissional.",
+        "point2": "A nossa rede de recrutamento conecta atletas com os clubes e oportunidades certas em todo o mundo."
+      }
+    },
+    "card4": {
+      "title": "Equipa Médica e de Ciências do Desporto",
+      "points": {
+        "point1": "Apoiamos os atletas com prevenção de lesões, sistemas de recuperação e expertise em ciências do desporto.",
+        "point2": "A nossa abordagem holística ao desempenho melhora a preparação física e a consistência a longo prazo."
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": {
+        "highlight": "Contacte",
+        "after": "nos"
+      }
+    },
+    "form": {
+      "firstName": "Nome",
+      "lastName": "Apelido",
+      "email": "Email",
+      "emailPlaceholder": "Ahmed@email.com",
+      "country": "País",
+      "selectLanguage": "Selecionar Idioma",
+      "language": "Idioma",
+      "role": "Função",
+      "player": "Jogador",
+      "phoneNumber": "Número de telefone",
+      "message": "Mensagem",
+      "messagePlaceholder": "Introduza a sua mensagem...",
+      "sendMessage": "Enviar Mensagem"
+    },
+    "officialChannels": {
+      "title": {
+        "before": "Contacte-nos através dos nossos",
+        "highlight": "canais oficiais"
+      },
+      "cards": {
+        "card1": {
+          "title": "Ligue-nos",
+          "value": "+1 (555) 000-0000"
+        },
+        "card2": {
+          "title": "WhatsApp",
+          "value": "+1 (555) 000-0000"
+        },
+        "card3": {
+          "title": "Telegram",
+          "value": "@OASports"
+        },
+        "card4": {
+          "title": "Envie-nos um email",
+          "value": "contact@oasports.com"
+        }
+      }
+    },
+    "Roles": {
+      "player": "Jogador/Atleta",
+      "coach": "Treinador",
+      "analyst": "Analista",
+      "manager": "Gestor",
+      "scout": "Scout",
+      "referee": "Árbitro",
+      "agent": "Agente",
+      "other": "Outro"
+    },
+    "searchNumber": "Pesquisar Número",
+    "searchLanguage": "Pesquisar Idioma...",
+    "searchCountry": "Pesquisar País..."
+  },
+  "footer": {
+    "description": "A OA Sports é uma empresa multifacetada de consultoria e gestão desportiva que reúne competências multidisciplinares sob o mesmo teto.",
+    "fastLinks": "Links Rápidos",
+    "contactUs": "Contacte-nos",
+    "rights": "OA Sports © Todos os Direitos Reservados",
+    "privacyPolicy": "Política de Privacidade",
+    "terms": "Termos",
+    "navbar": {
+      "home": "Início",
+      "services": "Serviços",
+      "news": "Notícias e avaliações",
+      "article": "Artigo",
+      "contact": "Contacte-nos"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BsStars } from "react-icons/bs";
-import footballPlayer from "/images/footballPlayer.png";
+// import footballPlayer from "/images/footballPlayer.png";
 import FAQ from "../../components/FAQ/faq";
 import GainFrom from "../../components/GainFrom/gainFrom";
 import Studyom from "../../components/Studyom/studyom";
@@ -17,6 +17,10 @@ import map from "/images/map.png";
 import dashbord from "/images/dashbord.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import i18n from "../../i18n";
+
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
 const item = {
     hidden: { opacity: 0, y: 50 },
@@ -111,11 +115,11 @@ function Services() {
                                     </div>
                                 </div>
                             </motion.div>
-                            <div className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px]  shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-full md:w-[386px] flex items-center justify-center ">
+                            <Link to={`/${currentLang}/pricing`} className="bg-[#D2FF00] cursor-pointer rounded-[8px] py-[18px] px-[24px]  shadow-[0_8px_16px_0_#D2FF0029,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040] w-full md:w-[386px] flex items-center justify-center ">
                                 <p className="font-['Chakra_Petch'] font-bold leading-[100%] text-[20px] ">
                                     {t("servicesPage.buttons.buyNow")}
                                 </p>
-                            </div>
+                            </Link>
                         </motion.div>
 
                     </motion.div>
@@ -282,11 +286,11 @@ function Services() {
                                     {t("servicesPage.cta.description2")}
                                 </p>
                             </div>
-                            <div className="w-full md:w-[284px] flex items-center justify-center rounded-[8px] py-[18px] px-[24px] cursor-pointer bg-[#D2FF00] shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040]">
+                            <Link to={`/${currentLang}/pricing`} className="w-full md:w-[284px] flex items-center justify-center rounded-[8px] py-[18px] px-[24px] cursor-pointer bg-[#D2FF00] shadow-[0_8px_16px_0_#D2FF0029,0_71px_29px_0_#D2FF000A,0_40px_24px_0_#D2FF0021,0_18px_18px_0_#D2FF0036,0_4px_10px_0_#D2FF0040]">
                                 <p className="font-['Chakra_Petch'] font-bold text-[20px] leading-[100%] ">
                                     {t("servicesPage.cta.button")}
                                 </p>
-                            </div>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>

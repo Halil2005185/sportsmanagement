@@ -2,6 +2,7 @@ import { CiCircleCheck } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 const item = {
     hidden: { opacity: 0, y: 50 },
@@ -14,6 +15,7 @@ const item = {
         },
     },
 };
+const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
 function PlayersPlan({ cardNum }) {
     const { t } = useTranslation()
@@ -50,7 +52,7 @@ function PlayersPlan({ cardNum }) {
                     </p>
                 </div>
                 <div className="cursor-pointer w-[95%] rounded-[8px] py-[18px] px-[24px] bg-[#D2FF00] flex items-center justify-center ">
-                    <Link to="/pricing/payment">
+                    <Link to={`${currentLang}/pricing/payment`}>
                         <p className="font-bold leading-[100%] font-['Chakra_Petch'] md:text-[20px] ">
                             {t("pricingPage.startNow")}
                         </p>

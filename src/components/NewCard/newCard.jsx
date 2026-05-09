@@ -3,12 +3,14 @@ import avatar from "/images/avatar.jpg";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import i18n from "../../i18n";
 function NewCard({ id, cardNum }) {
     const { t } = useTranslation();
     const tags = t(`newsCard.cards.${cardNum}.tags`, {
         returnObjects: true,
     });
+    const currentLang = i18n.language || localStorage.getItem("lang") || "en";
+
     return (
         <section className="w-[98%] flex flex-col gap-8  bg-[#1C1C1C] border-[#535862] rounded-[24px] p-3 border-[1px] h-fit py-4  ">
             <img
@@ -52,7 +54,7 @@ function NewCard({ id, cardNum }) {
                         <p className="text-white">{t(`newsCard.cards.${cardNum}.author`)}</p>
                     </div>
                     <div className="flex items-center gap-4 text-[#D2FF00] font-bold font-['Chakra_Petch'] leading-tight ">
-                        <Link to={`/News-and-reviews/${id}`}>
+                        <Link to={`/${currentLang}/News-and-reviews/${id}`}>
                             <p>{t(`newsCard.readMore`)}</p>
                         </Link>
                         <FiArrowUpRight />

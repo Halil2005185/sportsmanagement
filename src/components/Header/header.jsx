@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import usa from "/images/usa.webp"
 import chinese from "/images/chinese.webp"
 import france from "/images/france.webp"
@@ -14,13 +14,15 @@ import Logo from "/images/logoIcon.png"
 import { FaAngleDown } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import i18n from "../../i18n.js"
 function Header() {
+
+    const currentLang = i18n.language || localStorage.getItem("lang") || "en";
+    const navigate = useNavigate();
     const { t } = useTranslation()
     const [showLanguage, setShowLanguage] = useState(false)
     const [handleLanguage, setHandleLanguage] = useState(2)
@@ -28,13 +30,13 @@ function Header() {
     const langMenuRef = useRef()
     const { pathname } = useLocation()
     const Navber = [
-        { id: 1, label: "header.navbar.home", path: "/" },
-        { id: 2, label: "header.navbar.services", path: "/services" },
-        { id: 3, label: "header.navbar.partners", path: "/partners" },
-        { id: 4, label: "header.navbar.news", path: "/News-and-reviews" },
-        { id: 5, label: "header.navbar.pricing", path: "/pricing" },
-        { id: 6, label: "header.navbar.about", path: "/about-us" },
-        { id: 7, label: "header.navbar.contact", path: "/contact-us" },
+        { id: 1, label: "header.navbar.home", path: `/${currentLang}` },
+        { id: 2, label: "header.navbar.services", path: `/${currentLang}/services` },
+        { id: 3, label: "header.navbar.partners", path: `/${currentLang}/partners` },
+        { id: 4, label: "header.navbar.news", path: `/${currentLang}/News-and-reviews` },
+        { id: 5, label: "header.navbar.pricing", path: `/${currentLang}/pricing` },
+        { id: 6, label: "header.navbar.about", path: `/${currentLang}/about-us` },
+        { id: 7, label: "header.navbar.contact", path: `/${currentLang}/contact-us` },
     ];
     const Languages = [
         { id: 1, label: "Turkish", image: turkey, code: "tr" },
@@ -60,9 +62,19 @@ function Header() {
         return () => document.removeEventListener("mousedown", handler)
     }, [])
     function Handeler(id, code) {
-        setHandleLanguage(id)
-        setShowLanguage(false)
-        i18n.changeLanguage(code)
+        setHandleLanguage(id);
+        setShowLanguage(false);
+
+        i18n.changeLanguage(code);
+
+        localStorage.setItem("lang", code);
+
+        const newPath = pathname.replace(
+            /^\/(en|tr|ar|es|fr|pt|de|it|ja|ko|zh)/,
+            `/${code}`
+        );
+
+        navigate(newPath);
     }
 
     const container = {
@@ -137,7 +149,7 @@ function Header() {
                     <motion.div key={nav.id} variants={item}>
                         <Link
                             to={nav.path}
-                            className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white" 
+                            className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"
                                 } font-['Chakra_Petch'] text-[14px] xl:text-[15px] 2xl:text-[16px] `}
                         >
                             {t(nav.label)}
@@ -188,7 +200,7 @@ function Header() {
                     )}
 
                 </div>
-                <Link to="/contact-us" className="w-[133px] cursor-pointer h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
+                <Link to={`/${currentLang}/contact-us`} className="w-[133px] cursor-pointer h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29] ">
                     <p className=" font-bold leading-[100%] font-['Chakra_Petch']">{t("header.navbar.contact")}</p>
                 </Link>
             </div>
