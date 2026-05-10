@@ -83,14 +83,18 @@ const LangItem = {
 
 function Header() {
     const currentLang = i18n.language || localStorage.getItem("lang") || "en";
+    const SELCLANG = localStorage.getItem("SelectedLang") || 2;
+    console.log(SELCLANG);
+
     const navigate = useNavigate();
     const { t } = useTranslation()
     const [showLanguage, setShowLanguage] = useState(false)
     const [showLanguageMobile, setShowLanguageMobile] = useState(false)
-    const [handleLanguage, setHandleLanguage] = useState(2)
+    const [handleLanguage, setHandleLanguage] = useState(SELCLANG)
     const [openMenu, setOpenMenu] = useState(false)
     const langMenuRef = useRef()
     const { pathname } = useLocation()
+
     const Navber = [
         { id: 1, label: "header.navbar.home", path: `/${currentLang}` },
         { id: 2, label: "header.navbar.services", path: `/${currentLang}/services` },
@@ -130,7 +134,7 @@ function Header() {
         i18n.changeLanguage(code);
 
         localStorage.setItem("lang", code);
-
+        localStorage.setItem("SelectedLang", id);
         const newPath = pathname.replace(
             /^\/(en|tr|ar|es|fr|pt|de|it|ja|ko|zh)/,
             `/${code}`
