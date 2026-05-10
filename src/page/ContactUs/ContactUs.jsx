@@ -120,33 +120,28 @@ function ContactUs() {
                             className=" flex flex-col gap-6">
                             <motion.div
                                 variants={item}
-                                className="flex flex-col lg:flex-row gap-4"
-                            >
+                                className="flex flex-col lg:flex-row gap-4">
                                 <div className="flex flex-col gap-2 w-full lg:w-[50%]">
                                     <label
                                         htmlFor="firstName"
-                                        className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
-                                    >
+                                        className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic ">
                                         {t("contactPage.form.firstName")}
                                     </label>
                                     <input
                                         type="text"
                                         id="firstName"
-                                        className="bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
-                                    />
+                                        className="bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "/>
                                 </div>
                                 <div className="flex flex-col gap-2 w-full lg:w-[50%]">
                                     <label
                                         htmlFor="lastName"
-                                        className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic "
-                                    >
+                                        className="text-[#D5D7DA] font-['Platypi'] font-bold text-[26px] italic ">
                                         {t("contactPage.form.lastName")}
                                     </label>
                                     <input
                                         type="text"
                                         id="lastName"
-                                        className="bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "
-                                    />
+                                        className="bg-[#2B2B2B] border-[1px] border-[#2B2B2B] focus:border-[#D2FF00] text-white  outline-none rounded-[12px] py-[18px] px-4 "/>
                                 </div>
                             </motion.div>
 
@@ -450,11 +445,11 @@ function ContactUs() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.6 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                    className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 >
                     <motion.div
                         variants={item}
-                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                        className="bg-[#1C1C1C] w-[95%] md:w-full mx-auto h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
                     >
                         <MdOutlinePhoneInTalk className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
@@ -468,7 +463,7 @@ function ContactUs() {
                     </motion.div>
                     <motion.div
                         variants={item}
-                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                        className="bg-[#1C1C1C] mx-auto w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
                     >
                         <FaWhatsapp className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
@@ -483,7 +478,7 @@ function ContactUs() {
 
                     <motion.div
                         variants={item}
-                        className="bg-[#1C1C1C] w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                        className="bg-[#1C1C1C] mx-auto w-[95%] md:w-full  h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
                     >
                         <FaTelegramPlane className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">
@@ -498,7 +493,7 @@ function ContactUs() {
 
                     <motion.div
                         variants={item}
-                        className="bg-[#1C1C1C] w-[95%] md:w-full h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
+                        className="bg-[#1C1C1C] mx-auto w-[95%] md:w-full h-[219px] rounded-[18px] p-6 flex flex-col justify-center items-start gap-8"
                     >
                         <HiOutlineMailOpen className="bg-[#D2FF001A] text-[#D2FF00] text-[45px] p-2  rounded-full " />
                         <div className="flex flex-col gap-4">

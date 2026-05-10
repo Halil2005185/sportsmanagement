@@ -30,7 +30,7 @@ function PlayersPlan({ cardNum }) {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col gap-8 w-full md:w-[531px] h-fit bg-[#121212] border-[1px] border-[#D5D7DA] p-2 md:p-[24px] rounded-[30px]"
+            className="flex flex-col gap-8 w-full md:w-[531px] h-fit bg-[#121212] border-[1px] border-[#D5D7DA] py-6 p-2 md:p-[24px] rounded-[30px]"
         >
             <motion.div
                 variants={item}

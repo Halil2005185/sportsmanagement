@@ -19,8 +19,69 @@ import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import i18n from "../../i18n.js"
-function Header() {
+const MotionLink = motion.create(Link)
 
+
+
+const container = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.15
+        }
+    }
+};
+const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 }
+};
+const menuContainer = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.15,
+        },
+    },
+};
+const navContainer = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.08,
+        },
+    },
+};
+const Mobileitem = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+};
+const LanguageItem = {
+    hidden: { opacity: 0, y: -10 },
+    show: { opacity: 1, y: 0 }
+};
+const buttonItem = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.5
+        }
+    }
+};
+const LangItem = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.6
+        }
+    }
+};
+
+
+function Header() {
     const currentLang = i18n.language || localStorage.getItem("lang") || "en";
     const navigate = useNavigate();
     const { t } = useTranslation()
@@ -77,63 +138,6 @@ function Header() {
 
         navigate(newPath);
     }
-
-    const container = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.15
-            }
-        }
-    };
-    const item = {
-        hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0 }
-    };
-    const menuContainer = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.15,
-            },
-        },
-    };
-    const navContainer = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.08,
-            },
-        },
-    };
-    const Mobileitem = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0 },
-    };
-    const LanguageItem = {
-        hidden: { opacity: 0, y: -10 },
-        show: { opacity: 1, y: 0 }
-    };
-    const buttonItem = {
-        hidden: { opacity: 0, y: 20 },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                delay: 0.5
-            }
-        }
-    };
-    const LangItem = {
-        hidden: { opacity: 0, y: 20 },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                delay: 0.6
-            }
-        }
-    };
 
 
     return <section className=" bg-[#1C1C1C] w-screen h-[83px] flex items-center ">
@@ -226,7 +230,7 @@ function Header() {
                             <Link
                                 to={nav.path}
                                 onClick={() => setOpenMenu(false)}
-                                className="font-bold text-white font-['Chakra_Petch']">
+                                className={`${nav.path == pathname ? "text-[#D2FF00]" : "text-white"} font-bold  font-['Chakra_Petch']`}>
                                 {t(nav.label)}
                             </Link>
                         </motion.div>
@@ -274,14 +278,14 @@ function Header() {
                     )}
                 </motion.div>
                 {/* button */}
-                <motion.div
-                    variants={LangItem}
-                    className="w-full text-center mt-4 h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29]"
-                >
-                    <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">
-                        {t("header.navbar.contact")}
-                    </p>
-                </motion.div>
+                <MotionLink to={`/${currentLang}/contact-us`} variants={LangItem} >
+                    <div
+                        className="w-full text-center mt-4 h-[48px] bg-[#D2FF00] rounded-[8px] py-[18px] px-6 shadow-[0px_8px_16px_0px_#C3FF1A29]">
+                        <p className="cursor-pointer font-bold leading-[100%] font-['Chakra_Petch']">
+                            {t("header.navbar.contact")}
+                        </p>
+                    </div>
+                </MotionLink>
             </motion.div>
 
         </header>

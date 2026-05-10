@@ -275,12 +275,10 @@ function Home() {
                 </motion.h4>
                 <motion.div
                     variants={container}
-                    className="flex flex-wrap items-center gap-6 justify-evenly md:justify-between 2xl:justify-evenly w-full mx-auto"
-                >
+                    className="flex flex-wrap items-center gap-6 justify-evenly md:justify-between 2xl:justify-evenly w-full mx-auto">
                     <motion.div
                         variants={item}
-                        className="sm:w-[48%] lg:w-[45%] xl:w-[32%]"
-                    >
+                        className="sm:w-[48%] lg:w-[45%] xl:w-[32%]">
                         <WhySports
                             title={t("homePage.whySports.cards.card1.title")}
                             text={t("homePage.whySports.cards.card1.text")}
